@@ -8,3 +8,9 @@ ln -s $(pwd)/bash/.bash_profile ~
 
 echo "[\033[0;32mINFO\033[0m] brew install tree"
 brew install tree
+
+echo "[\033[0;32mINFO\033[0m] brew install fortune"
+brew install fortune
+
+echo "[\033[0;32mINFO\033[0m] touch ~/.hushlogin"
+touch ~/.hushlogin
