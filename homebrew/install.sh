@@ -9,3 +9,6 @@ fi
 
 echo "[\033[0;32mINFO\033[0m] brew update"
 brew update
+
+echo "[\033[0;32mINFO\033[0m] link full xcode"
+sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
