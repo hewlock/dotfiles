@@ -28,6 +28,11 @@ let g:lightline = {
 if has('gui_running')
 	set background=light
 	set guifont=Roboto\ Mono\ for\ Powerline:h14
+	set guioptions-=L
+	set guioptions-=R
+	set guioptions-=b
+	set guioptions-=l
+	set guioptions-=r
 endif
 
 let mapleader = "\<Space>"
