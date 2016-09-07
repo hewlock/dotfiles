@@ -7,3 +7,5 @@ alias ls='ls -Gh'
 
 fortune -as
 echo ""
+
+source ~/.bash_env
