@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+DATE=$(TZ=${1} date +"%A %B %-d • %-I:%M %p %Z")
+osascript -e "tell application \"Alfred 3\" to run trigger \"Large Type\" in workflow \"trigger-large-type\" with argument \"${DATE}\""

@@ -1,0 +1,30 @@
+#!/usr/bin/osascript
+# set-active-window-bounds <left> <top> <right> <bottom>
+#	<left>: left-offset-percent-desktop-width
+#	<top>: top-offset-percent-desktop-height
+#	<right>: right-offset-percent-desktop-width
+#	<bottom>: bottom-offset-percent-desktop-height
+#
+# Set the active window bounds based on width and height of the desktop.
+
+on run argv
+	set windowLib to (load script file "::helpers:window.scpt")
+	
+	set l to item 1 of argv
+	set t to item 2 of argv
+	set r to item 3 of argv
+	set b to item 4 of argv
+
+	tell windowLib
+		set deskBnds to getDesktopBounds()
+		set deskVec to getVector(deskBnds, getBoundsBottomRight(deskBnds))
+		set tlVec to getVectorAsInteger(getVectorDotProduct(deskVec, {l / 100, t / 100}))
+		set brVec to getVectorAsInteger(getVectorDotProduct(deskVec, {(100 - r) / 100, (100 - b) / 100}))
+		set originBnds to {item 1 of tlVec, item 2 of tlVec, item 1 of brVec, item 2 of brVec}
+		set bnds to getBoundsTranslation(originBnds, deskBnds)
+
+		set wnd to getActiveWindow()
+
+		setWindowBounds(wnd, bnds)
+	end tell
+end run

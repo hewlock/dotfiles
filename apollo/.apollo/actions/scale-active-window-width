@@ -1,0 +1,29 @@
+#!/usr/bin/osascript
+# scale-active-window-width <percent-desktop-width>
+#
+# Scale the active window to a percent width of the desktop.
+
+on run argv
+	set windowLib to (load script file "::helpers:window.scpt")
+	
+	set w to item 1 of argv
+
+	tell windowLib
+		set deskBnds to getDesktopBounds()
+		set deskVec to getVector(deskBnds, getBoundsBottomRight(deskBnds))
+		set sizeVec to getVectorAsInteger(getVectorDotProduct(deskVec, {w / 100, 0}))
+
+		set wnd to getActiveWindow()
+		set wndBnds to getWindowBounds(wnd)
+		set wndSize to getBoundsSize(wndBnds)
+
+		set bnds to getBounds(wndBnds, {item 1 of sizeVec, item 2 of wndSize})
+
+		set wndCenter to getBoundsCenter(wndBnds)
+		set bndsCenter to getBoundsCenter(bnds)
+		set vec to getVector(bndsCenter, wndCenter)
+		set bnds to getBoundsTranslation(bnds, vec)
+
+		setWindowBounds(wnd, bnds)
+	end tell
+end run

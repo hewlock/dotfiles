@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+PREFIX="$1 | "
+BOOKMARKS_FILE=bookmarks
+ENTRY=$(grep "^${PREFIX}" ${BOOKMARKS_FILE})
+if [ ! -z "$ENTRY" ]; then
+	ACTION=$(echo ${ENTRY} | sed 's/.* \| /actions\//')
+	eval ${ACTION}
+fi

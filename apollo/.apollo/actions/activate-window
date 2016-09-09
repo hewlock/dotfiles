@@ -1,0 +1,16 @@
+#!/usr/bin/osascript
+# activate-window <application-name> <window-id>
+#
+# Open and transfer focus to <application-name> window <window-id>.
+
+on run argv
+	set appName to item 1 of argv
+	set winId to item 2 of argv as integer
+	tell application appName
+		tell (first window whose id is winId)
+			set index to 1
+		end tell
+		delay 0.01
+		do shell script "open -a '" & appName & "'"
+	end tell
+end run

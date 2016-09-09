@@ -1,0 +1,95 @@
+A-e A-e | move-active-window-center
+A-e A-h | move-active-window-left
+A-e A-j | move-active-window-bottom
+A-e A-k | move-active-window-top
+A-e A-l | move-active-window-right
+
+A-h A-~ | show-keybind-prefix-help "A-~"
+A-h A-e | show-keybind-prefix-help "A-e"
+A-h A-h | show-keybind-prefix-help "A-h"
+A-h A-m | show-keybind-prefix-help "A-m"
+A-h A-n | show-keybind-prefix-help "A-n"
+A-h A-w | show-keybind-prefix-help "A-w"
+A-h A-x | show-keybind-prefix-help "A-x"
+
+A-n A-c | show-date "America/Chicago"
+A-n A-e | show-date "America/New_York"
+A-n A-g | show-date "GMT"
+A-n A-m | show-date "America/Denver"
+A-n A-p | show-date "America/Los_Angeles"
+
+A-w A-h | set-active-window-bounds 0 0 50 0
+A-w A-j | set-active-window-bounds 0 50 0 0
+A-w A-k | set-active-window-bounds 0 0 0 50
+A-w A-l | set-active-window-bounds 50 0 0 0
+A-w A-m | scale-active-window 100 100
+A-w A-n | set-active-window-bounds 15 0 15 0
+A-w A-q | scale-active-window 50 50
+A-w A-s | scale-active-window 60 50
+A-w A-w | toggle-active-window-fullscreen
+A-w A-z | hide-active-application
+
+A-x A-b | activate-application "Safari"
+A-x A-f | activate-application "Finder"
+A-x A-i | activate-application "iTerm"
+A-x A-j | activate-application "Intellij IDEA"
+A-x A-k | activate-application "Google Chrome"
+A-x A-l | activate-application "MacVim"
+A-x A-m | activate-application "Messages"
+A-x A-o | activate-application "OmniFocus"
+A-x A-s | activate-application "Slack"
+A-x A-u | activate-application "Amazon Music"
+
+A-m A-a | set-bookmark a
+A-m A-b | set-bookmark b
+A-m A-c | set-bookmark c
+A-m A-d | set-bookmark d
+A-m A-e | set-bookmark e
+A-m A-f | set-bookmark f
+A-m A-g | set-bookmark g
+A-m A-h | set-bookmark h
+A-m A-i | set-bookmark i
+A-m A-j | set-bookmark j
+A-m A-k | set-bookmark k
+A-m A-l | set-bookmark l
+A-m A-m | set-bookmark m
+A-m A-n | set-bookmark n
+A-m A-o | set-bookmark o
+A-m A-p | set-bookmark p
+A-m A-q | set-bookmark q
+A-m A-r | set-bookmark r
+A-m A-s | set-bookmark s
+A-m A-t | set-bookmark t
+A-m A-u | set-bookmark u
+A-m A-v | set-bookmark v
+A-m A-w | set-bookmark w
+A-m A-x | set-bookmark x
+A-m A-y | set-bookmark y
+A-m A-z | set-bookmark z
+
+A-~ A-a | load-bookmark a
+A-~ A-b | load-bookmark b
+A-~ A-c | load-bookmark c
+A-~ A-d | load-bookmark d
+A-~ A-e | load-bookmark e
+A-~ A-f | load-bookmark f
+A-~ A-g | load-bookmark g
+A-~ A-h | load-bookmark h
+A-~ A-i | load-bookmark i
+A-~ A-j | load-bookmark j
+A-~ A-k | load-bookmark k
+A-~ A-l | load-bookmark l
+A-~ A-m | load-bookmark m
+A-~ A-n | load-bookmark n
+A-~ A-o | load-bookmark o
+A-~ A-p | load-bookmark p
+A-~ A-q | load-bookmark q
+A-~ A-r | load-bookmark r
+A-~ A-s | load-bookmark s
+A-~ A-t | load-bookmark t
+A-~ A-u | load-bookmark u
+A-~ A-v | load-bookmark v
+A-~ A-w | load-bookmark w
+A-~ A-x | load-bookmark x
+A-~ A-y | load-bookmark y
+A-~ A-z | load-bookmark z

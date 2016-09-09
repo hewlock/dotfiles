@@ -1,0 +1,18 @@
+#!/usr/bin/osascript
+# toggle-active-window-fullscreen
+#
+# Change the window to and from fullscreen.
+
+set windowLib to (load script file "::helpers:window.scpt")
+
+tell application "System Events"
+	tell windowLib
+		set wnd to getActiveWindow()
+	end tell
+	
+	tell front window of (first process whose frontmost is true)
+		set isFullScreen to get value of attribute "AXFullScreen"
+		set isFullScreenAfter to not isFullScreen
+		set value of attribute "AXFullScreen" to isFullScreenAfter
+	end tell
+end tell

@@ -1,0 +1,20 @@
+#!/usr/bin/osascript
+# move-active-window-center
+#
+# Move the active window to the center of the screen.
+
+set windowLib to (load script file "::helpers:window.scpt")
+
+tell windowLib
+	set deskBnds to getDesktopBounds()
+	set deskCenter to getBoundsCenter(deskBnds)
+
+	set wnd to getActiveWindow()
+	set wndBnds to getWindowBounds(wnd)
+	set wndCenter to getBoundsCenter(wndBnds)
+
+	set vec to getVector(wndCenter, deskCenter)
+	set bnds to getBoundsTranslation(wndBnds, vec)
+
+	setWindowBounds(wnd, bnds)
+end tell

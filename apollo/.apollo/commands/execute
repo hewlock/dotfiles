@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+PREFIX="$* | "
+KEYBINDINGS_FILE=keybindings
+STATE_FILE=state
+ENTRY=$(grep "^${PREFIX}" ${KEYBINDINGS_FILE})
+if [ ! -z "$ENTRY" ]; then
+	ACTION=$(echo ${ENTRY} | sed 's/.* \| /actions\//')
+	rm ${STATE_FILE}
+	eval ${ACTION}
+fi

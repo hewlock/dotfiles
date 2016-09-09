@@ -1,0 +1,8 @@
+#!/usr/bin/osascript
+# hide-active-application
+#
+# Hide the active application.
+
+tell application "System Events"
+	set visible of (first process whose frontmost is true) to false
+end tell

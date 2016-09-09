@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+HELP=$(grep "^${1}" keybindings | tr "\"" "'")
+osascript -e "tell application \"Alfred 3\" to run trigger \"Large Type\" in workflow \"trigger-large-type\" with argument \"${HELP}\""

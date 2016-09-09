@@ -1,2 +1,5 @@
+*.swp
 .DS_Store
 .netrwhist
+apollo/.apollo/bookmarks
+apollo/.apollo/state

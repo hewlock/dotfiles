@@ -1,0 +1,12 @@
+#!/usr/bin/osascript
+# activate-application <application-name>
+#
+# Open and transfer focus to <application-name>.
+
+on run argv
+	set appName to item 1 of argv
+	tell application appName
+		activate
+		reopen
+	end tell
+end run

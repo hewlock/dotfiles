@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+APP=$(osascript -e "tell application \"System Events\" to get name of first application process whose frontmost is true")
+WIN=$(osascript -e "tell application \"${APP}\" to get id of the front window")
+
+sed "/^${1}/d" bookmarks > bookmarks-temp
+echo "${1} | activate-window \"${APP}\" \"${WIN}\"" >> bookmarks-temp
+cat bookmarks-temp | sort > bookmarks
+rm bookmarks-temp
