@@ -31,8 +31,8 @@ A-w A-z | hide-active-application
 
 A-x A-b | activate-application "Safari"
 A-x A-f | activate-application "Finder"
-A-x A-i | activate-application "iTerm"
-A-x A-j | activate-application "Intellij IDEA"
+A-x A-j | activate-application "Terminal"
+A-x A-i | activate-application "Intellij IDEA"
 A-x A-k | activate-application "Google Chrome"
 A-x A-l | activate-application "MacVim"
 A-x A-m | activate-application "Messages"
