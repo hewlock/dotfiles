@@ -12,6 +12,7 @@ cmd "ln -s $(pwd)/bash/.bash_profile ~"
 cmd "touch ~/.bash_env"
 cmd "touch ~/.hushlogin"
 
-install tree
+install ack
 install fortune
+install tree
 
