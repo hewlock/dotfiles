@@ -12,6 +12,17 @@ A-h A-n | show-keybind-prefix-help "A-n"
 A-h A-w | show-keybind-prefix-help "A-w"
 A-h A-x | show-keybind-prefix-help "A-x"
 
+A-j A-b | activate-application "Safari"
+A-j A-f | activate-application "Finder"
+A-j A-j | activate-application "Terminal"
+A-j A-i | activate-application "Intellij IDEA"
+A-j A-k | activate-application "Google Chrome"
+A-j A-l | activate-application "MacVim"
+A-j A-m | activate-application "Messages"
+A-j A-o | activate-application "OmniFocus"
+A-j A-s | activate-application "Slack"
+A-j A-u | activate-application "Amazon Music"
+
 A-n A-c | show-date "America/Chicago"
 A-n A-e | show-date "America/New_York"
 A-n A-g | show-date "GMT"
@@ -28,17 +39,6 @@ A-w A-q | scale-active-window 50 50
 A-w A-s | scale-active-window 60 50
 A-w A-w | toggle-active-window-fullscreen
 A-w A-z | hide-active-application
-
-A-x A-b | activate-application "Safari"
-A-x A-f | activate-application "Finder"
-A-x A-j | activate-application "Terminal"
-A-x A-i | activate-application "Intellij IDEA"
-A-x A-k | activate-application "Google Chrome"
-A-x A-l | activate-application "MacVim"
-A-x A-m | activate-application "Messages"
-A-x A-o | activate-application "OmniFocus"
-A-x A-s | activate-application "Slack"
-A-x A-u | activate-application "Amazon Music"
 
 A-m A-a | set-bookmark a
 A-m A-b | set-bookmark b

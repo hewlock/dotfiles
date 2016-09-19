@@ -2,6 +2,7 @@
 " :PlugInstall
 call plug#begin()
 Plug 'altercation/vim-colors-solarized'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'itchyny/lightline.vim'
 call plug#end()
 
@@ -19,6 +20,7 @@ set shiftwidth=4
 set t_Co=16
 set tabstop=4
 
+let g:ctrlp_cmd = 'CtrlPBuffer'
 let g:lightline = {
 	\ 'colorscheme': 'solarized',
 	\ 'separator': { 'left': '', 'right': '' },
