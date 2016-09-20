@@ -11,14 +11,18 @@ colorscheme solarized
 
 set background=dark
 set clipboard=unnamed
+set history=1000
 set hlsearch
 set incsearch
 set laststatus=2
+set listchars=trail:•,tab:»-
+set nobackup
 set noruler
 set number
 set shiftwidth=4
 set t_Co=16
 set tabstop=4
+set undolevels=1000
 
 let g:ctrlp_cmd = 'CtrlPBuffer'
 let g:lightline = {
@@ -39,6 +43,7 @@ endif
 
 let mapleader = "\<Space>"
 
-nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L> " clear search highlighting
-nnoremap <Leader>q :wq<CR>
-nnoremap <Leader>w :w<CR>
+nnoremap <Leader><Space> :noh<CR>
+nnoremap <Leader>n :set number!<CR>
+nnoremap <Leader>p :set paste!<CR>
+nnoremap <Leader>w :set list!<CR>
