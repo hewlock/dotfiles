@@ -16,3 +16,5 @@ install ack
 install fortune
 install tree
 
+cmd "brew cask install java"
+cmd "brew cask update java"
