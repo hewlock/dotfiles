@@ -1,6 +1,9 @@
 export LSCOLORS="dxcxcxdxbxegedabagacad"
 export PATH="/usr/local/bin:$PATH"
 
+# prevent tmux 2.2 errors from displaying
+export EVENT_NOKQUEUE=1
+
 alias la='ls -AGh'
 alias ll='ls -AGhl'
 alias ls='ls -Gh'
