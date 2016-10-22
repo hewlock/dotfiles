@@ -23,6 +23,7 @@ A-j A-o | activate-application "OmniFocus"
 A-j A-s | activate-application "Slack"
 A-j A-u | activate-application "Amazon Music"
 A-j A-v | activate-application "MacVim"
+A-j A-y | activate-application "YNAB 4"
 
 A-n A-c | show-date "America/Chicago"
 A-n A-e | show-date "America/New_York"
