@@ -4,6 +4,7 @@ sh homebrew/install.sh
 
 sh bash/install.sh
 sh vim/install.sh
+sh emacs/install.sh
 
 sh apollo/install.sh
 sh fonts/install.sh
