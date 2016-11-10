@@ -44,7 +44,8 @@
 (set-default 'truncate-lines t)
 
 (menu-bar-mode -1)
-(set-display-table-slot standard-display-table 'vertical-border (make-glyph-code ?┃))
+(set-face-background 'vertical-border "brightgreen")
+(set-face-foreground 'vertical-border (face-background 'vertical-border))
 
 (setq evil-want-C-i-jump nil) ; Enable TAB for org mode
 (setq evil-want-C-u-scroll t)
