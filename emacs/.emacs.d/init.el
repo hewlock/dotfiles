@@ -122,7 +122,12 @@
 			(helm-make-source "Buffers" 'helm-source-buffers)))
 	(helm :sources '(helm-source-buffers-list
 					 helm-source-projectile-files-list)))
-(defun mmoulton-reload-emacs-config ()
+
+(defun open-emacs-config ()
+	(interactive)
+	(find-file "~/.emacs.d/init.el"))
+
+(defun reload-emacs-config ()
 	(interactive)
 	(load-file "~/.emacs.d/init.el"))
 
@@ -185,6 +190,10 @@
 (leader-bind "f n" 'find-file)
 (leader-bind "f r" 'helm-projectile-recentf)
 (leader-bind "f s" 'save-buffer)
+
+(leader-help "f e" "emacs")
+(leader-bind "f e r" 'reload-emacs-config)
+(leader-bind "f e i" 'open-emacs-config)
 
 (leader-help "h" "help")
 (leader-bind "h F" 'describe-face)
