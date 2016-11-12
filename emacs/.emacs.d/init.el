@@ -1,5 +1,6 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
+(require 'cl)
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
@@ -16,8 +17,9 @@
 	org
 	powerline
 	projectile
-	s
+	s						; snippet string library
 	web-mode
+	which-key				; keybinding help
 	yasnippet
 	))
 (unless package-archive-contents
@@ -110,6 +112,9 @@
 (require 'org)
 (setq org-startup-folded 'showall)
 
+(require 'which-key)
+(which-key-mode)
+
 (defun mmoulton-helm-search ()
 	(interactive)
 	(unless helm-source-buffers-list
@@ -121,14 +126,85 @@
 	(interactive)
 	(load-file "~/.emacs.d/init.el"))
 
+(defun kill-other-buffers ()
+	"Kill all other buffers."
+	(interactive)
+	(mapc 'kill-buffer 
+		(delq (current-buffer) 
+			(remove-if-not 'buffer-file-name (buffer-list)))))
+
+(defun delete-current-buffer-file ()
+	"Kill the current buffer and deletes the file it is visiting."
+	(interactive)
+	(let ((filename (buffer-file-name)))
+		(if (y-or-n-p (concat "Delete " filename "?"))
+			(when filename
+				(if (vc-backend filename)
+						(vc-delete-file filename)
+					(progn
+						(delete-file filename)
+						(message "Deleted file %s" filename)
+						(kill-buffer)))))))
+
+(defun rename-current-buffer-file ()
+	"Renames current buffer and file it is visiting."
+	(interactive)
+	(let ((name (buffer-name))
+			(filename (buffer-file-name)))
+		(if (not (and filename (file-exists-p filename)))
+				(error "Buffer '%s' is not visiting a file!" name)
+			(let ((new-name (read-file-name "New name: " filename)))
+				(if (get-buffer new-name)
+						(error "A buffer named '%s' already exists!" new-name)
+					(rename-file filename new-name 1)
+					(rename-buffer new-name)
+					(set-visited-file-name new-name)
+					(set-buffer-modified-p nil)
+					(message "File '%s' successfully renamed to '%s'"
+						 name (file-name-nondirectory new-name)))))))
+
+(defun leader-bind (sequence action)
+	(define-key evil-normal-state-map (kbd (concat "SPC " sequence)) action))
+
+(defun leader-help (prefix description)
+	(which-key-add-key-based-replacements (concat "SPC " prefix) description))
+
+(leader-help "b" "buffer")
+(leader-bind "b b" 'helm-buffers-list)
+(leader-bind "b c" 'kill-this-buffer)
+(leader-bind "b k" 'kill-buffer)
+(leader-bind "b l" 'list-buffers)
+(leader-bind "b o" 'kill-other-buffers)
+(leader-bind "b w" 'read-only-mode)
+
+(leader-help "f" "file")
+(leader-bind "f c" 'copy-file)
+(leader-bind "f d" 'delete-current-buffer-file)
+(leader-bind "f f" 'helm-projectile-find-file)
+(leader-bind "f m" 'rename-current-buffer-file)
+(leader-bind "f n" 'find-file)
+(leader-bind "f r" 'helm-projectile-recentf)
+(leader-bind "f s" 'save-buffer)
+
+(leader-help "h" "help")
+(leader-bind "h F" 'describe-face)
+(leader-bind "h b" 'describe-bindings)
+(leader-bind "h c" 'describe-char)
+(leader-bind "h f" 'describe-function)
+(leader-bind "h k" 'describe-key)
+(leader-bind "h m" 'describe-mode)
+(leader-bind "h s" 'describe-symbol)
+(leader-bind "h v" 'describe-variable)
+
 (global-unset-key (kbd "C-k"))
+
+(global-set-key (kbd "C-h C-f") 'find-function)
 
 (global-set-key (kbd "C-@") 'mmoulton-helm-search)
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c b") 'org-iswitchb)
 (global-set-key (kbd "C-c c") 'org-capture)
 (global-set-key (kbd "C-c l") 'org-store-link)
-(global-set-key (kbd "C-h C-f") 'find-function)
 (global-set-key (kbd "C-k f") 'helm-projectile-ack)
 (global-set-key (kbd "C-k m") 'helm-mark-ring)
 (global-set-key (kbd "C-k o") 'neotree-find)
