@@ -19,6 +19,10 @@
 	(interactive)
 	(find-file "~/.emacs.d/init.el"))
 
+(defun open-keys-el ()
+	(interactive)
+	(find-file "~/.emacs.d/elisp/keys.el"))
+
 (defun reload-emacs ()
 	(interactive)
 	(load-file "~/.emacs.d/init.el"))

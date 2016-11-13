@@ -1,5 +1,5 @@
 (global-set-key (kbd "C-@") 'helm-project-list)
-(global-set-key (kbd "TAB") 'self-insert-command) ; insert TAB character
+(define-key evil-insert-state-map (kbd "TAB") 'self-insert-command) ; insert TAB character
 
 (defun leader-bind (sequence action) (define-key evil-normal-state-map (kbd (concat "SPC " sequence)) action))
 (defun leader-help (prefix description) (which-key-add-key-based-replacements (concat "SPC " prefix) description))
@@ -41,6 +41,7 @@
 (leader-bind "h v" 'describe-variable)
 (leader-bind "j d" 'find-function)
 (leader-bind "j i" 'open-init-el)
+(leader-bind "j k" 'open-keys-el)
 (leader-bind "m m" 'helm-mark-ring)
 (leader-bind "q q" 'helm-execute-kmacro)
 (leader-bind "s a" 'helm-projectile-ack)
@@ -51,10 +52,14 @@
 (leader-bind "t t" 'neotree-toggle-project)
 (leader-bind "y y" 'helm-show-kill-ring)
 
-;(define-key org-mode-map (kbd "M-h") 'org-metaleft)
-;(define-key org-mode-map (kbd "M-j") 'org-metadown)
-;(define-key org-mode-map (kbd "M-k") 'org-metaup)
-;(define-key org-mode-map (kbd "M-l") 'org-metaright)
+(define-key org-mode-map (kbd "M-H") 'org-shiftmetaleft)
+(define-key org-mode-map (kbd "M-J") 'org-shiftmetadown)
+(define-key org-mode-map (kbd "M-K") 'org-shiftmetaup)
+(define-key org-mode-map (kbd "M-L") 'org-shiftmetaright)
+(define-key org-mode-map (kbd "M-h") 'org-metaleft)
+(define-key org-mode-map (kbd "M-j") 'org-metadown)
+(define-key org-mode-map (kbd "M-k") 'org-metaup)
+(define-key org-mode-map (kbd "M-l") 'org-metaright)
 
 (add-hook 'neotree-mode-hook
 	(lambda ()
