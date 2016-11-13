@@ -1,6 +1,3 @@
-(require 'evil)
-(require 'powerline)
-
 (defcustom powerline-evil-tag-style 'verbose
 	"The style to use for displaying the evil state tag.
 	Valid Values: standard, verbose, visual-expanded"
@@ -100,4 +97,4 @@
 						(powerline-fill mode-line (powerline-width rhs))
 						(powerline-render rhs)))))))
 
-(provide 'powerline-minimal-vim-theme)
+(powerline-minimal-vim-theme)
