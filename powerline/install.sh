@@ -5,9 +5,6 @@ source functions.sh
 header powerline
 
 install python
+cmd "pip install --upgrade pip"
 cmd "pip install powerline-status"
-
-if [ -e ~/.config/powerline ]; then
-	cmd "rm ~/.config/powerline"
-fi
-cmd "ln -s $(pwd)/powerline/config ~/.config/powerline"
+link $(pwd)/powerline/config ~/.config/powerline

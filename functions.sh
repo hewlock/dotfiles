@@ -17,3 +17,10 @@ function install {
 	cmd "brew install $1"
 	cmd "brew upgrade $1"
 }
+
+function link {
+	if [ -e $2 ]; then
+		cmd "rm $2"
+	fi
+	cmd "ln -s $1 $2"
+}
