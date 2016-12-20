@@ -1,0 +1,3 @@
+set hintchars=asdfghjkl
+noremap j 3j
+noremap k 3k

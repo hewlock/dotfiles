@@ -11,3 +11,4 @@ sh fonts/install.sh
 sh git/install.sh
 sh powerline/install.sh
 sh tmux/install.sh
+sh vimperator/install.sh
