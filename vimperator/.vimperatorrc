@@ -1,3 +1,26 @@
 set hintchars=asdfghjkl
+
 noremap j 3j
 noremap k 3k
+
+hi Hint <<EOM
+	background-color: #fdf6e3;
+	border-color: #93a1a1;
+	border-radius: 2px;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,.6);
+	color: #586e75;
+	font-family: monospace;
+	font-size: 14px;
+	font-weight: normal;
+	padding: 0px 3px;
+	text-transform: uppercase;
+EOM
+
+hi HintActive <<EOM
+	background-color: #859900;
+	color: #002b36;
+EOM
+
+hi HintElem "
