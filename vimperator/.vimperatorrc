@@ -11,7 +11,8 @@ hi Hint <<EOM
 	font-family: monospace;
 	font-size: 14px;
 	font-weight: normal;
-	padding: 0px 3px;
+	line-height: 1em;
+	padding: 3px 5px;
 	text-transform: uppercase;
 EOM
 
