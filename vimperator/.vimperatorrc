@@ -4,13 +4,10 @@ noremap j 3j
 noremap k 3k
 
 hi Hint <<EOM
-	background-color: #ffffff;
-	border-color: #2f5f9f;
+	background-color: rgb(70, 131, 234);
 	border-radius: 4px;
-	border-style: solid;
-	border-width: 1px;
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,.6);
-	color: #2f5f9f;
+	box-shadow: 1px 1px 3px 0px rgba(0,0,0,.5);
+	color: #ffffff;
 	font-family: monospace;
 	font-size: 14px;
 	font-weight: normal;
