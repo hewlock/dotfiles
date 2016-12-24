@@ -9,7 +9,6 @@ syntax on
 colorscheme solarized
 
 set background=dark
-set clipboard=unnamed
 set history=1000
 set hlsearch
 set incsearch

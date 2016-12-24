@@ -1,7 +1,10 @@
 set hintchars=asdfghjklweruiocm
 
-noremap j 3j
-noremap k 3k
+nnoremap <C-r> :source ~/.vimperatorrc<CR>
+nnoremap c :q<CR>
+nnoremap j 3j
+nnoremap k 3k
+nnoremap m :bmarks! 
 
 hi Hint <<EOM
 	background-color: rgb(70, 131, 234);
