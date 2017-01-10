@@ -1,7 +1,6 @@
 set hintchars=asdfghjklweruiocm
 
 nnoremap <C-r> :source ~/.vimperatorrc<CR>
-nnoremap c :q<CR>
 nnoremap j 3j
 nnoremap k 3k
 nnoremap m :bmarks! 
