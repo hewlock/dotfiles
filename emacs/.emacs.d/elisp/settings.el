@@ -17,6 +17,7 @@
 (setq neo-smart-open nil)
 (setq neo-theme 'arrow)
 (setq neo-window-width 40)
+(setq org-agenda-files '("~/SpiderOak Backup/Org"))
 (setq org-log-done t)
 (setq org-startup-folded 'showall)
 (setq projectile-completion-system 'helm)
