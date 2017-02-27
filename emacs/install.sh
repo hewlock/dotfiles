@@ -4,5 +4,5 @@ source functions.sh
 
 header emacs
 link $(pwd)/emacs/.emacs.d ~/.emacs.d
-install "emacs"
+install "emacs --with-cocoa"
 cmd "brew linkapps"
