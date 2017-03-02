@@ -8,7 +8,6 @@
 	helm-projectile
 	neotree
 	org
-	powerline
 	projectile
 	which-key				; keybinding help
 	))
@@ -23,7 +22,6 @@
 (require 'helm-projectile)
 (require 'neotree)
 (require 'org)
-(require 'powerline)
 (require 'projectile)
 (require 'which-key)
 

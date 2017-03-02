@@ -1,5 +1,4 @@
 (defadvice helm-display-mode-line (after undisplay-header activate) (setq header-line-format nil)) ; remove help header
-(load-config "powerline-minimal-vim-theme")
 (load-theme 'solarized t)
 
 (set-face-attribute 'helm-header nil :foreground "black" :background "brightcyan" :weight 'bold)

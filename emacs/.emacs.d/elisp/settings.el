@@ -26,5 +26,8 @@
 
 (electric-indent-mode 1)
 (global-linum-mode t)
+(set-fringe-mode 0)
+(toggle-scroll-bar -1)
+(tool-bar-mode -1)
 
 (if (not (display-graphic-p)) (menu-bar-mode -1))
