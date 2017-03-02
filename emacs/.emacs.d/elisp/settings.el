@@ -23,4 +23,8 @@
 (setq projectile-completion-system 'helm)
 (setq projectile-require-project-root nil)
 (setq projectile-switch-project-action 'neotree-projectile-action)
-(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
+
+(electric-indent-mode 1)
+(global-linum-mode t)
+
+(if (not (display-graphic-p)) (menu-bar-mode -1))
