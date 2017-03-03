@@ -25,7 +25,7 @@
 (setq projectile-switch-project-action 'neotree-projectile-action)
 
 (electric-indent-mode 1)
-(global-linum-mode t)
+(global-linum-mode 0)
 (set-fringe-mode 0)
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
