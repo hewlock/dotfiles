@@ -1,8 +1,12 @@
-(global-set-key (kbd "C-@") 'helm-project-list)
 (define-key evil-insert-state-map (kbd "TAB") 'self-insert-command) ; insert TAB character
 
-(defun leader-bind (sequence action) (define-key evil-normal-state-map (kbd (concat "SPC " sequence)) action))
-(defun leader-help (prefix description) (which-key-add-key-based-replacements (concat "SPC " prefix) description))
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
+
+(defun leader-bind (sequence action)
+	(global-set-key (kbd (concat "C-c " sequence)) action))
+(defun leader-help (prefix description)
+	(which-key-add-key-based-replacements (concat "C-c " prefix) description))
 
 (leader-help "b" "buffer")
 (leader-help "e" "emacs")
@@ -22,14 +26,13 @@
 (leader-bind "b o" 'kill-other-buffers)
 (leader-bind "b s" 'save-buffer)
 (leader-bind "b w" 'read-only-mode)
+(leader-bind "c" 'helm-project-list)
 (leader-bind "e c" 'save-buffers-kill-terminal)
 (leader-bind "e r" 'reload-emacs)
-(leader-bind "e x" 'helm-M-x)
 (leader-bind "f c" 'copy-file)
 (leader-bind "f d" 'delete-current-buffer-file)
 (leader-bind "f f" 'helm-projectile-find-file)
 (leader-bind "f m" 'rename-current-buffer-file)
-(leader-bind "f n" 'find-file)
 (leader-bind "f r" 'helm-projectile-recentf)
 (leader-bind "h F" 'describe-face)
 (leader-bind "h b" 'describe-bindings)

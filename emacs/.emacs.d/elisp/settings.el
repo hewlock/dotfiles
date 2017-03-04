@@ -1,10 +1,11 @@
-(set-default 'truncate-lines t)
+(setq-default truncate-lines t)
+(setq-default indent-tabs-mode t)
+(setq-default default-tab-width 4)
 
 (setq auto-save-interval 20)
 (setq auto-save-timeout 5)
 (setq auto-save-visited-file-name t)
 (setq create-lockfiles nil)
-(setq default-tab-width 4)
 (setq evil-want-C-i-jump nil) ; Enable TAB for org mode
 (setq evil-want-C-u-scroll t)
 (setq frame-background-mode 'dark)
