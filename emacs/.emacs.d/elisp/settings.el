@@ -1,6 +1,7 @@
-(setq-default truncate-lines t)
-(setq-default indent-tabs-mode t)
 (setq-default default-tab-width 4)
+(setq-default indent-tabs-mode t)
+(setq-default scroll-bar-mode nil)
+(setq-default truncate-lines nil)
 
 (setq auto-save-interval 20)
 (setq auto-save-timeout 5)
@@ -26,7 +27,7 @@
 (setq projectile-switch-project-action 'neotree-projectile-action)
 
 (electric-indent-mode 1)
-(global-linum-mode 0)
+(global-linum-mode 1)
 (set-fringe-mode 0)
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
