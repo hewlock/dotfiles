@@ -32,6 +32,7 @@ A-n A-e | show-date "America/New_York"
 A-n A-g | show-date "GMT"
 A-n A-m | show-date "America/Denver"
 A-n A-p | show-date "America/Los_Angeles"
+A-n A-u | show-date "UTC"
 
 A-w A-h | set-active-window-bounds 0 0 50 0
 A-w A-j | set-active-window-bounds 0 50 0 0
