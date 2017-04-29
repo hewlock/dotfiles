@@ -14,9 +14,18 @@ Navigate to the project root and run:
 If brew fails with XCode error this may fix the problem:
 `sudo xcode-select -s /Applications/Xcode.app/Contents/Developer`
 
-
 ## Manual
 
-1. Control-click and open solarized/Solarized Dark.terminal
-2. Open Terminal preferences and make "Solarized Dark" the default profile
-3. Open MacVim; Edit > Font; Change to Roboto Mono
+### Terminal
+
+- Control-click and open solarized/Solarized Dark.terminal
+- Open Terminal preferences and make "Solarized Dark" the default profile
+- Disable: Edit > Marks > Automatically Mark Prompt Lines
+
+### Vim
+
+- :PlugInstall
+
+### MacVim
+
+- Open MacVim; Edit > Font; Change to Roboto Mono

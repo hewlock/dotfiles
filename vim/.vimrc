@@ -13,11 +13,12 @@ set history=1000
 set hlsearch
 set incsearch
 set laststatus=2
-set listchars=trail:•,tab:»-
+set listchars=tab:→\ ,eol:↩︎,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 set nobackup
 set noruler
 set number
 set shiftwidth=4
+set showbreak=↪\
 set t_Co=16
 set tabstop=4
 set undolevels=1000
