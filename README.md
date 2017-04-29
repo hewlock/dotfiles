@@ -1,3 +1,7 @@
+# TODO:
+
+- Update readme with new install/remove steps
+
 # Installation
 
 ## Pre-setup

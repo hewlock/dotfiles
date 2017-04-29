@@ -3,4 +3,9 @@
 source functions.sh
 
 header vimperator
-link $(pwd)/vimperator/.vimperatorrc ~/.vimperatorrc
+
+if [ "$1" = "install" ]; then
+	link $(pwd)/vimperator/.vimperatorrc ~/.vimperatorrc
+else
+	unlink ~/.vimperatorrc
+fi

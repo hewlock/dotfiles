@@ -3,4 +3,9 @@
 source functions.sh
 
 header apollo
-link $(pwd)/apollo/.apollo ~/.apollo
+
+if [ "$1" = "install" ]; then
+	link $(pwd)/apollo/.apollo ~/.apollo
+else
+	unlink ~/.apollo
+fi
