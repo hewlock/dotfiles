@@ -1,3 +1,12 @@
+# TODO
+
+- rename fonts to library and move fonts to library/Library/Fonts
+- remove global fonts `rm /Library/Fonts/Roboto*`
+- convert remaining install scripts
+- remove execute script and functions script
+- cleanup readme
+- install firefox from cask?
+
 # Install
 
 ## Pre-setup
@@ -18,7 +27,7 @@ If brew fails with XCode error this may fix the problem:
 
 ### Terminal
 
-- Control-click and open solarized/Solarized Dark.terminal
+- Control-click and open terminal/Solarized Dark.terminal
 - Open Terminal preferences and make "Solarized Dark" the default profile
 - Disable: Edit > Marks > Automatically Mark Prompt Lines
 

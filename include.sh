@@ -1,8 +1,3 @@
-function header {
-	echo ""
-	echo "[\033[0;32mPROCESS\033[0m] $1"
-}
-
 function info {
 	echo "[\033[0;32mINFO\033[0m] $1"
 }
@@ -36,13 +31,10 @@ function unlinkapps {
 	cmd "brew unlinkapps $1"
 }
 
-function unlink {
-	cmd "rm $1"
+function link {
+	cmd "stow -v $1"
 }
 
-function link {
-	if [ -e $2 ]; then
-		unlink $2
-	fi
-	cmd "ln -s $1 $2"
+function unlink {
+	cmd "stow -vD $1"
 }
