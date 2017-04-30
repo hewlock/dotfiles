@@ -4,7 +4,6 @@ source include.sh
 
 # sorted order
 #sh emacs/install.sh remove
-#sh fonts/install.sh remove
 #sh git/install.sh remove
 #sh powerline/install.sh remove
 unlink apollo
@@ -26,3 +25,5 @@ uninstall tree
 # required order
 #sh bash/install.sh remove
 #sh homebrew/install.sh remove
+
+fontuninstall roboto/roboto-mono.txt

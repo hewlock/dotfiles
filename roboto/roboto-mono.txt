@@ -1,0 +1,11 @@
+https://raw.githubusercontent.com/powerline/fonts/master/RobotoMono/
+Roboto Mono Bold Italic for Powerline.ttf
+Roboto Mono Bold for Powerline.ttf
+Roboto Mono Italic for Powerline.ttf
+Roboto Mono Light Italic for Powerline.ttf
+Roboto Mono Light for Powerline.ttf
+Roboto Mono Medium Italic for Powerline.ttf
+Roboto Mono Medium for Powerline.ttf
+Roboto Mono Thin Italic for Powerline.ttf
+Roboto Mono Thin for Powerline.ttf
+Roboto Mono for Powerline.ttf

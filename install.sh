@@ -19,10 +19,11 @@ linkapps macvim
 
 # sorted order
 #sh emacs/install.sh install
-#sh fonts/install.sh install
 #sh git/install.sh install
 #sh powerline/install.sh install
 link apollo
 link tmux
 link vim
 link vimperator
+
+fontinstall roboto/roboto-mono.txt

@@ -1,6 +1,5 @@
 # TODO
 
-- rename fonts to library and move fonts to library/Library/Fonts
 - remove global fonts `rm /Library/Fonts/Roboto*`
 - convert remaining install scripts
 - remove execute script and functions script

@@ -38,3 +38,22 @@ function link {
 function unlink {
 	cmd "stow -vD $1"
 }
+
+function fontinstall {
+	URL=$(head -n 1 "$1")
+	tail -n +2 "$1" | while read FONT; do
+		info "$FONT"
+		pushd ~/Library/Fonts > /dev/null
+		curl -o "$FONT" $URL${FONT//" "/"%20"}
+		popd > /dev/null
+	done
+}
+
+function fontuninstall {
+	tail -n +2 "$1" | while read FONT; do
+		info "$FONT"
+		pushd ~/Library/Fonts > /dev/null
+		rm "$FONT"
+		popd > /dev/null
+	done
+}
