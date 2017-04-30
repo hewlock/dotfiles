@@ -6,22 +6,29 @@ source include.sh
 #sh homebrew/install.sh install
 #sh bash/install.sh install
 
-install "macvim --with-override-system-vim"
 install ack
+install "emacs --with-cocoa"
 install fortune
+install git
+install "macvim --with-override-system-vim"
+install python
 install stow
 install tmux
 install tree
 
+linkapps emacs
 linkapps macvim
+
+cmd "pip install --upgrade pip"
+cmd "pip install powerline-status"
 
 #caskinstall java
 
 # sorted order
-#sh emacs/install.sh install
-#sh git/install.sh install
-#sh powerline/install.sh install
 link apollo
+link emacs
+link git
+link powerline
 link tmux
 link vim
 link vimperator

@@ -3,19 +3,23 @@
 source include.sh
 
 # sorted order
-#sh emacs/install.sh remove
-#sh git/install.sh remove
-#sh powerline/install.sh remove
 unlink apollo
+unlink emacs
+unlink git
+unlink powerline
 unlink tmux
 unlink vim
 unlink vimperator
 
+unlinkapps emacs
 unlinkapps macvim
 
 uninstall ack
+uninstall emacs
 uninstall fortune
+uninstall git
 uninstall macvim
+uninstall python
 uninstall stow
 uninstall tmux
 uninstall tree
