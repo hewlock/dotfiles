@@ -2,9 +2,8 @@
 
 source include.sh
 
-# required order
-#sh homebrew/install.sh install
-#sh bash/install.sh install
+info homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 install ack
 install "emacs --with-cocoa"
@@ -16,16 +15,16 @@ install stow
 install tmux
 install tree
 
-linkapps emacs
-linkapps macvim
+caskinstall java
 
 cmd "pip install --upgrade pip"
 cmd "pip install powerline-status"
 
-#caskinstall java
+linkapps emacs
+linkapps macvim
 
-# sorted order
 link apollo
+link bash
 link emacs
 link git
 link powerline

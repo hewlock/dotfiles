@@ -4,6 +4,7 @@ source include.sh
 
 # sorted order
 unlink apollo
+unlink bash
 unlink emacs
 unlink git
 unlink powerline
@@ -13,6 +14,8 @@ unlink vimperator
 
 unlinkapps emacs
 unlinkapps macvim
+
+caskuninstall java
 
 uninstall ack
 uninstall emacs
@@ -24,10 +27,7 @@ uninstall stow
 uninstall tmux
 uninstall tree
 
-#caskuninstall java
-
-# required order
-#sh bash/install.sh remove
-#sh homebrew/install.sh remove
+info homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
 
 fontuninstall roboto/roboto-mono.txt

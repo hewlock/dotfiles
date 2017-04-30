@@ -1,11 +1,3 @@
-# TODO
-
-- remove global fonts `rm /Library/Fonts/Roboto*`
-- convert remaining install scripts
-- remove execute script and functions script
-- cleanup readme
-- install firefox from cask?
-
 # Install
 
 ## Pre-setup
@@ -17,7 +9,7 @@
 
 Navigate to the project root and run:
 
-`sh execute.sh install`
+`sh install.sh`
 
 If brew fails with XCode error this may fix the problem:
 `sudo xcode-select -s /Applications/Xcode.app/Contents/Developer`
@@ -40,4 +32,4 @@ If brew fails with XCode error this may fix the problem:
 
 # Uninstall
 
-`sh execute.sh remove`
+`sh uninstall.sh`

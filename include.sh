@@ -44,7 +44,7 @@ function fontinstall {
 	tail -n +2 "$1" | while read FONT; do
 		info "$FONT"
 		pushd ~/Library/Fonts > /dev/null
-		curl -o "$FONT" $URL${FONT//" "/"%20"}
+		curl -# -o "$FONT" $URL${FONT//" "/"%20"}
 		popd > /dev/null
 	done
 }
