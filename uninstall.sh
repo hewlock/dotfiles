@@ -2,7 +2,6 @@
 
 source include.sh
 
-# sorted order
 unlink apollo
 unlink bash
 unlink emacs
