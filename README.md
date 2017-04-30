@@ -1,8 +1,4 @@
-# TODO:
-
-- Update readme with new install/remove steps
-
-# Installation
+# Install
 
 ## Pre-setup
 
@@ -13,7 +9,7 @@
 
 Navigate to the project root and run:
 
-`sh install.sh`
+`sh execute.sh install`
 
 If brew fails with XCode error this may fix the problem:
 `sudo xcode-select -s /Applications/Xcode.app/Contents/Developer`
@@ -33,3 +29,7 @@ If brew fails with XCode error this may fix the problem:
 ### MacVim
 
 - Open MacVim; Edit > Font; Change to Roboto Mono
+
+# Uninstall
+
+`sh execute.sh remove`

@@ -1,7 +1,6 @@
 function header {
 	echo ""
-	echo ""
-	echo "[\033[0;32mINSTALL\033[0m] $1"
+	echo "[\033[0;32mPROCESS\033[0m] $1"
 }
 
 function info {
