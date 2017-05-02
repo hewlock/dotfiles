@@ -21,6 +21,7 @@ uninstall emacs
 uninstall fortune
 uninstall git
 uninstall macvim
+uninstall node
 uninstall python
 uninstall stow
 uninstall tmux

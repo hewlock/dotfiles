@@ -10,6 +10,7 @@ install "emacs --with-cocoa"
 install fortune
 install git
 install "macvim --with-override-system-vim"
+install node
 install python
 install stow
 install tmux
