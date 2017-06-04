@@ -2,7 +2,6 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
 (setq package-list '(
-	color-theme-solarized
 	evil
 	helm
 	helm-projectile

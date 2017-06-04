@@ -1,5 +1,3 @@
-(setq-default default-tab-width 4)
-(setq-default indent-tabs-mode t)
 (setq-default scroll-bar-mode nil)
 
 (setq auto-save-interval 20)
@@ -8,7 +6,6 @@
 (setq create-lockfiles nil)
 (setq evil-want-C-i-jump nil) ; Enable TAB for org mode
 (setq evil-want-C-u-scroll t)
-(setq frame-background-mode 'dark)
 (setq helm-completion-in-region-fuzzy-match t)
 (setq helm-mode-fuzzy-match t)
 (setq helm-split-window-in-side-p t)
@@ -18,7 +15,7 @@
 (setq neo-smart-open nil)
 (setq neo-theme 'arrow)
 (setq neo-window-width 40)
-(setq org-agenda-files '("~/SpiderOak Backup/Org"))
+(setq org-agenda-files '("~/Downloads"))
 (setq org-log-done t)
 (setq org-startup-folded 'showall)
 (setq projectile-completion-system 'helm)
@@ -27,7 +24,6 @@
 (setq truncate-lines nil)
 
 (electric-indent-mode 1)
-(global-linum-mode 1)
 (set-fringe-mode 0)
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
