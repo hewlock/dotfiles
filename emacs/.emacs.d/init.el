@@ -5,7 +5,6 @@
 
 (load-config "settings")
 (load-config "package")
-(load-config "theme")
 (load-config "util")
 (load-config "keys")
 (load-config "custom")

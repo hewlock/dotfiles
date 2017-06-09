@@ -26,3 +26,5 @@
 (tool-bar-mode -1)
 
 (if (not (display-graphic-p)) (menu-bar-mode -1))
+
+(defadvice helm-display-mode-line (after undisplay-header activate) (setq header-line-format nil)) ; remove help header
