@@ -1,10 +1,12 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
+;; If anything is not found `M-x package-refresh-contents`
 (setq package-list '(
 	evil
 	helm
 	helm-projectile
+	markdown-mode
 	neotree
 	org
 	projectile
