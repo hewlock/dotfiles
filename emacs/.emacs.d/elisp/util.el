@@ -63,3 +63,22 @@
 					(set-buffer-modified-p nil)
 					(message "File '%s' successfully renamed to '%s'"
 						 name (file-name-nondirectory new-name)))))))
+
+(defun archive-current-org-buffer-file ()
+  "Archive current buffer and file it is visiting."
+  (interactive)
+  (let ((file-name (buffer-file-name))
+		(file-list (split-string (buffer-file-name) "/")))
+	  (if (y-or-n-p (concat "Archive " file-name "?"))
+		(let ((parent-list (last file-list 2)))
+			(let ((file-node (cdr parent-list)))
+			(let ((new-file-name (format "%s %s [%s].org"
+					(shell-command-to-string "echo -n $(date +%Y-%m-%d)")
+					(file-name-sans-extension (car file-node))
+					(car parent-list))))
+				(setcar parent-list "archive")
+				(setcar file-node new-file-name)
+				(let ((new-file-name (mapconcat 'identity file-list "/")))
+				(rename-file file-name new-file-name 1)
+				(rename-buffer new-file-name)
+				(message "Archived to '%s'" new-file-name))))))))
