@@ -82,3 +82,12 @@
 				(rename-file file-name new-file-name 1)
 				(rename-buffer new-file-name)
 				(message "Archived to '%s'" new-file-name))))))))
+
+(defun org-skip-subtree-if-priority (priority)
+  "Skip an agenda subtree if it has a priority of PRIORITY. PRIORITY may be one of the characters ?A, ?B, or ?C."
+  (let ((subtree-end (save-excursion (org-end-of-subtree t)))
+        (pri-value (* 1000 (- org-lowest-priority priority)))
+        (pri-current (org-get-priority (thing-at-point 'line t))))
+    (if (= pri-value pri-current)
+        subtree-end
+      nil)))
