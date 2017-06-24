@@ -7,20 +7,34 @@
  '(custom-enabled-themes (quote (solarized-light)))
  '(custom-safe-themes
    (quote
-	("fa23d36b3dcbe49185311f434ea872f34b3b7e05c456ad09713433f06b0ab197" default)))
+	("25fea52c69286a903282f99007e8af6473528d4c4f7aca20a4aecd4c7e9c58e1" "fa23d36b3dcbe49185311f434ea872f34b3b7e05c456ad09713433f06b0ab197" default)))
  '(custom-theme-directory "~/.emacs.d/themes/")
  '(org-agenda-custom-commands
-   (quote (("o" "Today View"
-			((tags "CATEGORY=\"inbox\""
-				   ((org-agenda-overriding-header "Inbox")))
-			 (tags "PRIORITY=\"A\""
-				   ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-					(org-agenda-overriding-header "Priority A")))
-			 (agenda "")
-			 (alltodo ""
-					 ((org-agenda-skip-function
-					   '(or (org-skip-subtree-if-priority ?A)
-							(org-agenda-skip-if nil '(scheduled deadline)))))))))))
+   (quote
+	(("o" "Today View"
+	  ((tags "CATEGORY=\"inbox\""
+			 ((org-agenda-skip-function
+			   (quote
+				(org-agenda-skip-entry-if
+				 (quote todo)
+				 (quote done))))
+			  (org-agenda-overriding-header "Inbox")))
+	   (tags "PRIORITY=\"A\""
+			 ((org-agenda-skip-function
+			   (quote
+				(org-agenda-skip-entry-if
+				 (quote todo)
+				 (quote done))))
+			  (org-agenda-overriding-header "Priority A")))
+	   (agenda "")
+	   (alltodo ""
+				((org-agenda-skip-function
+				  (quote
+				   (or
+					(org-skip-subtree-if-priority 65)
+					(org-agenda-skip-if nil
+										(quote
+										 (scheduled deadline)))))))))))))
  '(org-agenda-files
    (quote
 	("~/SpiderOak Hive/Inbox" "~/SpiderOak Hive/GTD/10k Maintenance" "~/SpiderOak Hive/GTD/20k Projects" "~/SpiderOak Hive/GTD/30k Goals" "~/SpiderOak Hive/GTD/40k Vision" "~/SpiderOak Hive/GTD/50k Purpose" "~/SpiderOak Hive/GTD/Actions")))
@@ -34,6 +48,10 @@
 	 (gnus . org-gnus-no-new-news)
 	 (file . find-file)
 	 (wl . wl))))
+ '(org-refile-targets
+   (quote
+	((org-agenda-files :maxlevel . 1)
+	 (nil :maxlevel . 1))))
  '(org-startup-folded (quote showall))
  '(org-todo-keyword-faces (quote (("WAITING" . "#cb4b16") ("SOMEDAY" . "#cb4b16"))))
  '(org-todo-keywords

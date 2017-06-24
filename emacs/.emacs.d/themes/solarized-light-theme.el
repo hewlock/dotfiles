@@ -75,7 +75,8 @@
  '(neo-file-link-face ((t nil)))
  '(custom-variable-tag ((t (:foreground "#268bd2" :weight bold))))
  '(neo-header-face ((t (:foreground "#b58900"))))
+ '(org-code ((t (:background "#eee8d5" :family "monospace"))))
  '(default ((t (:inherit nil :stipple nil :background "#fdf6e3" :foreground "#657b83" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "nil" :family "Roboto Mono for Powerline"))))
- '(org-code ((t (:background "#eee8d5" :family "monospace")))))
+ '(org-priority ((t (:inherit org-todo)))))
 
 (provide-theme 'solarized-light)
