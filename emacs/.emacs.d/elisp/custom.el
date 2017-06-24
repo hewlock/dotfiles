@@ -11,11 +11,13 @@
  '(custom-theme-directory "~/.emacs.d/themes/")
  '(org-agenda-custom-commands
    (quote (("o" "Today View"
-			((tags "PRIORITY=\"A\""
+			((tags "CATEGORY=\"inbox\""
+				   ((org-agenda-overriding-header "Inbox")))
+			 (tags "PRIORITY=\"A\""
 				   ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-					(org-agenda-overriding-header "High-priority")))
-			(agenda "")
-			(alltodo ""
+					(org-agenda-overriding-header "Priority A")))
+			 (agenda "")
+			 (alltodo ""
 					 ((org-agenda-skip-function
 					   '(or (org-skip-subtree-if-priority ?A)
 							(org-agenda-skip-if nil '(scheduled deadline)))))))))))
