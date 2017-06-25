@@ -9,7 +9,6 @@ unlink git
 unlink powerline
 unlink tmux
 unlink vim
-unlink vimperator
 
 unlinkapps emacs
 unlinkapps macvim

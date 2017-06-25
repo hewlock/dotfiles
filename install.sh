@@ -31,6 +31,5 @@ link git
 link powerline
 link tmux
 link vim
-link vimperator
 
 fontinstall roboto/roboto-mono.txt
