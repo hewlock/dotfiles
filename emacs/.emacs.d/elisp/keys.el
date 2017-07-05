@@ -44,6 +44,7 @@
 (leader-bind "h m" 'describe-mode)
 (leader-bind "h s" 'describe-symbol)
 (leader-bind "h v" 'describe-variable)
+(leader-bind "i v" 'visual-line-mode)
 (leader-bind "i w" 'whitespace-mode)
 (leader-bind "j d" 'find-function)
 (leader-bind "j i" 'open-init-el)
