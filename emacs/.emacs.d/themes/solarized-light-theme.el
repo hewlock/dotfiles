@@ -1,5 +1,5 @@
 (deftheme solarized-light
-  "Solarized Light Theme")
+  "Created 2017-07-11.")
 
 (custom-theme-set-faces
  'solarized-light
@@ -76,7 +76,11 @@
  '(custom-variable-tag ((t (:foreground "#268bd2" :weight bold))))
  '(neo-header-face ((t (:foreground "#b58900"))))
  '(org-code ((t (:background "#eee8d5" :family "monospace"))))
+ '(org-priority ((t (:inherit org-todo))))
+ '(helm-buffer-not-saved ((t (:foreground "#dc322f"))))
+ '(helm-buffer-process ((t (:foreground "#cb4b16"))))
  '(default ((t (:inherit nil :stipple nil :background "#fdf6e3" :foreground "#657b83" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "nil" :family "Roboto Mono for Powerline"))))
- '(org-priority ((t (:inherit org-todo)))))
+ '(helm-M-x-key ((t (:inherit link))))
+ '(helm-prefarg ((t (:foreground "#dc322f")))))
 
 (provide-theme 'solarized-light)

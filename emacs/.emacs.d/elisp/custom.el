@@ -7,7 +7,7 @@
  '(custom-enabled-themes (quote (solarized-light)))
  '(custom-safe-themes
    (quote
-	("25fea52c69286a903282f99007e8af6473528d4c4f7aca20a4aecd4c7e9c58e1" "fa23d36b3dcbe49185311f434ea872f34b3b7e05c456ad09713433f06b0ab197" default)))
+	("33b5bb1c3e6001a7d0d44acf4be7d1b0f992feb1aec59f26fef5272b3c410c67" default)))
  '(custom-theme-directory "~/.emacs.d/themes/")
  '(org-agenda-custom-commands
    (quote
