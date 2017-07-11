@@ -7,8 +7,9 @@
  '(custom-enabled-themes (quote (solarized-light)))
  '(custom-safe-themes
    (quote
-	("33b5bb1c3e6001a7d0d44acf4be7d1b0f992feb1aec59f26fef5272b3c410c67" default)))
+	("25ea96db3451d70537b92ddc1815d19bf93b9a76ae1bf9905ff6224cc78953b7" "5ab8a6f2e4c7028203692da709ed167ed853e624870044bbe31a2475461c9011" "33b5bb1c3e6001a7d0d44acf4be7d1b0f992feb1aec59f26fef5272b3c410c67" default)))
  '(custom-theme-directory "~/.emacs.d/themes/")
+ '(fill-column 80)
  '(org-agenda-custom-commands
    (quote
 	(("o" "Today View"
