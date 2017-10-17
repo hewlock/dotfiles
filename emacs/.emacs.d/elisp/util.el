@@ -27,6 +27,16 @@
 	(interactive)
 	(load-file "~/.emacs.d/init.el"))
 
+(defun light-theme ()
+	(interactive)
+	(setq frame-background-mode 'light)
+	(reload-emacs))
+
+(defun dark-theme ()
+	(interactive)
+	(setq frame-background-mode 'dark)
+	(reload-emacs))
+
 (defun kill-other-buffers ()
 	"Kill all other buffers."
 	(interactive)

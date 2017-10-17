@@ -31,6 +31,8 @@
 (leader-bind "c" 'helm-project-list)
 (leader-bind "e c" 'save-buffers-kill-terminal)
 (leader-bind "e r" 'reload-emacs)
+(leader-bind "e l" 'light-theme)
+(leader-bind "e d" 'dark-theme)
 (leader-bind "f c" 'copy-file)
 (leader-bind "f d" 'delete-current-buffer-file)
 (leader-bind "f f" 'helm-projectile-find-file)
