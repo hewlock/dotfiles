@@ -45,6 +45,7 @@
 (leader-bind "h s" 'describe-symbol)
 (leader-bind "h v" 'describe-variable)
 (leader-bind "i c" 'whitespace-cleanup)
+(leader-bind "i l" 'linum-mode)
 (leader-bind "i v" 'visual-line-mode)
 (leader-bind "i w" 'whitespace-mode)
 (leader-bind "j d" 'find-function)
