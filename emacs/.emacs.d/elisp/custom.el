@@ -7,7 +7,7 @@
  '(custom-enabled-themes (quote (solarized)))
  '(custom-safe-themes
    (quote
-    ("9ab4296781ee31b9ae1c872bfdac64b5b071fcffaef3a120724174e17b6b3313" default)))
+    ("6eeebe8e7af9194749a073b6faf8e21cf0f7e3fa45e8c4c18d97ddae6f95a1bf" "9ab4296781ee31b9ae1c872bfdac64b5b071fcffaef3a120724174e17b6b3313" default)))
  '(custom-theme-directory "~/.emacs.d/themes/")
  '(fill-column 80)
  '(indent-tabs-mode nil)
