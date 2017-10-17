@@ -4,7 +4,7 @@ export PATH="/usr/local/bin:$PATH"
 # prevent tmux 2.2 errors from displaying
 export EVENT_NOKQUEUE=1
 
-alias emacs='emacs --no-window-system'
+alias emacs='TERM=xterm-16color emacs --no-window-system'
 alias la='ls -AGh'
 alias ll='ls -AGhl'
 alias ls='ls -Gh'
