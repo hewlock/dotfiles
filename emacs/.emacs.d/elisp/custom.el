@@ -7,7 +7,7 @@
  '(custom-enabled-themes (quote (solarized-light)))
  '(custom-safe-themes
    (quote
-    ("b661d35ff8a101077019f138ad17db3b8c84d0cbf1d3c1145fe64dadd071a136" "25ea96db3451d70537b92ddc1815d19bf93b9a76ae1bf9905ff6224cc78953b7" "5ab8a6f2e4c7028203692da709ed167ed853e624870044bbe31a2475461c9011" "33b5bb1c3e6001a7d0d44acf4be7d1b0f992feb1aec59f26fef5272b3c410c67" default)))
+    ("07bb2e5a495a3faae56aba444ed1514131e9d43ffab03c17e0787acd68155692" default)))
  '(custom-theme-directory "~/.emacs.d/themes/")
  '(fill-column 80)
  '(indent-tabs-mode nil)

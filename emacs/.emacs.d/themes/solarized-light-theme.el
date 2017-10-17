@@ -86,6 +86,8 @@
  '(whitespace-trailing ((t (:inherit font-lock-warning-face))))
  '(whitespace-space ((t (:inherit font-lock-comment-face))))
  '(whitespace-newline ((t (:inherit whitespace-space))))
+ '(linum ((t (:background "#eee8d5" :foreground "#93a1a1"))))
+ '(sh-quoted-exec ((default (:inherit (font-lock-function-name-face)))))
  '(default ((t (:inherit nil :stipple nil :background "#fdf6e3" :foreground "#657b83" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "nil" :family "Roboto Mono for Powerline"))))
  '(whitespace-space-after-tab ((t (:inherit whitespace-line))))
  '(whitespace-space-before-tab ((t (:inherit whitespace-line)))))
