@@ -27,15 +27,22 @@
 	(interactive)
 	(load-file "~/.emacs.d/init.el"))
 
-(defun light-theme ()
+(defun toggle-theme ()
+	"Toggle between light and dark theme"
 	(interactive)
-	(setq frame-background-mode 'light)
-	(reload-emacs))
+    (if (eq frame-background-mode 'dark) (light-theme) (dark-theme)))
+
+(defun light-theme ()
+	"Switch to light theme"
+	(interactive)
+    (customize-set-variable 'frame-background-mode 'light)
+    (load-theme 'solarized t))
 
 (defun dark-theme ()
+	"Switch to dark theme"
 	(interactive)
-	(setq frame-background-mode 'dark)
-	(reload-emacs))
+    (customize-set-variable 'frame-background-mode 'dark)
+    (load-theme 'solarized t))
 
 (defun kill-other-buffers ()
 	"Kill all other buffers."
