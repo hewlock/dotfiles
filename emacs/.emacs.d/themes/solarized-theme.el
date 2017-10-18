@@ -120,7 +120,7 @@
  '(linum ((t (:inherit (solarized-base2-bg solarized-base1-fg)))))
  '(match ((t (:inherit (solarized-cyan-bg solarized-base1-fg)))))
  '(minibuffer-prompt ((t (:inherit solarized-blue-fg))))
- '(mode-line ((((class color) (min-colors 88)) (:inherit (solarized-base2-bg solarized-base1-box))) (t (:inherit solarized-base2-bg))))
+ '(mode-line ((((class color) (min-colors 88)) (:inherit (solarized-base2-bg solarized-base1-box))) (t (:inherit (solarized-base01-fg solarized-base2-bg)))))
  '(mode-line-buffer-id ((t (:weight bold))))
  '(mode-line-emphasis ((t (:weight bold))))
  '(mode-line-highlight ((t (:underline t))))
