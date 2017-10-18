@@ -25,12 +25,6 @@
     (((background dark)) (:foreground "brightyellow"))
     (t (:foreground "brightblue")))
   "Underline: Base0 in light mode; Base00 in dark mode")
-(defface solarized-base1-fg
-  '((((background dark) (class color) (min-colors 88)) (:foreground "#586e75"))
-    (((background light) (class color) (min-colors 88)) (:foreground "#93a1a1"))
-    (((background dark)) (:foreground "brightgreen"))
-    (t (:foreground "brightcyan")))
-  "Foreground: Base1 in light mode; Base01 in dark mode")
 (defface solarized-base1-bg
   '((((background dark) (class color) (min-colors 88)) (:background "#586e75"))
     (((background light) (class color) (min-colors 88)) (:background "#93a1a1"))
@@ -41,12 +35,24 @@
   '((((background dark) (class color) (min-colors 88)) (:box (:line-width 1 :color "#586e75")))
     (((background light) (class color) (min-colors 88)) (:box (:line-width 1 :color "#93a1a1"))))
   "Box: Base1 in light mode; Base01 in dark mode")
+(defface solarized-base1-fg
+  '((((background dark) (class color) (min-colors 88)) (:foreground "#586e75"))
+    (((background light) (class color) (min-colors 88)) (:foreground "#93a1a1"))
+    (((background dark)) (:foreground "brightgreen"))
+    (t (:foreground "brightcyan")))
+  "Foreground: Base1 in light mode; Base01 in dark mode")
 (defface solarized-base2-bg
   '((((background dark) (class color) (min-colors 88)) (:background "#073642"))
     (((background light) (class color) (min-colors 88)) (:background "#eee8d5"))
     (((background dark)) (:background "black"))
     (t (:background "white")))
   "Background: Base2 in light mode; Base02 in dark mode")
+(defface solarized-base2-fg
+  '((((background dark) (class color) (min-colors 88)) (:foreground "#073642"))
+    (((background light) (class color) (min-colors 88)) (:foreground "#eee8d5"))
+    (((background dark)) (:foreground "black"))
+    (t (:foreground "white")))
+  "Foreground: Base2 in light mode; Base02 in dark mode")
 (defface solarized-base3-bg
   '((((background dark) (class color) (min-colors 88)) (:background "#002b36"))
     (((background light) (class color) (min-colors 88)) (:background "#fdf6e3"))
@@ -156,6 +162,7 @@
  '(tooltip ((t (:inherit (solarized-base2-bg solarized-base01-fg)))))
  '(trailing-whitespace ((t (:inherit (solarized-red-bg solarized-base3-fg)))))
  '(variable-pitch ((t (:family "Sans Serif"))))
+ '(vertical-border ((((class color) (min-colors 88)) (:inherit (solarized-base3-bg mode-line))) (t (:inherit (solarized-base2-fg solarized-base2-bg)))))
  '(warning ((t (:inherit solarized-red-fg :weight bold))))
  '(whitespace-indentation ((t (:inherit whitespace-line))))
  '(whitespace-line ((t (:inherit highlight))))
