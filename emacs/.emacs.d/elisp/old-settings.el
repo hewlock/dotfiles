@@ -1,11 +1,5 @@
 (setq-default scroll-bar-mode nil)
 
-(setq auto-save-interval 20)
-(setq auto-save-timeout 5)
-(setq auto-save-visited-file-name t)
-(setq create-lockfiles nil)
-(setq evil-want-C-i-jump nil) ; Enable TAB for org mode
-(setq evil-want-C-u-scroll t)
 (setq helm-completion-in-region-fuzzy-match t)
 (setq helm-mode-fuzzy-match t)
 (setq helm-split-window-in-side-p t)
