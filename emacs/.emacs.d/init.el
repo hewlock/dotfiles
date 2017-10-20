@@ -16,9 +16,13 @@
 (defun config-file (name) (concat "~/.emacs.d/elisp/" name ".el"))
 (defun load-config (name) (load-file (config-file name)))
 
+;; dependencies
 (load-config "emacs")
+(load-config "projectile")
 
+;; sorted
 (load-config "evil")
+(load-config "neotree")
 (load-config "which-key")
 
 ;; (load-config "settings")

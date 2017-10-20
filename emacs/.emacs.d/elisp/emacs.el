@@ -1,10 +1,11 @@
-(setq-default cursor-in-non-selected-windows nil)
-(setq-default fill-column 80)
-(setq-default indent-tabs-mode nil)
-(setq-default linum-format "%3d ")
-(setq-default make-backup-files nil)
 (setq-default scroll-bar-mode nil)
-(setq-default truncate-lines nil)
+
+(setq cursor-in-non-selected-windows nil)
+(setq fill-column 80)
+(setq indent-tabs-mode nil)
+(setq linum-format "%3d ")
+(setq make-backup-files nil)
+(setq truncate-lines nil)
 
 (electric-indent-mode 1)
 (set-fringe-mode 0)
