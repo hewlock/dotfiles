@@ -8,13 +8,6 @@
 	(helm :sources '(helm-source-buffers-list
 					 helm-source-projectile-files-list)))
 
-(defun neotree-toggle-project ()
-	"Toggle show the NeoTree window."
-	(interactive)
-	(if (neo-global--window-exists-p)
-		(neotree-hide)
-		(neotree-dir (projectile-project-root))))
-
 (defun open-init-el ()
 	(interactive)
 	(find-file "~/.emacs.d/init.el"))

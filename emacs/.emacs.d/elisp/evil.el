@@ -1,5 +1,9 @@
 (use-package evil
   :ensure t
+  :demand
+  :bind (
+    :map evil-insert-state-map
+      ("TAB" . self-insert-command))
   :diminish 'undo-tree-mode
   :init (progn
     (setq evil-want-C-i-jump nil) ; Enable TAB for org mode

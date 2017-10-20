@@ -1,5 +1,3 @@
-(define-key evil-insert-state-map (kbd "TAB") 'self-insert-command) ; insert TAB character
-
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 
@@ -60,11 +58,6 @@
 (leader-bind "o o" 'org-agenda)
 (leader-bind "q q" 'helm-execute-kmacro)
 (leader-bind "s a" 'helm-projectile-ack)
-(leader-bind "t f" 'neotree-find)
-(leader-bind "t h" 'neotree-hidden-file-toggle)
-(leader-bind "t r" 'neotree-refresh)
-(leader-bind "t s" 'neotree-stretch-toggle)
-(leader-bind "t t" 'neotree-toggle-project)
 (leader-bind "y y" 'helm-show-kill-ring)
 
 (define-key org-mode-map (kbd "M-H") 'org-shiftmetaleft)
@@ -75,13 +68,3 @@
 (define-key org-mode-map (kbd "M-j") 'org-metadown)
 (define-key org-mode-map (kbd "M-k") 'org-metaup)
 (define-key org-mode-map (kbd "M-l") 'org-metaright)
-
-(add-hook 'neotree-mode-hook
-    (lambda ()
-        (define-key evil-normal-state-local-map (kbd "c") 'neotree-copy-node)
-        (define-key evil-normal-state-local-map (kbd "d") 'neotree-delete-node)
-        (define-key evil-normal-state-local-map (kbd "m") 'neotree-rename-node)
-        (define-key evil-normal-state-local-map (kbd "n") 'neotree-create-node)
-        (define-key evil-normal-state-local-map (kbd "o") 'neotree-enter)
-        (define-key evil-normal-state-local-map (kbd "O") 'neotree-change-root)
-    ))
