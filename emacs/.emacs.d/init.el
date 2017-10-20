@@ -26,11 +26,5 @@
 (load-config "org")
 (load-config "which-key")
 
-;; (load-config "settings")
-;; (load-config "package")
-;; (load-config "util")
-;; (load-config "keys")
-;; (load-config "custom")
-
 (setq custom-file (config-file "custom"))
 (load custom-file)
