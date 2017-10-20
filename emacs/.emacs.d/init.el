@@ -23,6 +23,7 @@
 
 ;; sorted
 (load-config "neotree")
+(load-config "org")
 (load-config "which-key")
 
 ;; (load-config "settings")
