@@ -30,7 +30,6 @@
 (global-set-key (kbd "C-c i l") 'linum-mode)
 (global-set-key (kbd "C-c i t") 'toggle-truncate-lines)
 (global-set-key (kbd "C-c i v") 'visual-line-mode)
-(global-set-key (kbd "C-c i w") 'whitespace-mode)
 (global-set-key (kbd "C-c r r") 'indent-region)
 (global-set-key (kbd "C-c r w") 'whitespace-cleanup)
 

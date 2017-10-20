@@ -25,6 +25,7 @@
 (load-config "neotree")
 (load-config "org")
 (load-config "which-key")
+(load-config "whitespace")
 
 (setq custom-file (config-file "custom"))
 (load custom-file)
