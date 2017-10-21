@@ -23,6 +23,7 @@ uninstall macvim
 uninstall node
 uninstall python
 uninstall stow
+uninstall the_silver_searcher
 uninstall tmux
 uninstall tree
 

@@ -13,6 +13,7 @@ install "macvim --with-override-system-vim"
 install node
 install python
 install stow
+install the_silver_searcher
 install tmux
 install tree
 
