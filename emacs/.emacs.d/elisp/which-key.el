@@ -1,5 +1,6 @@
 (use-package which-key
   :ensure t 
+  :demand
   :diminish 'which-key-mode
   :bind (("C-c h w" . which-key-show-top-level))
   :init

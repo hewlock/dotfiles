@@ -1,6 +1,8 @@
 (use-package org
   :ensure t
-  :bind (("C-c o o" . org-agenda)
+  :bind (("C-c o h" . org-html-export-as-html)
+         ("C-c o o" . org-agenda)
+         ("C-c o t" . org-table-align)
          :map org-mode-map
          ("M-H" . org-shiftmetaleft)
          ("M-J" . org-shiftmetadown)
@@ -11,4 +13,6 @@
          ("M-k" . org-metaup)
          ("M-l" . org-metaright))
   :init
+  (setq org-export-with-toc nil)
+  (setq org-html-validation-link nil)
   (setq org-startup-folded nil))
