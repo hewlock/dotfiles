@@ -8,6 +8,7 @@
 (setq-default tab-width 4)
 
 (electric-indent-mode 1)
+(set-cursor-color "#dc322f")
 (set-fringe-mode 0)
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
