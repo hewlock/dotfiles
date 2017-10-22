@@ -10,6 +10,7 @@
   (which-key-mode)
   (which-key-add-key-based-replacements "C-c e" "emacs")
   (which-key-add-key-based-replacements "C-c f" "filter")
+  (which-key-add-key-based-replacements "C-c g" "git")
   (which-key-add-key-based-replacements "C-c h" "help")
   (which-key-add-key-based-replacements "C-c i" "info")
   (which-key-add-key-based-replacements "C-c o" "org")

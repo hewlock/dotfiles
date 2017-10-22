@@ -6,7 +6,7 @@
  '(custom-enabled-themes (quote (solarized)))
  '(custom-safe-themes
    (quote
-    ("c4a33a7666785552d0ccf5031b20d8671e8ab3b20da8640ac5ff05751b7d6dd5" default)))
+    ("1eb8d4f58ca8ecf0b1340efe39fca3cecd482a3727c6687f9751fe180dbfec0c" default)))
  '(custom-theme-directory "~/.emacs.d/themes/")
  '(package-selected-packages (quote (projectile which-key use-package neotree evil))))
 (custom-set-faces

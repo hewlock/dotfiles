@@ -23,6 +23,7 @@
 
 ;; sorted
 (load-config "ivy")
+(load-config "magit")
 (load-config "neotree")
 (load-config "org")
 (load-config "rainbow-delimiters")
