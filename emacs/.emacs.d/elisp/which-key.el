@@ -1,6 +1,11 @@
 (use-package which-key
   :ensure t 
   :diminish 'which-key-mode
+  :bind (("C-c h w" . which-key-show-top-level))
+  :init
+  (setq which-key-add-column-padding 1)
+  (setq which-key-max-description-length 32)
+  (setq which-key-separator " ")
   :config
   (which-key-mode)
   (which-key-add-key-based-replacements "C-c e" "emacs")
