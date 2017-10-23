@@ -13,4 +13,4 @@ fortune -as
 echo ""
 
 source ~/.bash_env
-source $(pip show powerline-status | grep Location: | cut -c11-)/powerline/bindings/bash/powerline.sh
+source $(pip2 show powerline-status | grep Location: | cut -c11-)/powerline/bindings/bash/powerline.sh
