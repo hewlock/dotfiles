@@ -22,17 +22,19 @@
 (load-config "projectile")
 
 ;; sorted
-(load-config "coffee-mode")
 (load-config "ivy")
-(load-config "less-css-mode")
 (load-config "magit")
-(load-config "markdown-mode")
 (load-config "neotree")
 (load-config "org")
 (load-config "rainbow-delimiters")
-(load-config "web-mode")
 (load-config "which-key")
 (load-config "whitespace")
+
+;; modes
+(load-config "coffee-mode")
+(load-config "less-css-mode")
+(load-config "markdown-mode")
+(load-config "web-mode")
 
 (setq custom-file (config-file "custom"))
 (load custom-file)

@@ -5,6 +5,7 @@
 (setq-default indent-tabs-mode nil)
 (setq-default linum-format "%3d ")
 (setq-default scroll-bar-mode nil)
+(setq-default split-width-threshold 120)
 (setq-default tab-width 4)
 
 (electric-indent-mode 1)
