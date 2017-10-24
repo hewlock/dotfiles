@@ -6,11 +6,11 @@
  '(custom-enabled-themes (quote (solarized)))
  '(custom-safe-themes
    (quote
-    ("cec52e4f94e51ec27e4748e3dbc4f708f332c9f6ca219731024021d09927cde8" default)))
+    ("c394c9b11cd5b63ddf929c45db2a3f2b7190b411ffb92059dee32ab6e1e2e6d6" default)))
  '(custom-theme-directory "~/.emacs.d/themes/")
  '(package-selected-packages
    (quote
-    (markdown-mode projectile which-key use-package neotree evil))))
+    (company markdown-mode projectile which-key use-package neotree evil))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
