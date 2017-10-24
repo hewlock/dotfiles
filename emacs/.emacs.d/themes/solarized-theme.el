@@ -86,6 +86,8 @@
 (custom-theme-set-faces
  'solarized
  '(button ((t (:inherit link))))
+ '(css-selector ((t (:weight bold))))
+ '(css-proprietary-property ((t (:inherit (css-property highlight)))))
  '(cursor ((t (:inherit (solarized-red-bg)))))
  '(custom-variable-tag ((t (:inherit solarized-blue-fg :weight bold))))
  '(escape-glyph ((t (:inherit solarized-green-fg))))

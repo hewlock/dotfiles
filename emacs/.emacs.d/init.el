@@ -23,6 +23,7 @@
 
 ;; sorted
 (load-config "ivy")
+(load-config "less-css-mode")
 (load-config "magit")
 (load-config "markdown-mode")
 (load-config "neotree")
