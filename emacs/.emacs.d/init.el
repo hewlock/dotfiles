@@ -22,6 +22,7 @@
 (load-config "projectile")
 
 ;; sorted
+(load-config "evil-surround")
 (load-config "ivy")
 (load-config "magit")
 (load-config "neotree")
