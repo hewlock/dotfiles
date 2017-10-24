@@ -22,6 +22,7 @@
 (load-config "projectile")
 
 ;; sorted
+(load-config "coffee-mode")
 (load-config "ivy")
 (load-config "less-css-mode")
 (load-config "magit")
