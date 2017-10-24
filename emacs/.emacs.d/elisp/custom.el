@@ -8,7 +8,9 @@
    (quote
     ("cec52e4f94e51ec27e4748e3dbc4f708f332c9f6ca219731024021d09927cde8" default)))
  '(custom-theme-directory "~/.emacs.d/themes/")
- '(package-selected-packages (quote (projectile which-key use-package neotree evil))))
+ '(package-selected-packages
+   (quote
+    (markdown-mode projectile which-key use-package neotree evil))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
