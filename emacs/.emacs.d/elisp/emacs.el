@@ -19,6 +19,7 @@
 
 (global-set-key (kbd "C-c e d") 'dark-theme)
 (global-set-key (kbd "C-c e l") 'light-theme)
+(global-set-key (kbd "C-c e p") 'print-file-name)
 (global-set-key (kbd "C-c e r") 'reload-emacs)
 (global-set-key (kbd "C-c e t") 'toggle-theme)
 (global-set-key (kbd "C-c h b") 'describe-bindings)
@@ -45,6 +46,11 @@
 (defun reload-emacs ()
   (interactive)
   (load-file "~/.emacs.d/init.el"))
+
+(defun print-file-name ()
+  "Show the full path file name in the minibuffer."
+  (interactive)
+  (message (buffer-file-name)))
 
 (defun light-theme ()
   "Switch to light theme"
