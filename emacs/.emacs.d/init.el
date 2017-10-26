@@ -31,6 +31,7 @@
 (load-config "rainbow-delimiters")
 (load-config "which-key")
 (load-config "whitespace")
+(load-config "yasnippet")
 
 ;; modes
 (load-config "coffee-mode")
