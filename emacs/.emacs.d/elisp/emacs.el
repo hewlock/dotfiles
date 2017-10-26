@@ -38,9 +38,9 @@
 (global-set-key (kbd "C-c r c") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-c r r") 'indent-region)
 (global-set-key (kbd "C-c r w") 'whitespace-cleanup)
-(global-set-key (kbd "C-c w a") 'rotate-windows-anticlockwise)
+(global-set-key (kbd "C-c w R") 'rotate-windows-anticlockwise)
 (global-set-key (kbd "C-c w b") 'balance-windows)
-(global-set-key (kbd "C-c w c") 'rotate-windows-clockwise)
+(global-set-key (kbd "C-c w r") 'rotate-windows-clockwise)
 (global-set-key (kbd "C-c w t") 'toggle-window-split)
 
 (defun reload-emacs ()

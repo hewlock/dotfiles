@@ -3,30 +3,27 @@
   :demand
   :diminish company-mode
   :bind (:map company-active-map
-              ("M-a" . company-show-first)
-              ("M-d" . company-next-page)
-              ("M-e" . company-show-last)
-              ("M-h" . company-show-doc-buffer)
-              ("M-u" . company-previous-page))
+              ("C-d" . company-next-page)
+              ("C-h" . company-show-first)
+              ("C-j" . company-select-next)
+              ("C-k" . company-select-previous)
+              ("C-l" . company-show-last)
+              ("C-n" . company-show-doc-buffer)
+              ("C-u" . company-previous-page))
   :init
   (global-company-mode)
   :config
+  (evil-define-key 'insert company-mode-map (kbd "C-j") 'company-complete)
   (setq company-backends (mapcar #'company-mode/backend-with-yas company-backends))
   (setq company-dabbrev-downcase nil)
   (setq company-show-numbers t)
   (setq company-tooltip-align-annotations t)
-  (setq evil-complete-next-func 'company-complete-func)
-  (setq evil-complete-prev-func 'company-complete-func)
   :preface
   (defun company-mode/backend-with-yas (backend)
     (if (and (listp backend) (member 'company-yasnippet backend))
         backend
       (append (if (consp backend) backend (list backend))
               '(:with company-yasnippet))))
-  (defun company-complete-func (arg)
-    (interactive)
-    (company-complete)
-    (message arg))
   (defun company-show-first ()
     "Select the first candidate"
     (interactive)

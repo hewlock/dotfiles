@@ -17,12 +17,12 @@
 (defun load-config (name) (load-file (config-file name)))
 
 ;; dependencies
-(load-config "company")
 (load-config "emacs")
 (load-config "evil")
 (load-config "projectile")
 
 ;; sorted
+(load-config "company")
 (load-config "evil-surround")
 (load-config "ivy")
 (load-config "magit")
