@@ -8,7 +8,6 @@
               ("C-j" . ivy-next-line)
               ("C-k" . ivy-previous-line)
               ("C-l" . ivy-end-of-buffer)
-              ("C-n" . ivy-help)
               ("C-o" . ivy-dispatching-done)
               ("C-u" . ivy-scroll-down-command)
               ("M-o" . hydra-ivy/body))
@@ -35,6 +34,12 @@
 
 (use-package counsel-projectile
   :ensure t
-  :bind (("C-c f f" . counsel-projectile)
+  :bind (("C-c f S" . counsel-projectile-ag-hidden)
+         ("C-c f f" . counsel-projectile)
          ("C-c f p" . counsel-projectile-switch-project)
-         ("C-c f s" . counsel-projectile-ag)))
+         ("C-c f s" . counsel-projectile-ag))
+  :config
+  (defun counsel-projectile-ag-hidden ()
+    "Run an ag search in the project and include hidden files."
+    (interactive)
+    (counsel-projectile-ag "--hidden")))
