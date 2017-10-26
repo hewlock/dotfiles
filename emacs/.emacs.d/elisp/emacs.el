@@ -14,14 +14,13 @@
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
 
-(unless (display-graphic-p)
-  (menu-bar-mode -1))
+(unless (display-graphic-p) (menu-bar-mode -1))
 
 (global-set-key (kbd "C-c e d") 'dark-theme)
 (global-set-key (kbd "C-c e l") 'light-theme)
-(global-set-key (kbd "C-c e p") 'print-file-name)
 (global-set-key (kbd "C-c e r") 'reload-emacs)
 (global-set-key (kbd "C-c e t") 'toggle-theme)
+(global-set-key (kbd "C-c e x") 'eval-region)
 (global-set-key (kbd "C-c h b") 'describe-bindings)
 (global-set-key (kbd "C-c h c") 'describe-char)
 (global-set-key (kbd "C-c h f") 'describe-face)
@@ -30,13 +29,15 @@
 (global-set-key (kbd "C-c h s") 'describe-symbol)
 (global-set-key (kbd "C-c h u") 'describe-function)
 (global-set-key (kbd "C-c h v") 'describe-variable)
+(global-set-key (kbd "C-c i f") 'print-file-name)
 (global-set-key (kbd "C-c i h") 'hl-line-mode)
 (global-set-key (kbd "C-c i l") 'linum-mode)
 (global-set-key (kbd "C-c i p") 'show-paren-mode)
 (global-set-key (kbd "C-c i t") 'toggle-truncate-lines)
 (global-set-key (kbd "C-c i v") 'visual-line-mode)
 (global-set-key (kbd "C-c r c") 'comment-or-uncomment-region)
-(global-set-key (kbd "C-c r r") 'indent-region)
+(global-set-key (kbd "C-c r r") 'reformat-region)
+(global-set-key (kbd "C-c r t") 'toggle-indent-tabs-mode)
 (global-set-key (kbd "C-c r w") 'whitespace-cleanup)
 (global-set-key (kbd "C-c w R") 'rotate-windows-anticlockwise)
 (global-set-key (kbd "C-c w b") 'balance-windows)
@@ -70,6 +71,25 @@
   (if (eq frame-background-mode 'dark)
       (light-theme)
     (dark-theme)))
+
+(defun reformat-region (start end)
+  "Reformat selected region"
+  (interactive "r")
+  (if indent-tabs-mode
+      (tabify start end)
+    (untabify start end))
+  (indent-region start end))
+
+(defun toggle-indent-tabs-mode ()
+  "Toggle indent-tabs-mode"
+  (interactive)
+  (if indent-tabs-mode
+      (progn
+        (setq-default indent-tabs-mode nil)
+        (message "indent-tabs-mode disabled (spaces)"))
+    (progn
+      (setq-default indent-tabs-mode t)
+      (message "indent-tabs-mode enabled (tabs)"))))
 
 (defun toggle-window-split ()
   "If the frame is split vertically, split it horizontally or vice versa. Assumes that the frame is only split into two."
