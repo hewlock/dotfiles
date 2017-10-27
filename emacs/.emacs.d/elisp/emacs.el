@@ -6,20 +6,19 @@
 (setq-default fill-column 80)
 (setq-default indent-tabs-mode nil)
 (setq-default linum-format "%3d ")
+(setq-default same-window-regexps '("."))
 (setq-default scroll-bar-mode nil)
 (setq-default split-width-threshold 120)
 (setq-default tab-width 4)
 
+(add-hook 'auto-save-hook 'save-modified-buffers)
+(add-hook 'focus-out-hook 'save-modified-buffers)
 (electric-indent-mode 1)
 (set-cursor-color "#dc322f")
 (set-fringe-mode 0)
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
-
 (unless (display-graphic-p) (menu-bar-mode -1))
-
-(add-hook 'auto-save-hook 'save-modified-buffers)
-(add-hook 'focus-out-hook 'save-modified-buffers)
 
 (global-set-key (kbd "C-c b r") 'read-only-mode)
 (global-set-key (kbd "C-c e d") 'dark-theme)
