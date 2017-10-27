@@ -16,6 +16,7 @@
 
 (unless (display-graphic-p) (menu-bar-mode -1))
 
+(global-set-key (kbd "C-c b r") 'read-only-mode)
 (global-set-key (kbd "C-c e d") 'dark-theme)
 (global-set-key (kbd "C-c e l") 'light-theme)
 (global-set-key (kbd "C-c e r") 'reload-emacs)
@@ -75,6 +76,7 @@
 (defun reformat-region (start end)
   "Reformat selected region"
   (interactive "r")
+  (whitespace-cleanup-region start end)
   (if indent-tabs-mode
       (tabify start end)
     (untabify start end))

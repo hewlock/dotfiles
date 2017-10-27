@@ -11,13 +11,13 @@
               ("C-n" . company-show-doc-buffer)
               ("C-u" . company-previous-page))
   :init
-  (global-company-mode)
-  :config
-  (evil-define-key 'insert company-mode-map (kbd "C-j") 'company-complete)
-  (setq company-backends (mapcar #'company-mode/backend-with-yas company-backends))
   (setq company-dabbrev-downcase nil)
   (setq company-show-numbers t)
   (setq company-tooltip-align-annotations t)
+  :config
+  (evil-define-key 'insert company-mode-map (kbd "C-j") 'company-complete)
+  (setq company-backends (mapcar #'company-mode/backend-with-yas company-backends))
+  (global-company-mode)
   :preface
   (defun company-mode/backend-with-yas (backend)
     (if (and (listp backend) (member 'company-yasnippet backend))
