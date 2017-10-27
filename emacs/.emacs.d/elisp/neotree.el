@@ -4,7 +4,7 @@
          ("C-c t h" . neotree-hidden-file-toggle)
          ("C-c t r" . neotree-refresh)
          ("C-c t s" . neotree-stretch-toggle)
-         ("C-c t t" . neotree-toggle-project))
+         ("C-c t t" . mrm/neotree-toggle-project))
   :init
   (setq neo-persist-show nil)
   (setq neo-show-hidden-files t)
@@ -17,7 +17,7 @@
   (evil-define-key 'normal neotree-mode-map (kbd "o") 'neotree-enter)
   (evil-define-key 'normal neotree-mode-map (kbd "p") 'neotree-change-root)
   (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
-  (defun neotree-toggle-project ()
+  (defun mrm/neotree-toggle-project ()
     "Toggle show the NeoTree window."
     (interactive)
     (if (neo-global--window-exists-p)

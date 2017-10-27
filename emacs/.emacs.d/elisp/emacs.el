@@ -11,8 +11,8 @@
 (setq-default split-width-threshold 120)
 (setq-default tab-width 4)
 
-(add-hook 'auto-save-hook 'save-modified-buffers)
-(add-hook 'focus-out-hook 'save-modified-buffers)
+(add-hook 'auto-save-hook 'mrm/save-modified-buffers)
+(add-hook 'focus-out-hook 'mrm/save-modified-buffers)
 (electric-indent-mode 1)
 (set-cursor-color "#dc322f")
 (set-fringe-mode 0)
@@ -21,10 +21,10 @@
 (unless (display-graphic-p) (menu-bar-mode -1))
 
 (global-set-key (kbd "C-c b r") 'read-only-mode)
-(global-set-key (kbd "C-c e d") 'dark-theme)
-(global-set-key (kbd "C-c e l") 'light-theme)
-(global-set-key (kbd "C-c e r") 'reload-emacs)
-(global-set-key (kbd "C-c e t") 'toggle-theme)
+(global-set-key (kbd "C-c e d") 'mrm/dark-theme)
+(global-set-key (kbd "C-c e l") 'mrm/light-theme)
+(global-set-key (kbd "C-c e r") 'mrm/reload-emacs)
+(global-set-key (kbd "C-c e t") 'mrm/toggle-theme)
 (global-set-key (kbd "C-c e x") 'eval-region)
 (global-set-key (kbd "C-c h b") 'describe-bindings)
 (global-set-key (kbd "C-c h c") 'describe-char)
@@ -34,55 +34,55 @@
 (global-set-key (kbd "C-c h s") 'describe-symbol)
 (global-set-key (kbd "C-c h u") 'describe-function)
 (global-set-key (kbd "C-c h v") 'describe-variable)
-(global-set-key (kbd "C-c i f") 'print-file-name)
+(global-set-key (kbd "C-c i f") 'mrm/print-file-name)
 (global-set-key (kbd "C-c i h") 'hl-line-mode)
 (global-set-key (kbd "C-c i l") 'linum-mode)
 (global-set-key (kbd "C-c i p") 'show-paren-mode)
 (global-set-key (kbd "C-c i t") 'toggle-truncate-lines)
 (global-set-key (kbd "C-c i v") 'visual-line-mode)
 (global-set-key (kbd "C-c r c") 'comment-or-uncomment-region)
-(global-set-key (kbd "C-c r r") 'reformat-region)
-(global-set-key (kbd "C-c r t") 'toggle-indent-tabs-mode)
+(global-set-key (kbd "C-c r r") 'mrm/format-region)
+(global-set-key (kbd "C-c r t") 'mrm/toggle-indent-tabs-mode)
 (global-set-key (kbd "C-c r w") 'whitespace-cleanup)
-(global-set-key (kbd "C-c w R") 'rotate-windows-anticlockwise)
+(global-set-key (kbd "C-c w R") 'mrm/rotate-windows-anticlockwise)
 (global-set-key (kbd "C-c w b") 'balance-windows)
-(global-set-key (kbd "C-c w r") 'rotate-windows-clockwise)
-(global-set-key (kbd "C-c w t") 'toggle-window-split)
+(global-set-key (kbd "C-c w r") 'mrm/rotate-windows-clockwise)
+(global-set-key (kbd "C-c w t") 'mrm/toggle-window-split)
 
-(defun reload-emacs ()
+(defun mrm/reload-emacs ()
   (interactive)
   (load-file "~/.emacs.d/init.el"))
 
-(defun save-modified-buffers ()
+(defun mrm/save-modified-buffers ()
   "Save modified buffers without prompting."
   (interactive)
   (save-some-buffers t))
 
-(defun print-file-name ()
+(defun mrm/print-file-name ()
   "Show the full path file name in the minibuffer."
   (interactive)
   (message (buffer-file-name)))
 
-(defun light-theme ()
+(defun mrm/light-theme ()
   "Switch to light theme"
   (interactive)
   (customize-set-variable 'frame-background-mode 'light)
   (load-theme 'solarized t))
 
-(defun dark-theme ()
+(defun mrm/dark-theme ()
   "Switch to dark theme"
   (interactive)
   (customize-set-variable 'frame-background-mode 'dark)
   (load-theme 'solarized t))
 
-(defun toggle-theme ()
+(defun mrm/toggle-theme ()
   "Toggle between light and dark theme"
   (interactive)
   (if (eq frame-background-mode 'dark)
-      (light-theme)
-    (dark-theme)))
+      (mrm/light-theme)
+    (mrm/dark-theme)))
 
-(defun reformat-region (start end)
+(defun mrm/format-region (start end)
   "Reformat selected region"
   (interactive "r")
   (whitespace-cleanup-region start end)
@@ -91,7 +91,7 @@
     (untabify start end))
   (indent-region start end))
 
-(defun toggle-indent-tabs-mode ()
+(defun mrm/toggle-indent-tabs-mode ()
   "Toggle indent-tabs-mode"
   (interactive)
   (if indent-tabs-mode
@@ -102,7 +102,7 @@
       (setq-default indent-tabs-mode t)
       (message "indent-tabs-mode enabled (tabs)"))))
 
-(defun toggle-window-split ()
+(defun mrm/toggle-window-split ()
   "If the frame is split vertically, split it horizontally or vice versa. Assumes that the frame is only split into two."
   (interactive)
   (if (= (count-windows) 2)
@@ -128,7 +128,7 @@
           (select-window first-win)
           (if this-win-2nd (other-window 1))))))
 
-(defun rotate-windows (arg)
+(defun mrm/rotate-windows (arg)
   "Rotate windows"
   (interactive)
   (if (not (> (count-windows) 1))
@@ -149,12 +149,12 @@
             (set-window-buffer-start-and-point w1 b2 s2 p2)
             (set-window-buffer-start-and-point w2 b1 s1 p1)))))))
 
-(defun rotate-windows-clockwise ()
+(defun mrm/rotate-windows-clockwise ()
   "Rotate windows clockwise"
   (interactive)
-  (rotate-windows -1))
+  (mrm/rotate-windows -1))
 
-(defun rotate-windows-anticlockwise ()
+(defun mrm/rotate-windows-anticlockwise ()
   "Rotate windows clockwise"
   (interactive)
-  (rotate-windows 1))
+  (mrm/rotate-windows 1))
