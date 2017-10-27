@@ -1,5 +1,7 @@
 (setq make-backup-files nil)
 
+(setq-default auto-save-interval 20)
+(setq-default auto-save-timeout 5)
 (setq-default cursor-in-non-selected-windows nil)
 (setq-default fill-column 80)
 (setq-default indent-tabs-mode nil)
@@ -15,6 +17,9 @@
 (tool-bar-mode -1)
 
 (unless (display-graphic-p) (menu-bar-mode -1))
+
+(add-hook 'auto-save-hook 'save-modified-buffers)
+(add-hook 'focus-out-hook 'save-modified-buffers)
 
 (global-set-key (kbd "C-c b r") 'read-only-mode)
 (global-set-key (kbd "C-c e d") 'dark-theme)
@@ -48,6 +53,11 @@
 (defun reload-emacs ()
   (interactive)
   (load-file "~/.emacs.d/init.el"))
+
+(defun save-modified-buffers ()
+  "Save modified buffers without prompting."
+  (interactive)
+  (save-some-buffers t))
 
 (defun print-file-name ()
   "Show the full path file name in the minibuffer."
