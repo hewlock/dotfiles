@@ -13,5 +13,12 @@
          ("M-l" . org-metaright))
   :init
   (setq org-export-with-toc nil)
+  (setq org-html-head-include-default-style nil)
+  (setq org-html-head-include-scripts nil)
   (setq org-html-validation-link nil)
-  (setq org-startup-folded nil))
+  (setq org-startup-folded nil)
+  :config
+  (setq org-html-head
+        (concat "<style>\n"
+                (mrm/get-file-as-string "~/.emacs.d/css/solarized.css")
+                "</style>")))

@@ -58,6 +58,12 @@
   (interactive)
   (save-some-buffers t))
 
+(defun mrm/get-file-as-string (file)
+  "Return filePath's file content."
+  (with-temp-buffer
+    (insert-file-contents file)
+    (buffer-string)))
+
 (defun mrm/print-file-name ()
   "Show the full path file name in the minibuffer."
   (interactive)

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: rule
+# key: rule
+# --
+$1 {
+	$0
+}
