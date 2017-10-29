@@ -219,6 +219,7 @@
  '(org-scheduled-previously ((t (:inherit solarized-red-fg))))
  '(org-scheduled-today ((t nil)))
  '(org-special-keyword ((t (:inherit solarized-violet-fg))))
+ '(org-table ((t (:inherit highlight :family "monospace"))))
  '(org-tag ((t (:inherit solarized-violet-fg :weight bold))))
  '(org-todo ((t (:inherit solarized-magenta-fg :weight bold))))
  '(outline-1 ((t (:inherit (solarized-yellow-fg solarized-base00-underline) :height 1.6))))
