@@ -1,3 +1,5 @@
+(require 'windmove)
+
 (setq make-backup-files nil)
 
 (setq-default auto-save-interval 20)
@@ -11,14 +13,21 @@
 (setq-default split-width-threshold 120)
 (setq-default tab-width 4)
 
-(add-hook 'auto-save-hook 'mrm/save-modified-buffers)
-(add-hook 'focus-out-hook 'mrm/save-modified-buffers)
 (electric-indent-mode 1)
 (set-cursor-color "#dc322f")
 (set-fringe-mode 0)
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
 (unless (display-graphic-p) (menu-bar-mode -1))
+
+(add-hook 'auto-save-hook 'mrm/save-buffer)
+(add-hook 'focus-out-hook 'mrm/save-buffer)
+(defadvice other-window (before other-window-now activate) (mrm/save-buffer))
+(defadvice switch-to-buffer (before save-buffer-now activate) (mrm/save-buffer))
+(defadvice windmove-down (before other-window-now activate) (mrm/save-buffer))
+(defadvice windmove-left (before other-window-now activate) (mrm/save-buffer))
+(defadvice windmove-right (before other-window-now activate) (mrm/save-buffer))
+(defadvice windmove-up (before other-window-now activate) (mrm/save-buffer))
 
 (global-set-key (kbd "C-c b r") 'read-only-mode)
 (global-set-key (kbd "C-c e d") 'mrm/dark-theme)
@@ -53,10 +62,10 @@
   (interactive)
   (load-file "~/.emacs.d/init.el"))
 
-(defun mrm/save-modified-buffers ()
-  "Save modified buffers without prompting."
+(defun mrm/save-buffer ()
+  "Save current buffer."
   (interactive)
-  (save-some-buffers t))
+  (when buffer-file-name (save-buffer)))
 
 (defun mrm/get-file-as-string (file)
   "Return filePath's file content."
