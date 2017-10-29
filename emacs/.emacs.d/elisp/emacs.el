@@ -8,6 +8,7 @@
 (setq-default fill-column 80)
 (setq-default indent-tabs-mode nil)
 (setq-default linum-format "%3d ")
+(setq-default pulse-flag nil)
 (setq-default same-window-regexps '("."))
 (setq-default scroll-bar-mode nil)
 (setq-default split-width-threshold 120)
