@@ -3,12 +3,12 @@
   :demand
   :diminish 'ivy-mode
   :bind (:map ivy-minibuffer-map
+              ("C-a" . ivy-beginning-of-buffer)
               ("C-d" . ivy-scroll-up-command)
-              ("C-h" . ivy-beginning-of-buffer)
-              ("C-j" . ivy-next-line)
-              ("C-k" . ivy-previous-line)
-              ("C-l" . ivy-end-of-buffer)
+              ("C-e" . ivy-end-of-buffer)
+              ("C-n" . ivy-next-line)
               ("C-o" . ivy-dispatching-done)
+              ("C-p" . ivy-previous-line)
               ("C-u" . ivy-scroll-down-command)
               ("M-o" . hydra-ivy/body))
   :init

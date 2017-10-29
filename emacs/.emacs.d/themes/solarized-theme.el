@@ -89,6 +89,7 @@
  '(company-scrollbar-bg ((t (:inherit company-tooltip))))
  '(company-scrollbar-fg ((t (:inherit solarized-base1-bg))))
  '(company-tooltip ((t (:inherit highlight))))
+ '(company-tooltip-annotation ((t (:inherit solarized-base1-fg))))
  '(company-tooltip-common ((t (:weight bold))))
  '(company-tooltip-selection ((t (:inherit region))))
  '(css-proprietary-property ((t (:inherit (css-property highlight)))))
