@@ -10,10 +10,21 @@
               ("C-u" . company-previous-page))
   :init
   (setq company-dabbrev-downcase nil)
+  (setq company-require-match nil)
   (setq company-tooltip-align-annotations t)
   :config
   (evil-define-key 'insert company-mode-map (kbd "C-n") 'company-complete)
-  (setq company-backends (mapcar #'mrm/company-backends company-backends))
+  (setq company-backends '(company-files
+                           (company-css
+                            company-dabbrev-code
+                            company-etags
+                            company-capf
+                            :with
+                            company-yasnippet)
+                           (company-dabbrev
+                            :with
+                            company-yasnippet)))
+  ;;(setq company-backends (mapcar #'mrm/company-backends company-backends))
   (global-company-mode)
   :preface
   (defun mrm/company-backends (backend)
