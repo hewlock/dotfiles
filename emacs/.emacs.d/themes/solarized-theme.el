@@ -223,6 +223,7 @@
  '(org-table ((t (:inherit highlight :family "monospace"))))
  '(org-tag ((t (:inherit solarized-violet-fg :weight bold))))
  '(org-todo ((t (:inherit solarized-magenta-fg :weight bold))))
+ '(org-verbatim ((t (:inherit org-code))))
  '(outline-1 ((t (:inherit (solarized-yellow-fg solarized-base00-underline) :height 1.6))))
  '(outline-2 ((t (:weight bold))))
  '(outline-3 ((t (:inherit outline-2))))
