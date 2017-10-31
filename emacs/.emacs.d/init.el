@@ -24,6 +24,7 @@
 ;; sorted
 (load-config "company")
 (load-config "evil-surround")
+(load-config "eww")
 (load-config "ivy")
 (load-config "magit")
 (load-config "neotree")
