@@ -1,8 +1,8 @@
 (use-package org
   :ensure t
-  :bind (("C-c o h" . org-html-export-as-html)
-         ("C-c o o" . org-agenda)
+  :bind (("C-c o a" . org-agenda)
          :map org-mode-map
+         ("C-c c h" . org-html-export-as-html)
          ("M-H" . org-shiftmetaleft)
          ("M-J" . org-shiftmetadown)
          ("M-K" . org-shiftmetaup)
