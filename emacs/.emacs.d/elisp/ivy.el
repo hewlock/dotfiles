@@ -34,5 +34,5 @@
 
 (use-package counsel-projectile
   :ensure t
-  :bind (("C-c p f" . counsel-projectile)
+  :bind (("C-c p f" . counsel-projectile-find-file)
          ("C-c p s" . counsel-projectile-ag)))
