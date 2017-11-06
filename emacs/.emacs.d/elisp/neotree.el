@@ -27,4 +27,4 @@
   (defun mrm/project-tree ()
     "Show Neotree focused on the current project."
     (interactive)
-    (neotree-dir (projectile-project-root))))
+    (neotree-dir (mrm/project-directory))))
