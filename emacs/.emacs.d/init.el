@@ -18,8 +18,8 @@
 
 ;; dependencies
 (load-config "emacs")
+(load-config "emacs-project")
 (load-config "evil")
-(load-config "projectile")
 
 ;; sorted
 (load-config "company")

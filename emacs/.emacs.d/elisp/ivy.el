@@ -14,7 +14,6 @@
   :init
   (setq ivy-count-format "%d/%d ")
   (setq ivy-height 15)
-  (setq projectile-completion-system 'ivy)
   :config
   (ivy-mode 1))
 
@@ -27,12 +26,25 @@
 
 (use-package counsel
   :ensure t
-  :bind (("C-c d s" . counsel-ag)
+  :bind (("C-c d F" . counsel-find-file)
+         ("C-c d f" . counsel-file-jump)
+         ("C-c d s" . counsel-ag)
          ("C-c h F" . counsel-faces)
          ("C-c m f" . counsel-bookmark)
-         ("C-c y f" . counsel-yank-pop)))
-
-(use-package counsel-projectile
-  :ensure t
-  :bind (("C-c p f" . counsel-projectile-find-file)
-         ("C-c p s" . counsel-projectile-ag)))
+         ("C-c p F" . mrm/project-find-file)
+         ("C-c p f" . mrm/project-file-jump)
+         ("C-c p s" . mrm/project-ag)
+         ("C-c y f" . counsel-yank-pop))
+  :config
+  (defun mrm/project-ag ()
+    "Search files in project directory."
+    (interactive)
+    (counsel-ag nil (mrm/project-directory)))
+  (defun mrm/project-find-file ()
+    "Find file in project directory."
+    (interactive)
+    (counsel-find-file (mrm/project-directory)))
+  (defun mrm/project-file-jump ()
+    "Find any file in project directory."
+    (interactive)
+    (counsel-file-jump nil (mrm/project-directory))))

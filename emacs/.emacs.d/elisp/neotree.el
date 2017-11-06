@@ -1,15 +1,14 @@
 (use-package neotree
   :ensure t
   :bind (("C-c b t" . neotree-find)
-         ("C-c d t" . mrm/neotree-find-directory)
-         ("C-c p t" . mrm/neotree-find-project))
+         ("C-c d t" . mrm/directory-tree)
+         ("C-c p t" . mrm/project-tree))
   :init
   (setq neo-persist-show nil)
   (setq neo-show-hidden-files t)
   (setq neo-smart-open nil)
   (setq neo-theme 'arrow)
   (setq neo-window-width 40)
-  (setq projectile-switch-project-action 'neotree-projectile-action)
   :config
   (evil-define-key 'normal neotree-mode-map (kbd "SPC") 'neotree-quick-look)
   (evil-define-key 'normal neotree-mode-map (kbd "o") 'neotree-enter)
@@ -21,11 +20,11 @@
     (interactive)
     (neotree-enter)
     (neotree-hide))
-  (defun mrm/neotree-find-directory ()
+  (defun mrm/directory-tree ()
     "Show Neotree focused on the current directory."
     (interactive)
     (neotree-dir default-directory))
-  (defun mrm/neotree-find-project ()
+  (defun mrm/project-tree ()
     "Show Neotree focused on the current project."
     (interactive)
     (neotree-dir (projectile-project-root))))

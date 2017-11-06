@@ -22,4 +22,4 @@
   (defun mrm/magit-status-project ()
     "Show Magit status on the current directory."
     (interactive)
-    (magit-status-internal (projectile-project-root))))
+    (magit-status-internal (mrm/project-directory))))
