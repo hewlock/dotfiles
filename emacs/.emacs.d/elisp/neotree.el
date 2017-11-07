@@ -4,11 +4,11 @@
          ("C-c d t" . mrm/directory-tree)
          ("C-c p t" . mrm/project-tree)
          :map neotree-mode-map
-         ("O" . mrm/neotree-enter-hide)
+         ("RET" . mrm/neotree-enter-hide)
          ("SPC" . neotree-quick-look)
          ("o" . neotree-enter)
          ("q" . neotree-hide)
-         ("r" . neotree-change-root))
+         ("c" . neotree-change-root))
   :init
   (setq neo-persist-show nil)
   (setq neo-show-hidden-files t)
