@@ -6,6 +6,7 @@
               ("TAB" . self-insert-command)
               :map evil-motion-state-map
               ("RET" . nil)
+              ("SPC" . nil)
               :map evil-normal-state-map
               ("RET" . evil-ret))
   :init
