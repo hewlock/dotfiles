@@ -23,6 +23,7 @@
 
 ;; sorted
 (load-config "company")
+(load-config "dired")
 (load-config "evil-surround")
 (load-config "eww")
 (load-config "ivy")

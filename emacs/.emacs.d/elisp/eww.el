@@ -1,5 +1,4 @@
 (use-package eww
-  :ensure t
   :bind (("C-c w o" . eww)
          ("C-c w l" . eww-list-bookmarks))
   :init
