@@ -32,25 +32,22 @@
          ("C-c h F" . counsel-faces)
          ("C-c m f" . counsel-bookmark)
          ("C-c p f" . mrm/project-file-jump)
-         ("C-c p g" . mrm/project-git)
          ("C-c p o" . mrm/project-find-file)
-         ("C-c p s" . mrm/project-ag)
+         ("C-c p s" . mrm/project-search)
          ("C-c y f" . counsel-yank-pop))
   :config
-  (defun mrm/project-ag ()
-    "Search files in project directory."
-    (interactive)
-    (counsel-ag nil (mrm/project-directory)))
+  (setq counsel-ag-base-command "grep -nr %s .")
   (defun mrm/project-find-file ()
     "Find file in project directory."
     (interactive)
     (counsel-find-file (mrm/project-directory)))
   (defun mrm/project-file-jump ()
-    "Find any file in project directory."
-    (interactive)
-    (counsel-file-jump nil (mrm/project-directory)))
-  (defun mrm/project-git ()
     "Find git file in project directory."
     (interactive)
     (let ((default-directory (mrm/project-directory)))
-        (counsel-git))))
+        (counsel-git)))
+  (defun mrm/project-search ()
+    "Search files in project directory."
+    (interactive)
+    (let ((default-directory (mrm/project-directory)))
+        (counsel-git-grep))))
