@@ -5,7 +5,6 @@ source include.sh
 info homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-install ack
 install "emacs --with-cocoa"
 install fortune
 install git
@@ -13,7 +12,6 @@ install "macvim --with-override-system-vim"
 install node
 install python
 install stow
-install the_silver_searcher
 install tmux
 install tree
 
