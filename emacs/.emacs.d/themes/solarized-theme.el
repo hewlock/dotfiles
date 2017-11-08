@@ -239,7 +239,7 @@
  '(rainbow-delimiters-depth-6-face ((t (:inherit solarized-violet-fg))))
  '(rainbow-delimiters-depth-7-face ((t (:inherit solarized-green-fg))))
  '(rainbow-delimiters-depth-8-face ((t (:inherit solarized-red-fg))))
- '(rainbow-delimiters-depth-9-face ((t (:inherit solarized-base03-fg))))
+ '(rainbow-delimiters-depth-9-face ((t (:inherit solarized-base01-fg))))
  '(region ((t (:inherit (solarized-magenta-bg solarized-base3-fg)))))
  '(secondary-selection ((t (:inherit (solarized-blue-bg solarized-base3-fg)))))
  '(sh-quoted-exec ((default (:inherit (font-lock-function-name-face)))))

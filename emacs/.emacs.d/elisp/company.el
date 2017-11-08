@@ -24,7 +24,6 @@
                            (company-dabbrev
                             :with
                             company-yasnippet)))
-  ;;(setq company-backends (mapcar #'mrm/company-backends company-backends))
   (global-company-mode)
   :preface
   (defun mrm/company-backends (backend)

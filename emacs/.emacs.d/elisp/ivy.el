@@ -3,13 +3,13 @@
   :demand
   :diminish 'ivy-mode
   :bind (:map ivy-minibuffer-map
-              ("C-a" . ivy-beginning-of-buffer)
               ("C-d" . ivy-scroll-up-command)
-              ("C-e" . ivy-end-of-buffer)
               ("C-n" . ivy-next-line)
               ("C-o" . ivy-dispatching-done)
               ("C-p" . ivy-previous-line)
               ("C-u" . ivy-scroll-down-command)
+              ("M-d" . ivy-end-of-buffer)
+              ("M-u" . ivy-beginning-of-buffer)
               ("M-o" . hydra-ivy/body))
   :init
   (setq ivy-count-format "%d/%d ")
