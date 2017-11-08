@@ -22,7 +22,9 @@
 
 (use-package swiper
   :ensure t
-  :bind (("C-s" . swiper)))
+  :bind (("C-s" . swiper)
+         :map swiper-map
+         ("C-r" . swiper-query-replace)))
 
 (use-package counsel
   :ensure t
@@ -34,7 +36,11 @@
          ("C-c p f" . mrm/project-file-jump)
          ("C-c p o" . mrm/project-find-file)
          ("C-c p s" . mrm/project-search)
-         ("C-c y f" . counsel-yank-pop))
+         ("C-c y f" . counsel-yank-pop)
+         :map counsel-ag-map
+         ("C-r" . counsel-git-grep-query-replace)
+         :map counsel-git-grep-map
+         ("C-r" . counsel-git-grep-query-replace))
   :config
   (setq counsel-ag-base-command "grep -nr %s .")
   (defun mrm/project-find-file ()
