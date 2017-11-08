@@ -6,7 +6,7 @@
  '(custom-enabled-themes (quote (solarized)))
  '(custom-safe-themes
    (quote
-    ("095fc05a0458deedf31016c8ca42aa4ba11e7378c23ef59ec15f3ec108ad30b0" default)))
+    ("db2aaed2d63ea61e5c75c09b79b88a78c9402caa7e2c7dce911927aafc2f8164" default)))
  '(custom-theme-directory "~/.emacs.d/themes/")
  '(package-selected-packages
    (quote
