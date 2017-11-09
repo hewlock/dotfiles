@@ -8,4 +8,7 @@
 [push]
 	default = simple
 [core]
+	commentchar = "$"
 	editor = vim
+[diff]
+	tool = vimdiff
