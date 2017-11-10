@@ -23,7 +23,7 @@
     - d diff
     - f find [by: name]
     - k kill
-    - l log
+    - l log, list
     - o open [filename url]
     - p print [location name]
     - q quit

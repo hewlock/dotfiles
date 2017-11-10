@@ -1,8 +1,12 @@
 (use-package magit
   :ensure t
   :diminish 'magit-mode
-  :bind (("C-c b b" . magit-blame)
-         ("C-c d u" . mrm/magit-status-directory)
+  :bind (("C-c b B" . magit-blame-popup)
+         ("C-c b D" . magit-diff-buffer-file-popup)
+         ("C-c b L" . magit-log-buffer-file-popup)
+         ("C-c b b" . magit-blame)
+         ("C-c b d" . magit-diff-buffer-file)
+         ("C-c b l" . magit-log-buffer-file)
          ("C-c p u" . mrm/magit-status-project))
   :init
   (setq magit-bury-buffer-function (lambda(&optional kill-buffer) (interactive) (magit-restore-window-configuration t)))
@@ -15,10 +19,6 @@
   (advice-add 'magit-blame-quit :after 'evil-normal-state)
   (diminish 'auto-revert-mode)
   (diminish 'global-auto-revert-mode)
-  (defun mrm/magit-status-directory ()
-    "Show Magit status on the current directory."
-    (interactive)
-    (magit-status-internal default-directory))
   (defun mrm/magit-status-project ()
     "Show Magit status on the current directory."
     (interactive)
