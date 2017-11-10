@@ -20,5 +20,4 @@
   (which-key-add-key-based-replacements "C-c p" "project")
   (which-key-add-key-based-replacements "C-c q" "macro")
   (which-key-add-key-based-replacements "C-c r" "region")
-  (which-key-add-key-based-replacements "C-c w" "window")
-  (which-key-add-key-based-replacements "C-c y" "yank"))
+  (which-key-add-key-based-replacements "C-c w" "window"))

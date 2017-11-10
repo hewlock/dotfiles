@@ -36,11 +36,13 @@
          ("C-c p f" . mrm/project-file-jump)
          ("C-c p o" . mrm/project-find-file)
          ("C-c p s" . mrm/project-search)
-         ("C-c y f" . counsel-yank-pop)
+         ("C-p" . counsel-yank-pop)
          :map counsel-ag-map
          ("C-r" . counsel-git-grep-query-replace)
          :map counsel-git-grep-map
          ("C-r" . counsel-git-grep-query-replace))
+  :commands
+  counsel-yank-pop
   :config
   (setq counsel-ag-base-command "grep -nr %s .")
   (defun mrm/project-find-file ()
@@ -57,3 +59,5 @@
     (interactive)
     (let ((default-directory (mrm/project-directory)))
         (counsel-git-grep))))
+
+(mrm/evil-global-unbind "C-p")
