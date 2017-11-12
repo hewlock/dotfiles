@@ -31,6 +31,7 @@
 (defadvice windmove-up (before other-window-now activate) (mrm/save-buffer))
 
 (global-set-key (kbd "C-c b p") 'mrm/print-file-name)
+(global-set-key (kbd "C-c b q") 'kill-this-buffer)
 (global-set-key (kbd "C-c b r") 'mrm/rename-file-and-buffer)
 (global-set-key (kbd "C-c d c") 'cd)
 (global-set-key (kbd "C-c d p") 'pwd)
