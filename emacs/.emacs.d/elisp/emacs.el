@@ -31,6 +31,7 @@
 (defadvice windmove-up (before other-window-now activate) (mrm/save-buffer))
 
 (global-set-key (kbd "C-c b p") 'mrm/print-file-name)
+(global-set-key (kbd "C-c b r") 'mrm/rename-file-and-buffer)
 (global-set-key (kbd "C-c d c") 'cd)
 (global-set-key (kbd "C-c d p") 'pwd)
 (global-set-key (kbd "C-c h b") 'describe-bindings)
@@ -82,6 +83,21 @@
   "Show the full path file name in the minibuffer."
   (interactive)
   (message (buffer-file-name)))
+
+(defun mrm/rename-file-and-buffer (new-name)
+  "Renames both current buffer and file it's visiting."
+  (interactive "sNew name: ")
+  (let ((name (buffer-name))
+        (filename (buffer-file-name)))
+    (if (not filename)
+        (message "Buffer '%s' is not visiting a file!" name)
+      (if (get-buffer new-name)
+          (message "A buffer named '%s' already exists!" new-name)
+        (progn
+          (rename-file filename new-name 1)
+          (rename-buffer new-name)
+          (set-visited-file-name new-name)
+          (set-buffer-modified-p nil))))))
 
 (defun mrm/light-theme ()
   "Switch to light theme"

@@ -11,6 +11,7 @@
   (setq evil-want-C-i-jump nil) ; Enable TAB for org mode
   (setq evil-want-C-u-scroll t)
   :config
+  (define-key evil-motion-state-map (kbd "C-w C-c") 'kill-buffer-and-window)
   (evil-mode))
 
 (defun mrm/evil-global-unbind (binding)
