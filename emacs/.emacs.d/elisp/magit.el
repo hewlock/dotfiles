@@ -7,6 +7,7 @@
          ("C-c b b" . magit-blame)
          ("C-c b d" . magit-diff-buffer-file)
          ("C-c b l" . magit-log-buffer-file)
+         ("C-c p l" . magit-log-all)
          ("C-c p u" . mrm/magit-status-project))
   :init
   (setq magit-bury-buffer-function (lambda(&optional kill-buffer) (interactive) (magit-restore-window-configuration t)))

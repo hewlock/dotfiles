@@ -35,6 +35,8 @@
 (global-set-key (kbd "C-c b r") 'mrm/rename-file-and-buffer)
 (global-set-key (kbd "C-c d c") 'cd)
 (global-set-key (kbd "C-c d p") 'pwd)
+(global-set-key (kbd "C-c h U") 'find-function-at-point)
+(global-set-key (kbd "C-c h V") 'find-variable-at-point)
 (global-set-key (kbd "C-c h b") 'describe-bindings)
 (global-set-key (kbd "C-c h c") 'describe-char)
 (global-set-key (kbd "C-c h f") 'describe-face)

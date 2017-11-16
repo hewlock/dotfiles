@@ -2,6 +2,8 @@
 
 ** Global
    Global keybind prefix C-c.
+   Global "go" prefix g.
+   Global "view" prefix z.
 
 *** Prefix Keys
     - b buffer
