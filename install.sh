@@ -17,8 +17,8 @@ install tree
 
 caskinstall java
 
-cmd "pip install --upgrade pip"
-cmd "pip install powerline-status"
+cmd "pip2 install --upgrade pip"
+cmd "pip2 install powerline-status"
 
 linkapps emacs
 linkapps macvim
