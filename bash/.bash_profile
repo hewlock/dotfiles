@@ -12,5 +12,4 @@ alias ls='ls -Gh'
 fortune -as
 echo ""
 
-source ~/.bash_env
 source $(pip2 show powerline-status | grep Location: | cut -c11-)/powerline/bindings/bash/powerline.sh
