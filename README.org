@@ -1,6 +1,2 @@
 * Install
   - [[macos/README.org][macOS]]
-
-* License
-  dotfiles is copyright © 2017 Matthew Moulton. It is free software, and may be
-  redistributed under the terms specified in the [[LICENSE]] file.
