@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source include.sh
+source macos/include.sh
 
 unlink apollo
 unlink bash
