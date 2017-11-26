@@ -28,4 +28,8 @@ uninstall tree
 info homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
 
-fontuninstall roboto/roboto-mono.txt
+fontuninstall fonts/font-awesome.txt
+fontuninstall fonts/roboto-condensed.txt
+fontuninstall fonts/roboto-mono.txt
+fontuninstall fonts/roboto-slab.txt
+fontuninstall fonts/roboto.txt

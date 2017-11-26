@@ -31,4 +31,8 @@ link powerline
 link tmux
 link vim
 
-fontinstall roboto/roboto-mono.txt
+fontinstall fonts/font-awesome.txt
+fontinstall fonts/roboto-condensed.txt
+fontinstall fonts/roboto-mono.txt
+fontinstall fonts/roboto-slab.txt
+fontinstall fonts/roboto.txt

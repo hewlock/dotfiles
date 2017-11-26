@@ -1,0 +1,7 @@
+https://raw.githubusercontent.com/google/fonts/master/apache/robotocondensed/
+RobotoCondensed-Bold.ttf
+RobotoCondensed-BoldItalic.ttf
+RobotoCondensed-Italic.ttf
+RobotoCondensed-Light.ttf
+RobotoCondensed-LightItalic.ttf
+RobotoCondensed-Regular.ttf

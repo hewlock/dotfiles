@@ -1,0 +1,5 @@
+https://raw.githubusercontent.com/google/fonts/master/apache/robotoslab/
+RobotoSlab-Bold.ttf
+RobotoSlab-Light.ttf
+RobotoSlab-Regular.ttf
+RobotoSlab-Thin.ttf
