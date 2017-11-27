@@ -13,7 +13,7 @@ unlink vim
 unlinkapps emacs
 unlinkapps macvim
 
-caskuninstall java
+caskuninstall java8
 
 uninstall emacs
 uninstall fortune
