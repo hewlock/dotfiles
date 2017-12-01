@@ -3,7 +3,6 @@
 [credential]
 	helper = osxkeychain
 [user]
-	email = matthew.moulton@gmail.com
 	name = Matthew Moulton
 [push]
 	default = simple
