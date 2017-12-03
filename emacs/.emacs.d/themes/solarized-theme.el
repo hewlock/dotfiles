@@ -120,6 +120,7 @@
  '(isearch-fail ((t (:inherit (solarized-magenta-bg solarized-base3-fg)))))
  '(ivy-confirm-face ((t (:inherit solarized-cyan-fg))))
  '(ivy-current-match ((t (:inherit isearch))))
+ '(ivy-cursor ((t (:inherit cursor))))
  '(ivy-match-required-face ((t (:inherit solarized-red-fg))))
  '(ivy-minibuffer-match-face-1 ((t (:inherit highlight))))
  '(ivy-minibuffer-match-face-2 ((t (:inherit ivy-minibuffer-match-face-1 :weight bold))))
