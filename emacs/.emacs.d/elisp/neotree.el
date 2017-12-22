@@ -6,9 +6,10 @@
          :map neotree-mode-map
          ("RET" . mrm/neotree-enter-hide)
          ("SPC" . neotree-quick-look)
+         ("c" . neotree-change-root)
          ("o" . neotree-enter)
          ("q" . neotree-hide)
-         ("c" . neotree-change-root))
+         ("r" . neotree-refresh))
   :init
   (setq neo-persist-show nil)
   (setq neo-show-hidden-files t)

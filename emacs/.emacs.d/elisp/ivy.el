@@ -10,7 +10,7 @@
               ("C-u" . ivy-scroll-down-command)
               ("M-d" . ivy-end-of-buffer)
               ("M-u" . ivy-beginning-of-buffer)
-              ("M-o" . hydra-ivy/body))
+              ("M-o" . ivy-immediate-done))
   :init
   (setq ivy-count-format "%d/%d ")
   (setq ivy-height 15)
