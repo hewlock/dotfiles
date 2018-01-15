@@ -12,6 +12,7 @@ A-h A-n | show-keybind-prefix-help "A-n"
 A-h A-w | show-keybind-prefix-help "A-w"
 A-h A-x | show-keybind-prefix-help "A-x"
 
+A-j A-b | activate-application "Brave"
 A-j A-c | activate-application "Calendar"
 A-j A-e | activate-application "Emacs"
 A-j A-f | activate-application "Firefox"
