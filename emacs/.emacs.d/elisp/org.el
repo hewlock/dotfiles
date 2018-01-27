@@ -2,6 +2,7 @@
   :ensure t
   :bind (("C-c o a" . org-agenda)
          :map org-mode-map
+         ("C-c c a" . org-table-align)
          ("C-c c h" . org-html-export-as-html)
          ("M-H" . org-shiftmetaleft)
          ("M-J" . org-shiftmetadown)
