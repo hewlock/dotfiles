@@ -19,7 +19,20 @@
   (setq org-html-validation-link nil)
   (setq org-startup-folded nil)
   :config
+  (advice-add 'org-clocktable-indent-string
+              :override #'mrm/org-clocktable-indent-string)
   (setq org-html-head
         (concat "<style>\n"
                 (mrm/get-file-as-string "~/.emacs.d/css/solarized.css")
                 "</style>")))
+
+(defun mrm/org-clocktable-indent-string (level)
+  "Fix \emsp from showing in clock tables"
+  (if (= level 1)
+      ""
+    (let ((str ""))
+      (while (> level 2)
+        (setq level (1- level)
+              str (concat str "~~")))
+      (concat str "~> "))))
+
