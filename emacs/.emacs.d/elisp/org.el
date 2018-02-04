@@ -3,7 +3,8 @@
   :bind (("C-c o a" . org-agenda)
          :map org-mode-map
          ("C-c c a" . org-table-align)
-         ("C-c c h" . org-html-export-as-html)
+         ("C-c c e" . org-html-export-as-html)
+         ("C-c c u" . org-update-all-dblocks)
          ("M-H" . org-shiftmetaleft)
          ("M-J" . org-shiftmetadown)
          ("M-K" . org-shiftmetaup)
@@ -17,6 +18,7 @@
   (setq org-html-head-include-default-style nil)
   (setq org-html-head-include-scripts nil)
   (setq org-html-validation-link nil)
+  (setq org-log-into-drawer t)
   (setq org-startup-folded nil)
   :config
   (advice-add 'org-clocktable-indent-string
