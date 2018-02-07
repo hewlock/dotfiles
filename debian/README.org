@@ -1,2 +1,6 @@
-apt-get update
-apt-get install git-core
+* Install
+
+** Pre-setup
+
+1. ~apt-get update~
+2. ~apt-get install git-core~
