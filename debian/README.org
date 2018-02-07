@@ -4,3 +4,8 @@
 
 1. ~apt-get update~
 2. ~apt-get install git-core~
+
+** Install
+
+1. As super user ~su~
+2. ~bash debian/install.sh~
