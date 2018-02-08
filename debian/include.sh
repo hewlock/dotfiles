@@ -33,9 +33,10 @@ function unlink {
 
 function fontinstall {
 	URL=$(head -n 1 "$1")
+	mkdir -p /usr/local/share/fonts
 	tail -n +2 "$1" | while read FONT; do
 		info "$FONT"
-		pushd ~/Library/Fonts > /dev/null
+		pushd /usr/local/share/fonts > /dev/null
 		curl -# -o "$FONT" $URL${FONT//" "/"%20"}
 		popd > /dev/null
 	done
@@ -44,7 +45,7 @@ function fontinstall {
 function fontuninstall {
 	tail -n +2 "$1" | while read FONT; do
 		info "$FONT"
-		pushd ~/Library/Fonts > /dev/null
+		pushd /usr/local/share/fonts > /dev/null
 		rm "$FONT"
 		popd > /dev/null
 	done
