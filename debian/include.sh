@@ -16,11 +16,11 @@ function upgrade {
 }
 
 function install {
-	cmd "apt-get install $1"
+	cmd "apt-get install $1 --assume-yes"
 }
 
 function remove {
-	cmd "apt-get remove $1"
+	cmd "apt-get remove $1 --assume-yes"
 }
 
 function link {
