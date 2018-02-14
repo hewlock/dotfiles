@@ -13,6 +13,10 @@ install tmux
 install tree
 install vim
 
+cmd "mv ~/.bashrc ~/.bashrc.backup"
+cmd "mv ~/.profile ~/.profile.backup"
+
+link "bash-linux"
 link emacs
 link tmux
 link vim

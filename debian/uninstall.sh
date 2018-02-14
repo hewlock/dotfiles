@@ -2,6 +2,14 @@
 
 source debian/include.sh
 
+unlink "bash-linux"
+unlink emacs
+unlink tmux
+unlink vim
+
+cmd "mv ~/.bashrc.backup ~/.bashrc"
+cmd "mv ~/.profile.backup ~/.profile"
+
 remove curl
 remove emacs
 remove fortune
@@ -10,10 +18,6 @@ remove stow
 remove tmux
 remove tree
 remove vim
-
-unlink emacs
-unlink tmux
-unlink vim
 
 fontuninstall fonts/font-awesome.txt
 fontuninstall fonts/roboto-condensed.txt

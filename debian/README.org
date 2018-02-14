@@ -13,4 +13,4 @@
 
 1. ~git clone dotfiles-repo~
 2. ~cd dotfiles~
-3. ~sudo bash debian/install.sh~
+3. ~sudo -E bash debian/install.sh~
