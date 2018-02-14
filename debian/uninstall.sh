@@ -2,7 +2,7 @@
 
 source debian/include.sh
 
-unlink "bash-linux"
+unlink bash-linux
 unlink emacs
 unlink tmux
 unlink vim

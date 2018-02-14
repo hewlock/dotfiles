@@ -3,7 +3,7 @@
 source macos/include.sh
 
 unlink apollo
-unlink bash
+unlink bash-macos
 unlink emacs
 unlink git
 unlink powerline

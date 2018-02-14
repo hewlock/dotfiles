@@ -25,7 +25,7 @@ linkapps emacs
 linkapps macvim
 
 link apollo
-link bash
+link bash-macos
 link emacs
 link git
 link powerline
