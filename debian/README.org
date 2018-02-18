@@ -2,15 +2,19 @@
 
 ** Pre-setup
 
-1. ~su~
-2. ~apt-get update~
-3. ~apt-get install git-core~
-4. ~apt-get install sudo~
-5. ~usermod -aG sudo myusername~
-6. Log out or restart
+   1. ~su~
+   2. ~apt-get update~
+   3. ~apt-get install git-core~
+   4. ~apt-get install sudo~
+   5. ~usermod -aG sudo myusername~
+   6. Log out or restart
 
 ** Install
 
-1. ~git clone dotfiles-repo~
-2. ~cd dotfiles~
-3. ~sudo -E bash debian/install.sh~
+   1. ~git clone dotfiles-repo~
+   2. ~cd dotfiles~
+   3. ~bash debian/install.sh~
+
+** Tips
+
+   - To watch for GUI changes use ~dconf watch /~

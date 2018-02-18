@@ -8,19 +8,19 @@ function cmd {
 }
 
 function update {
-	cmd "apt-get update"
+	cmd "sudo apt-get update"
 }
 
 function upgrade {
-	cmd "apt-get upgrade"
+	cmd "sudo apt-get upgrade"
 }
 
 function install {
-	cmd "apt-get install $1 --assume-yes"
+	cmd "sudo apt-get install $1 --assume-yes"
 }
 
 function remove {
-	cmd "apt-get remove $1 --assume-yes"
+	cmd "sudo apt-get remove $1 --assume-yes"
 }
 
 function link {
@@ -37,7 +37,7 @@ function fontinstall {
 	tail -n +2 "$1" | while read FONT; do
 		info "$FONT"
 		pushd /usr/local/share/fonts > /dev/null
-		curl -# -o "$FONT" $URL${FONT//" "/"%20"}
+		sudo curl -# -o "$FONT" $URL${FONT//" "/"%20"}
 		popd > /dev/null
 	done
 }
@@ -46,7 +46,7 @@ function fontuninstall {
 	tail -n +2 "$1" | while read FONT; do
 		info "$FONT"
 		pushd /usr/local/share/fonts > /dev/null
-		rm "$FONT"
+		sudo rm "$FONT"
 		popd > /dev/null
 	done
 }

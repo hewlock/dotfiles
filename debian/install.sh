@@ -26,3 +26,6 @@ fontinstall fonts/roboto-condensed.txt
 fontinstall fonts/roboto-mono.txt
 fontinstall fonts/roboto-slab.txt
 fontinstall fonts/roboto.txt
+
+cmd "source gnome-terminal/solarized-base.sh"
+cmd "source gnome-terminal/solarized-light.sh"
