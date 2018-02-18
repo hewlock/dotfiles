@@ -8,7 +8,6 @@ brew tap caskroom/versions
 
 install "emacs --with-cocoa"
 install fortune
-install git
 install "macvim --with-override-system-vim"
 install node
 install python
@@ -20,6 +19,7 @@ caskinstall java8
 
 cmd "pip2 install --upgrade pip"
 cmd "pip2 install powerline-status"
+cmd "source git/install.sh"
 
 linkapps emacs
 linkapps macvim

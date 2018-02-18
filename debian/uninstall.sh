@@ -9,6 +9,7 @@ unlink vim
 
 cmd "mv ~/.bashrc.backup ~/.bashrc"
 cmd "mv ~/.profile.backup ~/.profile"
+cmd "rm ~/.gitconfig"
 
 remove curl
 remove emacs

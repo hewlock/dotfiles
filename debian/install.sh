@@ -15,6 +15,7 @@ install vim
 
 cmd "mv ~/.bashrc ~/.bashrc.backup"
 cmd "mv ~/.profile ~/.profile.backup"
+cmd "source git/install.sh"
 
 link bash-linux
 link emacs

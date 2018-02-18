@@ -5,10 +5,11 @@ source macos/include.sh
 unlink apollo
 unlink bash-macos
 unlink emacs
-unlink git
 unlink powerline
 unlink tmux
 unlink vim
+
+cmd "rm ~/.gitconfig"
 
 unlinkapps emacs
 unlinkapps macvim
