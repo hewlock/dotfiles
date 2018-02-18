@@ -3,6 +3,8 @@ case $- in
       *) return;;
 esac
 
+[[ -f ~/.LESS_TERMCAP ]] && . ~/.LESS_TERMCAP
+
 shopt -s checkwinsize
 shopt -s histappend
 
