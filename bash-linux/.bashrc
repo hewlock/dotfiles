@@ -19,7 +19,7 @@ function git_color {
 	if [[ ! $git_status =~ "working tree clean" ]]; then
 		echo -e "\033[0;31;47m"
 	elif [[ $git_status =~ "branch is ahead of" ]]; then
-		echo -e "\033[0;44;47m"
+		echo -e "\033[0;34;47m"
 	fi
 }
 
