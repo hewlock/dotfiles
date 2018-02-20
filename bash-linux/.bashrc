@@ -34,7 +34,7 @@ function git_branch {
 	fi
 }
 
-PS1='\[\033[01;32;47m\]\u\[\033[00m\]\[$(git_color)\]$(git_branch) \[\033[0;00;47m\]\w \$\[\033[00m\] '
+PS1='\[\033[01;32;47m\]\u\[\033[00;47m\]\[$(git_color)\]$(git_branch) \[\033[0;00;47m\]\w \$\[\033[00m\] '
 
 alias emacs='TERM=xterm-16color emacs --no-window-system'
 alias ls='ls $LS_OPTIONS'
