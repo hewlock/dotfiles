@@ -1,1 +1,3 @@
-brew update && brew upgrade `brew outdated`
+brew update
+brew outdated
+brew upgrade `brew outdated`
