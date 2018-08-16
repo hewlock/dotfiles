@@ -32,6 +32,7 @@ A-n A-c | show-date "America/Chicago"
 A-n A-e | show-date "America/New_York"
 A-n A-g | show-date "GMT"
 A-n A-m | show-date "America/Denver"
+A-n A-n | show-date
 A-n A-p | show-date "America/Los_Angeles"
 A-n A-u | show-date "UTC"
 
