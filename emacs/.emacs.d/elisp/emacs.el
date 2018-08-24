@@ -119,7 +119,8 @@
   (interactive)
   (if (eq frame-background-mode 'dark)
       (mrm/light-theme)
-    (mrm/dark-theme)))
+    (mrm/dark-theme))
+  (set-cursor-color "#dc322f"))
 
 (defun mrm/format-region (start end)
   "Reformat selected region"
