@@ -96,6 +96,18 @@ a {
     color: #b58900;
 }
 
+blockquote {
+    white-space: pre;
+}
+
+blockquote > p {
+	margin-top: 0;
+}
+
+code {
+    background-color: #eee8d5;
+}
+
 li:before {
     content: '• ';
 }
