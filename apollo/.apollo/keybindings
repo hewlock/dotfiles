@@ -51,6 +51,7 @@ A-m A-c | show-military-date "America/Chicago"
 A-m A-e | show-military-date "America/New_York"
 A-m A-g | show-military-date "GMT"
 A-m A-m | show-military-date "America/Denver"
+A-m A-n | show-military-date
 A-m A-p | show-military-date "America/Los_Angeles"
 A-m A-u | show-military-date "UTC"
 

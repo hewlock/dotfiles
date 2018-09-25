@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
-DATE=$(TZ=${1} date +"%-H:%M %Z")
+if [ $# -eq "1" ]
+then
+	DATE=$(TZ=${1} date +"%-H:%M %Z")
+else
+	DATE=$(date +"%-H:%M %Z")
+fi
 osascript -e "tell application \"Alfred 3\" to run trigger \"Large Type\" in workflow \"trigger-large-type\" with argument \"${DATE}\""
