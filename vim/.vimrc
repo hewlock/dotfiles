@@ -16,6 +16,7 @@ set laststatus=2
 set listchars=tab:→\ ,eol:↩︎,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 set nobackup
 set noruler
+set nowrap
 set number
 set shiftwidth=4
 set showbreak=↪\
