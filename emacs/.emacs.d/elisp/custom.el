@@ -8,6 +8,7 @@
    (quote
 	("53e892db12a66b1227c0430870b9ec7849011d592086655b8fd57c62f025a6db" default)))
  '(custom-theme-directory "~/.emacs.d/themes/")
+ '(frame-background-mode (quote dark))
  '(package-selected-packages
    (quote
 	(web-mode markdown-mode less-css-mode coffee-mode yasnippet which-key rainbow-delimiters neotree magit counsel swiper ivy-hydra ivy evil-surround company evil use-package))))
