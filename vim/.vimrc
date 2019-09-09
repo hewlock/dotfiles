@@ -3,6 +3,8 @@
 call plug#begin()
 Plug 'altercation/vim-colors-solarized'
 Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 syntax on
