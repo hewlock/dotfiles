@@ -16,9 +16,9 @@
 
 (electric-indent-mode 1)
 (set-cursor-color "#dc322f")
-(set-fringe-mode 0)
-(toggle-scroll-bar -1)
-(tool-bar-mode -1)
+;(set-fringe-mode 0)
+;(toggle-scroll-bar -1)
+;(tool-bar-mode -1)
 (unless (display-graphic-p) (menu-bar-mode -1))
 
 (add-hook 'auto-save-hook 'mrm/save-buffer)
