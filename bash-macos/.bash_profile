@@ -13,4 +13,4 @@ alias ls='ls -Gh'
 fortune -as
 echo ""
 
-source $(pip2 show powerline-status | grep Location: | cut -c11-)/powerline/bindings/bash/powerline.sh
+source $(pip3 show powerline-status | grep Location: | cut -c11-)/powerline/bindings/bash/powerline.sh
