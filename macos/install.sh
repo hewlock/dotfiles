@@ -6,16 +6,16 @@ info homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap caskroom/versions
 
-install "emacs --with-cocoa"
 install fortune
-install "macvim --with-override-system-vim"
+install macvim
 install node
 install python
 install stow
 install tmux
 install tree
 
-caskinstall java8
+caskinstall emacs
+caskinstall java
 
 cmd "pip3 install --upgrade pip"
 cmd "pip3 install powerline-status"
