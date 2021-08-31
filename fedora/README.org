@@ -1,0 +1,11 @@
+* Install
+
+** Script
+
+Navigate to the project root and run:
+
+`sudo bash fedora/install.sh`
+
+* Uninstall
+
+`sudo bash fedora/uninstall.sh`

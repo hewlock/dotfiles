@@ -1,0 +1,19 @@
+[alias]
+	co = checkout
+[color "diff"]
+	meta = green bold
+[core]
+	commentchar = $
+	editor = vim
+[diff]
+	tool = vimdiff
+[merge]
+	conflictstyle = diff3
+	tool = vimdiff
+[push]
+	default = simple
+[user]
+	name = Matthew Moulton
+	email = matthew.moulton@gmail.com
+[credential]
+	helper = cache
