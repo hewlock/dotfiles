@@ -1,4 +1,5 @@
 *.swp
+*~
 .DS_Store
 .netrwhist
 apollo/.apollo/bookmarks

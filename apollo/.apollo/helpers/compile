@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-osacompile -o window.scpt window.applescript

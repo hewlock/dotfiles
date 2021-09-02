@@ -8,7 +8,7 @@ Plug 'tpope/vim-surround'
 call plug#end()
 
 syntax on
-colorscheme solarized
+silent! colorscheme solarized
 
 set background=dark
 set history=1000

@@ -1,2 +1,13 @@
 * Install
-  - [[macos/README.org][macOS]]
+
+** Elementary
+
+   1. ~sudo apt install git~
+   2. ~git clone dotfiles-repo~
+   3. ~cd dotfiles~
+   4. ~bash scripts/update.sh~
+   5. ~bash scripts/install.sh~
+
+* Tips
+
+   - To watch for GUI changes use ~dconf watch /~
