@@ -1,0 +1,10 @@
+Emacs
+- emacs colors are wonky
+- emacs command "gemacs?" to open gui emacs
+
+Vim
+- why is vim in light mode?
+
+Elementary
+- replace caps -> control
+- detect desktop environment and conditionally run elementary.sh 
