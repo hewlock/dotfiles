@@ -1,3 +1,0 @@
-Elementary
-- detect desktop environment and conditionally run elementary.sh
-

@@ -1,0 +1,20 @@
+* Setup
+
+  - [ ] create dconf settings dump before and after scripts
+  - [ ] create script to compare ui changes since install script
+
+* Elementary
+
+  - [ ] detect desktop environment and conditionally run elementary.sh
+
+* Project
+
+  - [X] cleanup dead code and directories
+
+* Terminal
+
+  - [X] command for "open ." to open files app at location
+
+* Web
+
+  - [ ] closing browser should not persist tabs

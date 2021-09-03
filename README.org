@@ -11,3 +11,4 @@
 * Tips
 
    - To watch for GUI changes use ~dconf watch /~
+   - Dump all settings ~dconf dump /~
