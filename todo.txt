@@ -1,5 +1,3 @@
-Emacs
-- emacs colors are wonky
-
 Elementary
 - detect desktop environment and conditionally run elementary.sh
+
