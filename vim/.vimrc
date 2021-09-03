@@ -10,7 +10,7 @@ call plug#end()
 syntax on
 silent! colorscheme solarized
 
-set background=dark
+set background=light
 set history=1000
 set hlsearch
 set incsearch
@@ -26,22 +26,7 @@ set t_Co=16
 set tabstop=4
 set undolevels=1000
 
-let g:lightline = {
-	\ 'colorscheme': 'solarized',
-	\ 'separator': { 'left': '', 'right': '' },
-	\ 'subseparator': { 'left': '', 'right': '' }
-	\ }
-
-if has('gui_running')
-	set background=light
-	set guifont=Roboto\ Mono\ for\ Powerline:h14
-	set guioptions-=L
-	set guioptions-=R
-	set guioptions-=b
-	set guioptions-=l
-	set guioptions-=r
-endif
-
+let g:lightline = { 'colorscheme': 'solarized' }
 let mapleader = "\<Space>"
 
 nnoremap <Leader><Space> :noh<CR>
