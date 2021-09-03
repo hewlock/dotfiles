@@ -10,7 +10,7 @@ call plug#end()
 syntax on
 silent! colorscheme solarized
 
-set background=light
+set background=dark
 set history=1000
 set hlsearch
 set incsearch

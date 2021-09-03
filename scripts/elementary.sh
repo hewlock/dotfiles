@@ -17,10 +17,13 @@ BLUE="rgb(38,139,210)"
 CYAN="rgb(42,161,152)"
 GREEN="rgb(133,153,0)"
 
-gsettings set io.elementary.terminal.settings background "rgba(0,43,54,0.95)"
+gsettings set io.elementary.terminal.settings background "rgba(12,42,53,0.95)"
 gsettings set io.elementary.terminal.settings cursor-color "${RED}"
 gsettings set io.elementary.terminal.settings foreground "${BASE0}"
 gsettings set io.elementary.terminal.settings natural-copy-paste false
-gsettings set io.elementary.terminal.settings palette "${BASE2}:${RED}:${GREEN}:${YELLOW}:${BLUE}:${MAGENTA}:${CYAN}:${BASE02}:${BASE3}:${ORANGE}:${BASE1}:${BASE0}:${BASE00}:${VIOLET}:${BASE01}:${BASE03}"
+gsettings set io.elementary.terminal.settings palette "${BASE02}:${RED}:${GREEN}:${YELLOW}:${BLUE}:${MAGENTA}:${CYAN}:${BASE2}:${BASE03}:${ORANGE}:${BASE01}:${BASE00}:${BASE0}:${VIOLET}:${BASE1}:${BASE3}"
 gsettings set io.elementary.terminal.settings tab-bar-behavior "'Hide When Single Tab'"
 gsettings set io.elementary.terminal.settings unsafe-paste-alert false
+gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ icon-size 96
+gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ theme "Matte"
+gsettings set org.gnome.desktop.input-sources xkb-options "['grp:alt_shift_toggle', 'ctrl:nocaps']"
