@@ -4,6 +4,8 @@ function git_color {
 		echo -e "\033[1;31m"
 	elif [[ $git_status =~ "branch is ahead of" ]]; then
 		echo -e "\033[1;36m"
+	else
+		echo -e "\033[1m"
 	fi
 }
 
