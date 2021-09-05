@@ -4,4 +4,4 @@ source bin/include.sh
 
 backup_gsettings
 
-cmd "sudo apt upgrade"
+cmd "sudo apt upgrade --assume-yes"
