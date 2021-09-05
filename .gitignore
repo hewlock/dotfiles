@@ -2,8 +2,6 @@
 *~
 .DS_Store
 .netrwhist
-apollo/.apollo/bookmarks
-apollo/.apollo/state
 emacs/.emacs.d/auto-save-list/
 emacs/.emacs.d/bookmarks
 emacs/.emacs.d/elpa/

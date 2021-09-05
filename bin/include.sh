@@ -22,3 +22,7 @@ function link {
 function unlink {
 	cmd "stow -vD $1"
 }
+
+function backup_gsettings {
+	cmd "bash bin/backup-gsettings.sh"
+}

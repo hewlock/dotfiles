@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Stand-alone script to print out basic 16 colors
+
 function header {
 	echo -e "\n\033[1;4m$1\033[0m\n"
 }

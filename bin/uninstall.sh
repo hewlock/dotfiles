@@ -1,15 +1,14 @@
 #!/bin/bash
 
-source scripts/include.sh
+source bin/include.sh
+
+backup_gsettings
 
 unlink bash
 unlink emacs
 unlink git
 unlink tmux
 unlink vim
-
-# cmd "mv ~/.bashrc.backup ~/.bashrc"
-# cmd "mv ~/.profile.backup ~/.profile"
 
 uninstall curl
 uninstall emacs

@@ -1,6 +1,8 @@
 #!/bin/bash
 
-source scripts/include.sh
+source bin/include.sh
+
+backup_gsettings
 
 install curl
 install emacs
@@ -19,4 +21,4 @@ link vim
 cmd "echo \"source ~/.bash_override\" > ~/.bash_aliases"
 cmd "vim +PlugInstall +qall"
 
-source scripts/elementary.sh
+source bin/elementary.sh

@@ -5,10 +5,10 @@
    1. ~sudo apt install git~
    2. ~git clone dotfiles-repo~
    3. ~cd dotfiles~
-   4. ~bash scripts/update.sh~
-   5. ~bash scripts/install.sh~
+   4. ~bash bin/update.sh~
+   5. ~bash bin/install.sh~
 
-* Tips
+* Helper Scripts
 
-   - To watch for GUI changes use ~dconf watch /~
-   - Dump all settings ~dconf dump /~
+   - ~bash bin/colors.sh~ - Print out termal formatting and color information.
+   - ~bash bin/backup-gsettings.sh~ - create a gsetting backup/dump to diff in ~$HOME/.gsettings.backup/~.
