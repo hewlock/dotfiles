@@ -11,4 +11,4 @@
 * Helper Scripts
 
    - ~bash bin/colors.sh~ - Print out termal formatting and color information.
-   - ~bash bin/backup-gsettings.sh~ - create a gsetting backup/dump to diff in ~$HOME/.gsettings.backup/~.
+   - ~bash bin/backup-gsettings.sh~ - Create a gsetting backup/dump to diff in ~$HOME/.gsettings.backup/~.
