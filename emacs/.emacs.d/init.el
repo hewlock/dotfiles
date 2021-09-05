@@ -45,3 +45,5 @@
 
 (setq custom-file (config-file "custom"))
 (load custom-file)
+
+(if (display-graphic-p) (mrm/light-theme) (mrm/dark-theme))

@@ -1,11 +1,10 @@
 * Setup
 
+  - [ ] assume eOS and run all install scripts or combine all
   - [ ] create dconf settings dump before and after scripts
   - [ ] create script to compare ui changes since install script
-
-* Elementary
-
-  - [ ] detect desktop environment and conditionally run elementary.sh
+  - [ ] only include DE config that can't be done through UI (and maybe control/caps)
+  - [X] setup emacs gui
 
 * Project
 
@@ -14,7 +13,3 @@
 * Terminal
 
   - [X] command for "open ." to open files app at location
-
-* Web
-
-  - [ ] closing browser should not persist tabs
