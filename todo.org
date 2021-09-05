@@ -1,9 +1,9 @@
 * Setup
 
-  - [ ] assume eOS and run all install scripts or combine all
+  - [X] assume eOS and run all install scripts or combine all
+  - [X] only include DE config that can't be done through UI (and maybe control/caps)
   - [ ] create dconf settings dump before and after scripts
   - [ ] create script to compare ui changes since install script
-  - [ ] only include DE config that can't be done through UI (and maybe control/caps)
   - [X] setup emacs gui
 
 * Project

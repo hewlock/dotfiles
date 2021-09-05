@@ -10,8 +10,6 @@ install tmux
 install tree
 install vim
 
-# cmd "mv ~/.bashrc ~/.bashrc.default"
-
 link bash
 link emacs
 link git
@@ -20,3 +18,5 @@ link vim
 
 cmd "echo \"source ~/.bash_override\" > ~/.bash_aliases"
 cmd "vim +PlugInstall +qall"
+
+source scripts/elementary.sh
