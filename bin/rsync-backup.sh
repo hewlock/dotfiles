@@ -31,7 +31,7 @@ function backup_dir {
 
 	echo "$TIMESTAMP" > $LOCK_FILE
 	info "sync $SOURCE_DIR -> $TARGET_DIR/$TIMESTAMP"
-	rsync -aPh --delete --link-dest=$TARGET_DIR/current $SOURCE_DIR $TARGET_DIR/$TIMESTAMP
+	rsync -aPh --delete --link-dest=$TARGET_DIR/current $SOURCE_DIR/ $TARGET_DIR/$TIMESTAMP
 	rm $LOCK_FILE
 
 	if [ "$?" = 0 ]; then
@@ -48,12 +48,17 @@ function backup_dir {
 }
 
 function backup_users {
+	RESULT=0
 	for SOURCE_DIR in /home/*; do
 		USER="$(basename $SOURCE_DIR)"
 		TARGET_DIR=$1/$USER
 		mkdir -p $TARGET_DIR
 		backup_dir $SOURCE_DIR $TARGET_DIR
+		if [ "$?" != 0 ]; then
+			RESULT=1
+		fi
 	done
+	return $RESULT
 }
 
 BACKUP_DIRS=""
@@ -70,6 +75,11 @@ done
 
 if [ -z "$BACKUP_DIRS" ]; then
 	error "backup failed"
+	for SOURCE_DIR in /home/*; do
+		USER="$(basename $SOURCE_DIR)"
+		USER_ID=$(id -u $USER)
+		sudo -u $USER DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$USER_ID/bus notify-send --icon=appointment-missed "Rsync Backup" "Backup failed"
+	done
 else
 	info "backup complete to:$BACKUP_DIRS"
 fi
