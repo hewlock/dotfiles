@@ -2,6 +2,10 @@ function info {
 	echo -e "[\033[0;32mINFO\033[0m] $1"
 }
 
+function error {
+	echo -e "[\033[0;31mERROR\033[0m] $1"
+}
+
 function cmd {
 	info "$1"
 	eval "$1"

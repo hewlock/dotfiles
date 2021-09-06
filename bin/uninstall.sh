@@ -19,3 +19,4 @@ uninstall tree
 uninstall vim
 
 cmd "rm ~/.bash_aliases"
+cmd "rm ~/bin"

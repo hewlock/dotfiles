@@ -29,5 +29,7 @@ alias gitd='git diff HEAD'
 alias gits='git status'
 alias open='gio open 2>/dev/null'
 
+export PATH=~/bin:$PATH
+
 fortune -as
 echo ""
