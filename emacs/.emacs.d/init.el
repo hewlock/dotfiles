@@ -38,6 +38,7 @@
 (load-config "neotree")
 (load-config "org")
 (load-config "rainbow-delimiters")
+(load-config "undo-fu")
 (load-config "web-mode")
 (load-config "which-key")
 (load-config "whitespace")
