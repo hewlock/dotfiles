@@ -15,3 +15,6 @@
    - ~bash bin/incremental-backup.sh $SRC $DST~ - Create Time Machine style incremental backups.
 	 - Example: ~bash bin/incremental-backup.sh ~ /backup/path/$(whoami)~
 	 - Add to user's crontab to receive user notifications
+   - ~bash bin/tag-files.sh $SRC $DST~ - create tag dir with links to files.
+	 - Example: ~bash bin/tag-files.sh ~/Documents ~/Documents/Tags~
+	 - Add to user's crontab to receive user notifications
