@@ -12,6 +12,8 @@ install tmux
 install tree
 install vim
 
+install "ubuntu-restricted-extras ttf-mscorefonts-installer-"
+
 link bash
 link emacs
 link git
