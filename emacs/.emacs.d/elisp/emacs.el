@@ -38,6 +38,10 @@
 (defadvice windmove-right (before other-window-now activate) (mrm/save-buffer))
 (defadvice windmove-up (before other-window-now activate) (mrm/save-buffer))
 
+(global-set-key (kbd "C-S-c") 'kill-ring-save)
+(global-set-key (kbd "C-S-v") 'yank)
+(global-set-key (kbd "C-S-x") 'kill-region)
+(global-set-key (kbd "C-S-z") 'undo)
 (global-set-key (kbd "C-c b p") 'mrm/print-file-name)
 (global-set-key (kbd "C-c b q") 'kill-this-buffer)
 (global-set-key (kbd "C-c b r") 'mrm/rename-file-and-buffer)
