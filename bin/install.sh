@@ -8,6 +8,7 @@ install curl
 install emacs
 install fortune
 install gnome-disk-utility
+install gnome-system-monitor
 install keepassxc
 install stow
 install tmux

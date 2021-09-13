@@ -14,6 +14,7 @@ uninstall curl
 uninstall emacs
 uninstall fortune
 uninstall gnome-disk-utility
+uninstall gnome-system-monitor
 uninstall keepassxc
 uninstall stow
 uninstall tmux
