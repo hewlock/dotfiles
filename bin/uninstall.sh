@@ -13,6 +13,8 @@ unlink vim
 uninstall curl
 uninstall emacs
 uninstall fortune
+uninstall gnome-disk-utility
+uninstall keepassxc
 uninstall stow
 uninstall tmux
 uninstall tree

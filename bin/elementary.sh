@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source scripts/include.sh
+source bin/include.sh
 
 BASE00="rgb(101,123,131)"
 BASE01="rgb(88,110,117)"
@@ -21,7 +21,7 @@ YELLOW="rgb(181,137,0)"
 
 cmd "gsettings set io.elementary.terminal.settings background \"rgba(12,42,53,0.95)\""
 cmd "gsettings set io.elementary.terminal.settings cursor-color \"${RED}\""
-cmd "gsettings set io.elementary.terminal.settings font \"Roboto Mono 11\""
+cmd "gsettings set io.elementary.terminal.settings font \"Roboto Mono 10\""
 cmd "gsettings set io.elementary.terminal.settings foreground \"${BASE0}\""
 cmd "gsettings set io.elementary.terminal.settings natural-copy-paste false"
 cmd "gsettings set io.elementary.terminal.settings palette \"${BASE02}:${RED}:${GREEN}:${YELLOW}:${BLUE}:${MAGENTA}:${CYAN}:${BASE2}:${BASE03}:${ORANGE}:${BASE01}:${BASE00}:${BASE0}:${VIOLET}:${BASE1}:${BASE3}\""

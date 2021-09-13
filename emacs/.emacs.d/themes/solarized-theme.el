@@ -278,9 +278,9 @@
  '(whitespace-space-after-tab ((t (:inherit whitespace-space))))
  '(whitespace-space-before-tab ((t (:inherit trailing-whitespace))))
  '(whitespace-trailing ((t (:inherit trailing-whitespace))))
- '(default ((((background dark) (class color) (min-colors 88)) (:background "#002b36" :foreground "#839496" :inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "nil" :family "Roboto Mono for Powerline"))
-            (((background light) (class color) (min-colors 88)) (:background "#fdf6e3" :foreground "#657b83" :inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "nil" :family "Roboto Mono for Powerline"))
-            (((background dark)) (:background "brightblack" :foreground "brightblue" :inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "nil" :family "Roboto Mono for Powerline"))
-            (t (:background "brightwhite" :foreground "brightyellow" :inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "nil" :family "Roboto Mono for Powerline")))))
+ '(default ((((background dark) (class color) (min-colors 88)) (:background "#002b36" :foreground "#839496" :inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "nil" :family "Roboto Mono"))
+            (((background light) (class color) (min-colors 88)) (:background "#fdf6e3" :foreground "#657b83" :inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "nil" :family "Roboto Mono"))
+            (((background dark)) (:background "brightblack" :foreground "brightblue" :inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "nil" :family "Roboto Mono"))
+            (t (:background "brightwhite" :foreground "brightyellow" :inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "nil" :family "Roboto Mono")))))
 
 (provide-theme 'solarized)

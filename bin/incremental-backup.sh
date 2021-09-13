@@ -37,7 +37,7 @@ fi
 
 echo "$TIMESTAMP" > $LOCK_FILE
 info "Sync $SOURCE_DIR -> $TARGET_DIR/$TIMESTAMP"
-rsync -aPh --delete --link-dest=$TARGET_DIR/current $SOURCE_DIR/ $TARGET_DIR/$TIMESTAMP
+rsync -aPh --delete --exclude={".cache/*",".mozilla/*",".var/*"} --link-dest=$TARGET_DIR/current $SOURCE_DIR/ $TARGET_DIR/$TIMESTAMP
 rm $LOCK_FILE
 
 if [ "$?" = 0 ]; then
