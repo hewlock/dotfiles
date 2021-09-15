@@ -28,3 +28,4 @@ cmd "ln -s dotfiles/bin ~/bin"
 cmd "vim +PlugInstall +qall"
 
 source bin/elementary.sh
+source bin/brave.sh
