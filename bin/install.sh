@@ -24,7 +24,6 @@ link tmux
 link vim
 
 cmd "echo \"source ~/.bash_override\" > ~/.bash_aliases"
-cmd "ln -s dotfiles/bin ~/bin"
 cmd "vim +PlugInstall +qall"
 
 source bin/elementary.sh

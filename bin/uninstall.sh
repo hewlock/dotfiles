@@ -24,4 +24,3 @@ uninstall vim
 uninstall ubuntu-restricted-extras
 
 cmd "rm ~/.bash_aliases"
-cmd "rm ~/bin"

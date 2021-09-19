@@ -16,9 +16,9 @@ function error {
 
 SOURCE_DIR=$1
 TARGET_DIR=$2
-CURRENT_DIR="$TARGET_DIR/current"
+LATEST_DIR="$TARGET_DIR/latest"
+IN_PROGRESS_DIR="$TARGET_DIR/in-progress"
 LOCK_FILE="$TARGET_DIR/.in-progress"
-TIMESTAMP=`date "+%Y-%m-%dT%H-%M-%S"`
 
 if [ ! -d "$SOURCE_DIR" ]; then
 	error "Source directory \"$SOURCE_DIR\" does not exist"
@@ -35,22 +35,26 @@ if [ -f "$LOCK_FILE" ]; then
 	exit 1
 fi
 
-echo "$TIMESTAMP" > $LOCK_FILE
+echo "$(date)" > $LOCK_FILE
 info "Sync $SOURCE_DIR -> $TARGET_DIR/$TIMESTAMP"
-rsync -aPh --delete --exclude={".cache/*",".mozilla/*",".var/*"} --link-dest=$TARGET_DIR/current $SOURCE_DIR/ $TARGET_DIR/$TIMESTAMP
+rsync -aPh --delete --link-dest=$LATEST_DIR $SOURCE_DIR/ $IN_PROGRESS_DIR
+RSYNC_STATUS="$?"
+
 rm $LOCK_FILE
 
-if [ "$?" = 0 ]; then
-	if [ -e $CURRENT_DIR ]; then
-		rm -f $TARGET_DIR/current
-		info "Backup complete to \"$TARGET_DIR\""
+# 24 is vanished file error (cache and temp files do this a lot)
+if [ "$RSYNC_STATUS" = 0 ] || [ "$RSYNC_STATUS" = 24 ]; then
+	if [ -e $LATEST_DIR ]; then
+		rm -f $LATEST_DIR
+		notify "Backup complete to \"$TARGET_DIR\""
 	else
 		notify "Initial backup complete to \"$TARGET_DIR\""
 	fi
 	
-	ln -s $TARGET_DIR/$TIMESTAMP $TARGET_DIR/current
+	TIMESTAMP_DIR="$TARGET_DIR/$(date "+%Y-%m-%dT%H-%M-%S")"
+	mv $IN_PROGRESS_DIR $TIMESTAMP_DIR
+	ln -s $TIMESTAMP_DIR $LATEST_DIR
 else
 	error "rsync failed to sync to \"$TARGET_DIR\""
-	mv $TARGET_DIR/$TIMESTAMP $TARGET_DIR/failed-$TIMESTAMP
 	exit 1
 fi

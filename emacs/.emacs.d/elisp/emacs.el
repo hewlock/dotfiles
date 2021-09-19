@@ -15,6 +15,7 @@
 (setq-default tab-width 4)
 
 (electric-indent-mode 1)
+(menu-bar-mode -1)
 (set-cursor-color "#dc322f")
 
 ; GUI Mode
@@ -24,10 +25,6 @@
   (set-frame-parameter (selected-frame) 'alpha '(95 . 95))
   (add-to-list 'default-frame-alist '(alpha . (95 . 95)))
   (tool-bar-mode -1))
-
-; Terminal Mode
-(unless (display-graphic-p)
-  (menu-bar-mode -1))
 
 (add-hook 'auto-save-hook 'mrm/save-buffer)
 (add-hook 'focus-out-hook 'mrm/save-buffer)
