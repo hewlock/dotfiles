@@ -225,7 +225,7 @@
  '(org-tag ((t (:inherit solarized-violet-fg :weight bold))))
  '(org-todo ((t (:inherit solarized-magenta-fg :weight bold))))
  '(org-verbatim ((t (:inherit org-code))))
- '(outline-1 ((t (:weight bold :underline t :height 1.6))))
+ '(outline-1 ((t (:weight bold :height 1.6))))
  '(outline-2 ((t (:weight bold))))
  '(outline-3 ((t (:inherit outline-2))))
  '(outline-4 ((t (:inherit outline-3))))
