@@ -16,4 +16,4 @@
 	name = Matthew Moulton
 	email = matthew.moulton@gmail.com
 [credential]
-	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+	helper = libsecret

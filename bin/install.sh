@@ -1,29 +1,92 @@
 #!/bin/bash
 
-source bin/include.sh
+##############################
+# Helper Functions
+##############################
 
-backup_gsettings
+function info {
+	echo -e "[\033[0;32mINFO\033[0m] $1"
+}
+
+function error {
+	echo -e "[\033[0;31mERROR\033[0m] $1"
+}
+
+function cmd {
+	info "$1"
+	eval "$1"
+}
+
+function link {
+	cmd "stow -v $1"
+}
+
+##############################
+# Distro Detection
+##############################
+
+OS_NAME=`hostnamectl | grep "Operating System:" | cut -d ":" -f 2 | awk '{$1=$1};1' | cut -d " " -f 1 | tr [:upper:] [:lower:]`
+info "OS Detected: $OS_NAME"
+
+if [[ $OS_NAME != "elementary" && $OS_NAME != "fedora" ]]; then
+	error "Unsupported OS"
+	exit 1
+fi
+
+##############################
+# Distro Functions
+##############################
+
+function install {
+	case $OS_NAME in
+		elementary)
+			cmd "sudo apt install $1 --assume-yes"
+			;;
+		fedora)
+			cmd "sudo dnf install $1 --assumeyes"
+			;;
+	esac
+}
+
+function update {
+	case $OS_NAME in
+		elementary)
+			cmd "sudo apt update --assume-yes"
+			cmd "sudo apt upgrade --assume-yes"
+			cmd "sudo apt autoremove --assume-yes"
+			;;
+		fedora)
+			cmd "sudo dnf upgrade --assumeyes"
+			cmd "sudo dnf autoremove --assumeyes"
+			;;
+	esac
+}
+
+##############################
+# Backup Configuration
+##############################
+
+cmd "mkdir -p ~/.gsettings.backup"
+cmd "gsettings list-recursively | sort > ~/.gsettings.backup/$(date --iso-8601=ns).txt"
+
+##############################
+# Install
+##############################
+
+update
 
 install curl
 install emacs
-install fortune
+install fortune-mod
 install gcc
 install gnome-disk-utility
 install gnome-system-monitor
-install keepassxc
-install libsecret-1-0
-install libsecret-1-dev
 install make
+install rsync
 install stow
 install tmux
 install tree
 install vim
-
-install "ubuntu-restricted-extras ttf-mscorefonts-installer-"
-
-# Git credential helper
-# https://stackoverflow.com/a/40312117
-cmd "sudo make --directory=/usr/share/doc/git/contrib/credential/libsecret"
 
 link bash
 link emacs
@@ -31,8 +94,7 @@ link git
 link tmux
 link vim
 
-cmd "echo \"source ~/.bash_override\" > ~/.bash_aliases"
 cmd "vim +PlugInstall +qall"
 
-source bin/elementary.sh
-source bin/brave.sh
+source bin/install/$OS_NAME.sh
+source bin/install/gnome.sh

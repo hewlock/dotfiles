@@ -23,14 +23,3 @@ function git_branch {
 }
 
 PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]\[$(git_color)\]$(git_branch) \[\033[01;34m\]\w\[\033[00m\] \$ '
-
-alias emacs='TERM=xterm emacs --no-window-system'
-alias gitd='git diff HEAD'
-alias gits='git status'
-alias open='gio open 2>/dev/null'
-alias trash='gio trash'
-
-export PATH=~/bin:$PATH
-
-fortune -as
-echo ""

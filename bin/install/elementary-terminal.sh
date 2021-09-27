@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source bin/include.sh
-
 BASE00="rgb(101,123,131)"
 BASE01="rgb(88,110,117)"
 BASE02="rgb(7,54,66)"
@@ -27,14 +25,3 @@ cmd "gsettings set io.elementary.terminal.settings natural-copy-paste false"
 cmd "gsettings set io.elementary.terminal.settings palette \"${BASE02}:${RED}:${GREEN}:${YELLOW}:${BLUE}:${MAGENTA}:${CYAN}:${BASE2}:${BASE03}:${ORANGE}:${BASE01}:${BASE00}:${BASE0}:${VIOLET}:${BASE1}:${BASE3}\""
 cmd "gsettings set io.elementary.terminal.settings tab-bar-behavior \"'Hide When Single Tab'\""
 cmd "gsettings set io.elementary.terminal.settings unsafe-paste-alert false"
-cmd "gsettings set org.gnome.desktop.input-sources xkb-options \"['grp:alt_shift_toggle', 'ctrl:nocaps', 'compose:menu']\""
-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys home \"['<Super>e']\""
-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys media \"['<Super>m']\""
-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys next \"['AudioNext']\""
-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys play \"['AudioPlay']\""
-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys previous \"['AudioPrev']\""
-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys terminal \"['<Super>t']\""
-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys volume-down \"['AudioLowerVolume']\""
-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys volume-mute \"['AudioMute']\""
-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys volume-up \"['AudioRaiseVolume']\""
-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys www \"['<Super>i']\""

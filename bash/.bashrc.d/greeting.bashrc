@@ -1,0 +1,2 @@
+fortune -as
+echo ""
