@@ -83,6 +83,7 @@ install gnome-disk-utility
 install gnome-system-monitor
 install gnome-terminal
 install make
+install neofetch
 install rsync
 install stow
 install tmux
