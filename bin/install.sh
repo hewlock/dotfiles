@@ -81,6 +81,7 @@ install fortune-mod
 install gcc
 install gnome-disk-utility
 install gnome-system-monitor
+install gnome-terminal
 install make
 install rsync
 install stow
@@ -97,4 +98,6 @@ link vim
 cmd "vim +PlugInstall +qall"
 
 source bin/install/$OS_NAME.sh
+
+source bin/install/gnome-terminal.sh
 source bin/install/gnome.sh
