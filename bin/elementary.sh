@@ -9,4 +9,4 @@ install libsecret-1-dev
 cmd "sudo make --directory=/usr/share/doc/git/contrib/credential/libsecret"
 cmd "git config --global credential.helper \"/usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret\""
 
-source bin/install/elementary-terminal.sh
+source bin/elementary-terminal.sh

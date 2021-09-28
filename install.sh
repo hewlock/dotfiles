@@ -98,7 +98,7 @@ link vim
 
 cmd "vim +PlugInstall +qall"
 
-source bin/install/$OS_NAME.sh
+source bin/$OS_NAME.sh
 
-source bin/install/gnome-terminal.sh
-source bin/install/gnome.sh
+source bin/gnome-terminal.sh
+source bin/gnome.sh
