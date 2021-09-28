@@ -1,11 +1,5 @@
 * Install
 
-** Elementary
-
-   1. ~sudo apt install git~
-
-** All Distros
-
    1. ~git clone dotfiles-repo~
    2. ~cd dotfiles~
    3. ~bash install.sh~
