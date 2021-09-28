@@ -18,7 +18,7 @@ function cmd {
 }
 
 function link {
-	cmd "stow -v $1"
+	cmd "stow -v -t ~ $1"
 }
 
 ##############################
