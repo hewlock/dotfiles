@@ -7,7 +7,7 @@
  '(custom-safe-themes
    '("b046fd92c6604db28b47c585f4449243dcbeea685f808ba0b30810a1a9515814" default))
  '(custom-theme-directory "~/.emacs.d/themes/")
- '(frame-background-mode 'light)
+ '(frame-background-mode 'dark)
  '(package-selected-packages
    '(web-mode markdown-mode less-css-mode coffee-mode yasnippet which-key rainbow-delimiters neotree magit counsel swiper ivy-hydra ivy evil-surround company evil use-package)))
 (custom-set-faces
