@@ -16,4 +16,4 @@
 	name = Matthew Moulton
 	email = matthew.moulton@gmail.com
 [credential]
-	helper = libsecret
+	helper = cache --timeout 7200

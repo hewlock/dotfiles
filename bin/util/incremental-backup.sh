@@ -37,7 +37,7 @@ fi
 
 echo "$(date)" > $LOCK_FILE
 info "Sync $SOURCE_DIR -> $TARGET_DIR/$TIMESTAMP"
-rsync -aPh --delete --link-dest=$LATEST_DIR $SOURCE_DIR/ $IN_PROGRESS_DIR
+rsync -aPh --delete --exclude "lost+found" --link-dest=$LATEST_DIR $SOURCE_DIR/ $IN_PROGRESS_DIR
 RSYNC_STATUS="$?"
 
 rm $LOCK_FILE
