@@ -3,9 +3,3 @@
    1. ~git clone dotfiles-repo~
    2. ~cd dotfiles~
    3. ~bash install.sh~
-
-* Helper Scripts
-
-   - ~bash bin/tag-files.sh $SRC $DST~ - create tag dir with links to files.
-	 - Example: ~bash bin/util/tag-files.sh ~/Documents ~/Documents/Tags~
-	 - Add to user's crontab to receive user notifications
