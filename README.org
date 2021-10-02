@@ -6,10 +6,6 @@
 
 * Helper Scripts
 
-   - ~bash bin/util/colors.sh~ - Print out termal formatting and color information.
-   - ~bash bin/util/incremental-backup.sh $SRC $DST~ - Create Time Machine style incremental backups.
-	 - Example: ~bash bin/util/incremental-backup.sh ~ /backup/path/$(whoami)~
-	 - Add to user's crontab to receive user notifications
    - ~bash bin/tag-files.sh $SRC $DST~ - create tag dir with links to files.
 	 - Example: ~bash bin/util/tag-files.sh ~/Documents ~/Documents/Tags~
 	 - Add to user's crontab to receive user notifications
