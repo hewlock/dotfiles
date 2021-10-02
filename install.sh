@@ -17,10 +17,6 @@ function cmd {
 	eval "$1"
 }
 
-function link {
-	cmd "stow -v -t ~ $1"
-}
-
 ##############################
 # Distro Detection
 ##############################
@@ -90,11 +86,7 @@ install tmux
 install tree
 install vim
 
-link bash
-link emacs
-link git
-link tmux
-link vim
+cmd "stow -v -t ~ home"
 
 cmd "vim +PlugInstall +qall"
 

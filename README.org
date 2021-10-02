@@ -3,3 +3,59 @@
    1. ~git clone dotfiles-repo~
    2. ~cd dotfiles~
    3. ~bash install.sh~
+
+* Emacs
+
+** Keybinds
+
+*** Global
+	Global keybind prefix C-c.
+	Global "go" prefix g.
+	Global "view" prefix z.
+
+**** Prefix Keys
+     - b buffer
+     - c mode-specific
+     - d directory
+     - e web
+     - h help
+     - i indicators/toggles
+     - m bookmarks
+     - o org
+     - p project
+     - q macro
+     - r region
+     - w window/frame
+     - y yank
+
+**** Suffix Keys
+     - c change [location] (Ex. change directory)
+     - d diff
+     - f find [by: name]
+     - k kill
+     - l log, list
+     - o open [filename url]
+     - p print [location name]
+     - q quit
+     - r rename [name]
+     - s search [within: buffer file]
+     - t tree
+     - u status
+     - x eval/execute
+
+*** Mode
+
+**** Evil Motion Keys
+     - B E F G H   K L M N T V W Y
+     - b e f g h j k l   n t v w y z
+
+**** Available Mode Keys
+     - A C D I J   O P Q R S U X Z
+     - a c d i   m o p q r s u x
+     - RET SPC
+
+**** Mode Keys
+     - o open [open in other window; transfer focus]
+     - q quit/hide
+     - RET open [open in current window]
+     - SPC quick look [open in other window; keep focus]
