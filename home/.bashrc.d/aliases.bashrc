@@ -1,5 +1,0 @@
-alias emacs='TERM=xterm emacs --no-window-system'
-alias gitd='git diff HEAD'
-alias gits='git status'
-alias open='gio open 2>/dev/null'
-alias trash='gio trash'

@@ -15,6 +15,9 @@ cmd "gsettings list-recursively | sort > ~/.gsettings.backup/$(date --iso-8601=n
 
 update
 
+backup ~/.bash_profile
+backup ~/.bashrc
+
 install curl
 install emacs
 install fortune-mod

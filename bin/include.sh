@@ -17,6 +17,12 @@ function cmd {
 	eval "$1"
 }
 
+function backup {
+	if [ -f $1 ]; then
+		cmd "mv \"$1\" \"$1.backup\""
+	fi
+}
+
 ##############################
 # Distro Detection
 ##############################
