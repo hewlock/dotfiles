@@ -1,0 +1,41 @@
+include "%L"
+
+<Multi_key> <Multi_key> <b> <e> <e> <r>                 : "🍺" # beer
+<Multi_key> <Multi_key> <b> <o> <m> <b>                 : "💣" # bomb
+<Multi_key> <Multi_key> <b> <o> <o> <m>                 : "💥" # boom
+<Multi_key> <Multi_key> <c> <h> <e> <c>                 : "✔️" # chec   -k
+<Multi_key> <Multi_key> <c> <o> <f> <f>                 : "☕" # coff   -ee
+<Multi_key> <Multi_key> <c> <o> <l> <b>                 : "🤨️" # colb   -ert
+<Multi_key> <Multi_key> <c> <o> <n> <f>                 : "😕️" # conf   -used
+<Multi_key> <Multi_key> <c> <o> <o> <l>                 : "😎" # cool
+<Multi_key> <Multi_key> <d> <o> <w> <n>                 : "👇" # down
+<Multi_key> <Multi_key> <e> <y> <e> <s>                 : "👀" # eyes
+<Multi_key> <Multi_key> <f> <c>                         : "🤞" # fc      fingers crossed
+<Multi_key> <Multi_key> <f> <p>                         : "🤦" # fp      face palm
+<Multi_key> <Multi_key> <g> <r> <i> <m>                 : "😬" # grim   -acing
+<Multi_key> <Multi_key> <g> <r> <i> <n>                 : "😀" # grin
+<Multi_key> <Multi_key> <h> <a> <n> <d>                 : "🙌" # hand   -s
+<Multi_key> <Multi_key> <j> <o> <y>                     : "😂" # joy
+<Multi_key> <Multi_key> <l> <e> <f> <t>                 : "👈" # left
+<Multi_key> <Multi_key> <minus> <1>                     : "👎️" # -1
+<Multi_key> <Multi_key> <n> <o> <s> <e>                 : "🙈" # nose   -e
+<Multi_key> <Multi_key> <p> <l> <e> <a>                 : "🥺" # plea
+<Multi_key> <Multi_key> <p> <o> <o>                     : "💩" # poo    -p
+<Multi_key> <Multi_key> <plus> <1>                      : "👍" # +1
+<Multi_key> <Multi_key> <r> <i> <g> <h>                 : "👉" # righ   -t
+<Multi_key> <Multi_key> <r> <o> <f> <l>                 : "🤣" # rofl
+<Multi_key> <Multi_key> <s> <a> <d>                     : "😥️" # sad
+<Multi_key> <Multi_key> <s> <c> <r> <e>                 : "😱" # scre   -am
+<Multi_key> <Multi_key> <s> <h> <i> <t>                 : "🤬" # shit
+<Multi_key> <Multi_key> <s> <h> <o> <c>                 : "🤯" # shoc   -k
+<Multi_key> <Multi_key> <s> <h> <r> <u>                 : "🤷" # shru   -g
+<Multi_key> <Multi_key> <t> <a> <d> <a>                 : "🎉" # tada
+<Multi_key> <Multi_key> <t> <h> <i> <n>                 : "🤔" # thin   -k
+<Multi_key> <Multi_key> <t> <o> <n> <g>                 : "😛" # tong   -ue
+<Multi_key> <Multi_key> <u> <p>                         : "☝️" # up
+<Multi_key> <Multi_key> <v> <o> <m> <i>                 : "🤮" # vomi   -t
+<Multi_key> <Multi_key> <w> <a> <v> <e>                 : "👋" # wave
+<Multi_key> <Multi_key> <w> <o> <r> <r>                 : "😟" # worr   -ied
+<Multi_key> <Multi_key> <w> <o> <w>                     : "😯" # wow
+<Multi_key> <Multi_key> <z> <z> <z>                     : "💤" # zzz
+
