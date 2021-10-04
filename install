@@ -1,13 +1,13 @@
 #!/bin/bash
 
-source bin/include.sh 
+source home/bin/include
 
 ##############################
 # Backup Configuration
 ##############################
 
-cmd "mkdir -p ~/.gsettings.backup"
-cmd "gsettings list-recursively | sort > ~/.gsettings.backup/$(date --iso-8601=ns).txt"
+cmd "mkdir -p $HOME/.gsettings.backup"
+cmd "gsettings list-recursively | sort > $HOME/.gsettings.backup/$(date --iso-8601=ns).txt"
 
 ##############################
 # Install
@@ -15,8 +15,8 @@ cmd "gsettings list-recursively | sort > ~/.gsettings.backup/$(date --iso-8601=n
 
 update
 
-backup ~/.bash_profile
-backup ~/.bashrc
+backup $HOME/.bash_profile
+backup $HOME/.bashrc
 
 install curl
 install emacs
@@ -37,7 +37,7 @@ cmd "stow -v -t ~ home"
 
 cmd "vim +PlugInstall +qall"
 
-source bin/$OS_NAME.sh
+source bin/$OS_NAME
 
-source bin/gnome-terminal.sh
-source bin/gnome.sh
+source bin/gnome-terminal
+source bin/gnome

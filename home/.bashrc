@@ -4,7 +4,7 @@ case $- in
       *) return;;
 esac
 
-for file in ~/.bashrc.d/*;
+for file in $HOME/.bashrc.d/*;
 do
 	source "$file"
 done
