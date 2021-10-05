@@ -1,0 +1,4 @@
+#!/bin/bash
+
+HOME2_ROOT=/media/$USER/home
+HOME2=$HOME2_ROOT/$USER
