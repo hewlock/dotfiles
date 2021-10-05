@@ -1,4 +1,6 @@
 #!/bin/bash
 
-HOME2_ROOT=/media/$USER/home
-HOME2=$HOME2_ROOT/$USER
+export MEDIA=/media/$USER
+export BACKUP_ROOT=$MEDIA/backup
+export HOME2_ROOT=$MEDIA/home
+export HOME2=$HOME2_ROOT/$USER

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+function info {
+	echo -e "[\033[0;32mINFO\033[0m] $1"
+}
+
+function cmd {
+	info "$1"
+	eval "$1"
+}
+
+cmd "tag-index $HOME2/Documents/Archive $HOME/Tags"
+cmd "incremental-backup $HOME2_ROOT $BACKUP_ROOT"

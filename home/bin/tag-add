@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# tag-add my-tag *.md
+
 TAG=$1
 
 for SRC in "${@:2}"
