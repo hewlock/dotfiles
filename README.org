@@ -3,3 +3,8 @@
    1. ~git clone dotfiles-repo~
    2. ~cd dotfiles~
    3. ~bash install~
+
+* Bin Scripts
+
+   - ~x-~ prefix signifies an executable script
+   - ~s-~ prefix signifies a "sourceable" script with helper functions
