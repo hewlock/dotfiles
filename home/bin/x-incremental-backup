@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+name="x-incremental-backup"
+
+source_dir=$1
+target_dir=$2
+latest_dir="$target_dir/latest"
+in_progress_dir="$target_dir/in-progress"
+lock_file="$target_dir/.in-progress"
+
+if [ ! -d "$source_dir" ]; then
+	x-notify-error $name "Source directory \"$source_dir\" does not exist"
+	exit 1
+fi
+
+if [ ! -d "$target_dir" ]; then
+	x-notify-error $name "Target directory \"$target_dir\" does not exist"
+	exit 1
+fi
+
+if [ -f "$lock_file" ]; then
+	x-notify-error $name "Backup still in progress to \"$target_dir\""
+	exit 1
+fi
+
+echo "$(date)" > $lock_file
+x-info "Sync $source_dir -> $target_dir"
+rsync -aPh --delete --exclude "lost+found" --exclude ".Trash-*" --link-dest=$latest_dir $source_dir/ $in_progress_dir
+rsync_status="$?"
+
+rm $lock_file
+
+# 24 is vanished file error (cache and temp files do this a lot)
+if [ "$rsync_status" = 0 ] || [ "$rsync_status" = 24 ]; then
+	if [ -e $latest_dir ]; then
+		rm -f $latest_dir
+		x-notify-info $name "Backup complete to \"$target_dir\""
+	else
+		x-notify-info $name "Initial backup complete to \"$target_dir\""
+	fi
+	
+	timestamp=$(date "+%Y-%m-%dT%H-%M-%S")
+	mv $in_progress_dir $target_dir/$timestamp
+	ln -s ./$timestamp $latest_dir
+else
+	x-notify-error $name "rsync failed to sync to \"$target_dir\""
+	exit 1
+fi

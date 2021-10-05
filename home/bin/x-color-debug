@@ -1,13 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Stand-alone script to print out basic 16 colors
+. s-solarized
 
 function header {
-	echo -e "\n\033[1;4m$1\033[0m\n"
+	echo -e "\n$(bold)$(underline)$1$(clr)\n"
 }
 
 function color {
-	echo -e "$1 $2 \033[$1m$2\033[0m"
+	echo -e "$1 $2 \e[$1m$2$(clr)"
 }
 
 clear

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+x-error "$1: $2"
+notify-send --icon=dialog-error "$1" "$2"

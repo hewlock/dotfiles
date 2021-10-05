@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# x-tag-add my-tag *.md
+
+tag=$1
+
+for src in "${@:2}"
+do
+	name="${src%.*}"
+	ext="${src##*.}"
+	dst="$name #$tag.$ext"
+	x-cmd "mv \"$src\" \"$dst\""
+done

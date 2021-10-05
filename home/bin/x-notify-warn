@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+x-warn "$1: $2"
+notify-send --icon=dialog-warning "$1" "$2"

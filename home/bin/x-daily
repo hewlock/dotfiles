@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+x-cmd "x-tag-index $HOME2/Documents/Archive $HOME/Tags"
+x-cmd "x-incremental-backup $HOME2_ROOT $BACKUP_ROOT"

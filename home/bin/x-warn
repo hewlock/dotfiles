@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+. s-solarized
+
+echo -e "[$(bold)$(yellow)WARN$(clr)] $1"

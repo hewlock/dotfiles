@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+name="x-tag-index"
+
+source_dir=$1
+target_dir=$2
+tag_pattern="\#[a-zA-Z0-9-]"
+
+if [ ! -d "$source_dir" ]; then
+	x-notify-error $name "Source directory \"$source_dir\" does not exist"
+	exit 1
+fi
+
+x-cmd "rm -rf $target_dir"
+x-cmd "mkdir -p $target_dir"
+
+if [ ! -d "$target_dir" ]; then
+	x-notify-error $name "Target directory \"$target_dir\" does not exist"
+	exit 1
+fi
+
+files=$(find $source_dir -name "*$tag_pattern*" -type f -print)
+
+OIFS="$IFS"
+IFS=$'\n'
+for file in $files; do
+	name=$(basename $file)
+	tags=$(echo $name | grep -o "$tag_pattern*" | cut -c 2-)
+
+	for tag in $tags; do
+		mkdir -p $target_dir/$tag
+		x-cmd "ln -s \"$file\" \"$target_dir/$tag\""
+	done
+done
+IFS="$OIFS"

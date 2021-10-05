@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+# Dark -> Light background tones
+function base03() { printf "\e[90m"; }
+function base02() { printf "\e[30m"; }
+function base01() { printf "\e[92m"; }
+function base00() { printf "\e[93m"; }
+function base0() { printf "\e[94m"; }
+function base1() { printf "\e[96m"; }
+function base2() { printf "\e[37m"; }
+function base3() { printf "\e[97m"; }
+
+# Accent Colors
+function yellow() { printf "\e[33m"; }
+function orange() { printf "\e[91m"; }
+function red() { printf "\e[31m"; }
+function magenta() { printf "\e[35m"; }
+function violet() { printf "\e[95m"; }
+function blue() { printf "\e[34m"; }
+function cyan() { printf "\e[36m"; }
+function green() { printf "\e[32m"; }
+
+# Dark -> Light background tones
+function base03-bg() { printf "\e[100m"; }
+function base02-bg() { printf "\e[40m"; }
+function base01-bg() { printf "\e[102m"; }
+function base00-bg() { printf "\e[103m"; }
+function base0-bg() { printf "\e[104m"; }
+function base1-bg() { printf "\e[106m"; }
+function base2-bg() { printf "\e[47m"; }
+function base3-bg() { printf "\e[107m"; }
+
+# Accent Colors
+function yellow-bg() { printf "\e[43m"; }
+function orange-bg() { printf "\e[101m"; }
+function red-bg() { printf "\e[41m"; }
+function magenta-bg() { printf "\e[45m"; }
+function violet-bg() { printf "\e[105m"; }
+function blue-bg() { printf "\e[44m"; }
+function cyan-bg() { printf "\e[46m"; }
+function green-bg() { printf "\e[42m"; }
+
+# Modifiers
+function bold() { printf "\e[1m"; }
+function dim() { printf "\e[2m"; }
+function underline() { printf "\e[4m"; }
+function invert() { printf "\e[7m"; }
+
+function clr() { printf "\e[0m"; }

@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+distro_name=$(x-distro-name)
+
+case $distro_name in
+	elementary)
+		x-cmd "sudo apt update --assume-yes"
+		x-cmd "sudo apt upgrade --assume-yes"
+		x-cmd "sudo apt autoremove --assume-yes"
+		;;
+	fedora)
+		x-cmd "sudo dnf upgrade --assumeyes"
+		x-cmd "sudo dnf autoremove --assumeyes"
+		;;
+	*)
+		x-error "Unsupported OS: $distro_name"
+		;;
+esac

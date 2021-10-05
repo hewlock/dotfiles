@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+x-info "$1"
+eval "$1"

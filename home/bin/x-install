@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+distro_name=$(x-distro-name)
+
+case $distro_name in
+	elementary)
+		x-cmd "sudo apt install $1 --assume-yes"
+		;;
+	fedora)
+		x-cmd "sudo dnf install $1 --assumeyes"
+		;;
+	*)
+		x-error "Unsupported OS: $distro_name"
+		;;
+esac

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+x-info "$1: $2"
+notify-send --icon=dialog-information "$1" "$2"

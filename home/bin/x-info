@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+. s-solarized
+
+echo -e "[$(bold)$(green)INFO$(clr)] $1"
