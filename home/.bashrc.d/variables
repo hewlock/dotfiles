@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 export MEDIA=/media/$USER
 export BACKUP_ROOT=$MEDIA/backup

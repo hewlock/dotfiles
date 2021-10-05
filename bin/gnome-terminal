@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-info "Gnome Terminal settings and theme"
+x-info "Gnome Terminal settings and theme"
 
 BASE03="rgb(0,43,54)"
 BASE02="rgb(7,54,66)"

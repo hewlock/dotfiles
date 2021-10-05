@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 BASE00="rgb(101,123,131)"
 BASE01="rgb(88,110,117)"
@@ -17,11 +17,11 @@ RED="rgb(220,50,47)"
 VIOLET="rgb(108,113,196)"
 YELLOW="rgb(181,137,0)"
 
-cmd "gsettings set io.elementary.terminal.settings background \"rgba(12,42,53,0.95)\""
-cmd "gsettings set io.elementary.terminal.settings cursor-color \"${RED}\""
-cmd "gsettings set io.elementary.terminal.settings font \"Roboto Mono 10\""
-cmd "gsettings set io.elementary.terminal.settings foreground \"${BASE0}\""
-cmd "gsettings set io.elementary.terminal.settings natural-copy-paste false"
-cmd "gsettings set io.elementary.terminal.settings palette \"${BASE02}:${RED}:${GREEN}:${YELLOW}:${BLUE}:${MAGENTA}:${CYAN}:${BASE2}:${BASE03}:${ORANGE}:${BASE01}:${BASE00}:${BASE0}:${VIOLET}:${BASE1}:${BASE3}\""
-cmd "gsettings set io.elementary.terminal.settings tab-bar-behavior \"'Hide When Single Tab'\""
-cmd "gsettings set io.elementary.terminal.settings unsafe-paste-alert false"
+x-cmd "gsettings set io.elementary.terminal.settings background \"rgba(12,42,53,0.95)\""
+x-cmd "gsettings set io.elementary.terminal.settings cursor-color \"${RED}\""
+x-cmd "gsettings set io.elementary.terminal.settings font \"Roboto Mono 10\""
+x-cmd "gsettings set io.elementary.terminal.settings foreground \"${BASE0}\""
+x-cmd "gsettings set io.elementary.terminal.settings natural-copy-paste false"
+x-cmd "gsettings set io.elementary.terminal.settings palette \"${BASE02}:${RED}:${GREEN}:${YELLOW}:${BLUE}:${MAGENTA}:${CYAN}:${BASE2}:${BASE03}:${ORANGE}:${BASE01}:${BASE00}:${BASE0}:${VIOLET}:${BASE1}:${BASE3}\""
+x-cmd "gsettings set io.elementary.terminal.settings tab-bar-behavior \"'Hide When Single Tab'\""
+x-cmd "gsettings set io.elementary.terminal.settings unsafe-paste-alert false"
