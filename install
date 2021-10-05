@@ -2,6 +2,13 @@
 
 PATH="$(pwd)/home/bin:$PATH"
 
+disto=$(x-distro-name)
+x-info "distro detected: $disto"
+if [[ $disto != "elementary" && $disto != "fedora" ]]; then
+	x-error "distro unsupported"
+	exit 1
+fi
+
 x-cmd "mkdir -p $HOME/.gsettings.backup"
 x-cmd "gsettings list-recursively | sort > $HOME/.gsettings.backup/$(date --iso-8601=ns).txt"
 
@@ -29,6 +36,6 @@ x-cmd "stow -v -t ~ home"
 
 x-cmd "vim +PlugInstall +qall"
 
-. bin/$OS_NAME
+. bin/$disto
 . bin/gnome-terminal
 . bin/gnome
