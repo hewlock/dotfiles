@@ -14,6 +14,7 @@ include "%L"
 <Multi_key> <Multi_key> <f> <p>                         : "🤦" # fp      face palm
 <Multi_key> <Multi_key> <g> <r> <i> <m>                 : "😬" # grim   -acing
 <Multi_key> <Multi_key> <g> <r> <i> <n>                 : "😀" # grin
+<Multi_key> <Multi_key> <g> <u> <n>                     : "🔫" # gun
 <Multi_key> <Multi_key> <h> <a> <n> <d>                 : "🙌" # hand   -s
 <Multi_key> <Multi_key> <j> <o> <y>                     : "😂" # joy
 <Multi_key> <Multi_key> <l> <e> <f> <t>                 : "👈" # left
