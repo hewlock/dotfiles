@@ -1,4 +1,18 @@
 #!/usr/bin/env bash
 
-x-cmd "x-tag-index $HOME2/Documents/Archive $HOME/Tags"
+##############################
+# Tags
+##############################
+
+tag_dir=$HOME2/.cache/Tags
+x-cmd "rm -rf $tag_dir"
+x-cmd "mkdir -p $tag_dir"
+
+x-cmd "x-tag-index $HOME2/Documents $tag_dir"
+x-cmd "x-tag-index $HOME2/Inbox $tag_dir"
+
+##############################
+# Backup
+##############################
+
 x-cmd "x-incremental-backup $HOME2_ROOT $BACKUP_ROOT"

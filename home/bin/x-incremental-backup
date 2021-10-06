@@ -25,7 +25,12 @@ fi
 
 echo "$(date)" > $lock_file
 x-info "Sync $source_dir -> $target_dir"
-rsync -aPh --delete --exclude "lost+found" --exclude ".Trash-*" --link-dest=$latest_dir $source_dir/ $in_progress_dir
+rsync -aPh \
+	  --delete \
+	  --exclude ".Trash-*" \
+	  --exclude ".cache" \
+	  --exclude "lost+found" \
+	  --link-dest=$latest_dir $source_dir/ $in_progress_dir
 rsync_status="$?"
 
 rm $lock_file

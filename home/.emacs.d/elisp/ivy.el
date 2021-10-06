@@ -36,7 +36,7 @@
          ("C-c p f" . mrm/project-file-jump)
          ("C-c p o" . mrm/project-find-file)
          ("C-c p s" . mrm/project-search)
-         ("C-p" . counsel-yank-pop)
+         ; ("C-p" . counsel-yank-pop) ; This breaks emacs C-p keybind
          :map counsel-ag-map
          ("C-r" . counsel-git-grep-query-replace)
          :map counsel-git-grep-map

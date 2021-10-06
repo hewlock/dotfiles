@@ -11,10 +11,11 @@
          ("C-c p u" . mrm/magit-status-project))
   :init
   (setq magit-bury-buffer-function (lambda(&optional kill-buffer) (interactive) (magit-restore-window-configuration t)))
-  (setq magit-display-buffer-function 'magit-display-buffer-same-window-except-diff-v1)
-  (evil-set-initial-state 'magit-diff-mode 'motion)
-  (evil-set-initial-state 'magit-log-mode 'motion)
-  (evil-set-initial-state 'magit-status-mode 'motion)
+  (setq ediff-split-window-function 'split-window-horizontally)
+  (setq magit-ediff-dwim-show-on-hunks t)
+  (evil-set-initial-state 'magit-diff-mode 'emacs)
+  (evil-set-initial-state 'magit-log-mode 'emacs)
+  (evil-set-initial-state 'magit-status-mode 'emacs)
   :config
   (advice-add 'magit-blame-mode :before 'evil-emacs-state)
   (advice-add 'magit-blame-quit :after 'evil-normal-state)

@@ -11,9 +11,6 @@ if [ ! -d "$source_dir" ]; then
 	exit 1
 fi
 
-x-cmd "rm -rf $target_dir"
-x-cmd "mkdir -p $target_dir"
-
 if [ ! -d "$target_dir" ]; then
 	x-notify-error $name "Target directory \"$target_dir\" does not exist"
 	exit 1
@@ -28,8 +25,9 @@ for file in $files; do
 	tags=$(echo $name | grep -o "$tag_pattern*" | cut -c 2-)
 
 	for tag in $tags; do
+		x-info "$tag: $file"
 		mkdir -p $target_dir/$tag
-		x-cmd "ln -s \"$file\" \"$target_dir/$tag\""
+		ln -s "$file" "$target_dir/$tag"
 	done
 done
 IFS="$OIFS"
