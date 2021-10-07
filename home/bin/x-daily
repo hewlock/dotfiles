@@ -12,6 +12,12 @@ x-cmd "x-tag-index $HOME2/Documents $tag_dir"
 x-cmd "x-tag-index $HOME2/Inbox $tag_dir"
 
 ##############################
+# App Backup
+##############################
+
+x-cmd "cp $HOME/.config/BraveSoftware/Brave-Browser/Default/Bookmarks $HOME2/Apps/Brave/Bookmarks"
+
+##############################
 # Backup
 ##############################
 
