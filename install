@@ -25,6 +25,7 @@ x-install gnome-disk-utility
 x-install gnome-system-monitor
 x-install gnome-terminal
 x-install make
+x-install ncurses-term
 x-install neofetch
 x-install rsync
 x-install stow
