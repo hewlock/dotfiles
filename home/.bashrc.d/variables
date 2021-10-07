@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-export MEDIA=/media/$USER
-export BACKUP_ROOT=$MEDIA/backup
-export HOME2_ROOT=$MEDIA/home
+export BACKUP_ROOT=/mnt/backup
+export HOME2_ROOT=/mnt/home
 export HOME2=$HOME2_ROOT/$USER
