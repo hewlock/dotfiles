@@ -4,6 +4,6 @@ if [ -L $1 ]; then
 	x-cmd "rm \"$1\""
 else
 	if [ -f $1 ]; then
-		x-cmd "mv \"$1\" \"$1.backup\""
+		x-cmd "mv \"$1\" \"$1.bak\""
 	fi
 fi
