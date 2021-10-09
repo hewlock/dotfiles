@@ -4,21 +4,10 @@
 # Tags
 ##############################
 
-tag_dir=$HOME2/.cache/Tags
+db=$HOME/Dropbox
+tag_dir=$HOME/.cache/Tags
 x-cmd "rm -rf $tag_dir"
 x-cmd "mkdir -p $tag_dir"
 
-x-cmd "x-tag-index $HOME2/Documents $tag_dir"
-x-cmd "x-tag-index $HOME2/Inbox $tag_dir"
-
-##############################
-# App Backup
-##############################
-
-x-cmd "cp $HOME/.config/BraveSoftware/Brave-Browser/Default/Bookmarks $HOME2/Apps/Brave/Bookmarks"
-
-##############################
-# Backup
-##############################
-
-x-cmd "x-incremental-backup $HOME2_ROOT $BACKUP_ROOT"
+x-cmd "x-tag-index $db/Documents $tag_dir"
+x-cmd "x-tag-index $db/Inbox $tag_dir"

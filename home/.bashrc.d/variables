@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-export BACKUP_ROOT=/mnt/backup
-export HOME2_ROOT=/mnt/home
-export HOME2=$HOME2_ROOT/$USER
