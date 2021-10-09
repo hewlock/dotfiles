@@ -4,3 +4,10 @@ x-install google-roboto-condensed-fonts
 x-install google-roboto-fonts
 x-install google-roboto-mono-fonts
 x-install google-roboto-slab-fonts
+
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+x-update
+
+sudo dnf install @multimedia
