@@ -27,6 +27,7 @@ x-install gnome-terminal
 x-install make
 x-install ncurses-term
 x-install neofetch
+x-install ranger
 x-install rsync
 x-install stow
 x-install tmux

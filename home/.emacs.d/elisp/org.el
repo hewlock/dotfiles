@@ -20,6 +20,7 @@
   (setq org-html-validation-link nil)
   (setq org-log-into-drawer t)
   (setq org-startup-folded nil)
+  (add-hook 'org-mode-hook 'turn-on-auto-fill)
   :config
   (advice-add 'org-clocktable-indent-string
               :override #'mrm/org-clocktable-indent-string)
