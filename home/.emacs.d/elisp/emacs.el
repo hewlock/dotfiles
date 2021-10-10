@@ -22,8 +22,6 @@
 (when (display-graphic-p)
   (set-fringe-mode 0)
   (toggle-scroll-bar -1)
-  (set-frame-parameter (selected-frame) 'alpha '(95 . 95))
-  (add-to-list 'default-frame-alist '(alpha . (95 . 95)))
   (tool-bar-mode -1))
 
 (add-hook 'auto-save-hook 'mrm/save-buffer)

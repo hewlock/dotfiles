@@ -17,7 +17,7 @@ RED="rgb(220,50,47)"
 VIOLET="rgb(108,113,196)"
 YELLOW="rgb(181,137,0)"
 
-x-cmd "gsettings set io.elementary.terminal.settings background \"rgba(12,42,53,0.95)\""
+x-cmd "gsettings set io.elementary.terminal.settings background \"rgb(12,42,53)\""
 x-cmd "gsettings set io.elementary.terminal.settings cursor-color \"${RED}\""
 x-cmd "gsettings set io.elementary.terminal.settings font \"Roboto Mono 10\""
 x-cmd "gsettings set io.elementary.terminal.settings foreground \"${BASE0}\""
