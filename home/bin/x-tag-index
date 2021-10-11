@@ -4,7 +4,7 @@ name="x-tag-index"
 
 source_dir=$1
 target_dir=$2
-tag_pattern="\#[a-zA-Z0-9-]"
+tag_pattern="{\([a-zA-Z0-9-]*\)}"
 
 if [ ! -d "$source_dir" ]; then
 	x-notify-error $name "Source directory \"$source_dir\" does not exist"
@@ -16,13 +16,13 @@ if [ ! -d "$target_dir" ]; then
 	exit 1
 fi
 
-files=$(find $source_dir -name "*$tag_pattern*" -type f -print)
+files=$(find $source_dir -regextype sed -regex ".*$tag_pattern.*" -type f -print)
 
 OIFS="$IFS"
 IFS=$'\n'
 for file in $files; do
 	name=$(basename $file)
-	tags=$(echo $name | grep -o "$tag_pattern*" | cut -c 2-)
+	tags=$(echo $name | grep -o "$tag_pattern" | sed "s/$tag_pattern/\1/")
 
 	for tag in $tags; do
 		x-info "$tag: $file"
