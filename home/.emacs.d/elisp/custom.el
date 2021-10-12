@@ -5,9 +5,9 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes '(solarized))
  '(custom-safe-themes
-   '("19098e7cee80d3012e6574cff5c9dc7489f868955ba57140eb1fc93acdf2a684" default))
+   '("e29fa615eb27f88d08f6cc3f25d6c6479f7c0bbf4cf65aab9e37daf7c5d76809" default))
  '(custom-theme-directory "~/.emacs.d/themes/")
- '(frame-background-mode 'light)
+ '(frame-background-mode 'dark)
  '(package-selected-packages
    '(web-mode markdown-mode less-css-mode coffee-mode yasnippet which-key rainbow-delimiters neotree magit counsel swiper ivy-hydra ivy evil-surround company evil use-package)))
 (custom-set-faces
