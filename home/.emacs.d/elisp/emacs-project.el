@@ -1,5 +1,5 @@
 (defvar mrm/project-directory-internal
-  (locate-dominating-file default-directory ".git")
+  (or (locate-dominating-file default-directory ".git") (getenv "PWD"))
   "Project directory.")
 
 (defun mrm/project-directory ()

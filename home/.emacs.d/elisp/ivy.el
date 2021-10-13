@@ -36,7 +36,7 @@
          ("C-c p f" . mrm/project-file-jump)
          ("C-c p o" . mrm/project-find-file)
          ("C-c p s" . mrm/project-search)
-         ; ("C-p" . counsel-yank-pop) ; This breaks emacs C-p keybind
+         ("M-p" . counsel-yank-pop)
          :map counsel-ag-map
          ("C-r" . counsel-git-grep-query-replace)
          :map counsel-git-grep-map
@@ -44,20 +44,15 @@
   :commands
   counsel-yank-pop
   :config
-  (setq counsel-ag-base-command "grep -nr %s .")
   (defun mrm/project-find-file ()
     "Find file in project directory."
     (interactive)
     (counsel-find-file (mrm/project-directory)))
   (defun mrm/project-file-jump ()
-    "Find git file in project directory."
+    "Search file names in project directory."
     (interactive)
-    (let ((default-directory (mrm/project-directory)))
-        (counsel-git)))
+    (counsel-file-jump nil (mrm/project-directory)))
   (defun mrm/project-search ()
-    "Search files in project directory."
+    "Search file contents in project directory."
     (interactive)
-    (let ((default-directory (mrm/project-directory)))
-        (counsel-git-grep))))
-
-(mrm/evil-global-unbind "C-p")
+	(counsel-ag nil (mrm/project-directory) "--hidden")))

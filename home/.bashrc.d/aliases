@@ -9,6 +9,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+alias ag="ag --hidden"
 alias emacs='TERM=xterm-16color emacs --no-window-system'
 alias ga='git add .'
 alias gd='git diff HEAD'
