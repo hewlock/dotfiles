@@ -1,1 +1,15 @@
-EDITOR=/usr/bin/vim
+#!/usr/bin/env bash
+
+export EDITOR=/usr/bin/vim
+
+export X_DROPBOX=~/Dropbox
+export X_PROJECTS=~/Projects
+
+export X_DOCUMENTS=$X_DROPBOX/Documents
+
+export X_ARCHIVE=$X_DOCUMENTS/Archive
+export X_DOTFILES=$X_PROJECTS/dotfiles
+export X_INBOX=$X_DROPBOX/Inbox
+export X_NOTES=$X_DOCUMENTS/Notes
+export X_TEMPLATES=$X_DROPBOX/Templates
+export X_TODOS=$X_DOCUMENTS/Todos
