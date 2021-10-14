@@ -10,11 +10,11 @@
          ("M-K" . org-shiftmetaup)
          ("M-L" . org-shiftmetaright)
          ("M-h" . org-metaleft)
-         ("M-i" . org-insert-todo-heading)
+         ("M-i" . (lambda () (interactive) (org-insert-todo-heading 1)))
          ("M-j" . org-metadown)
          ("M-k" . org-metaup)
          ("M-l" . org-metaright)
-         ("M-o" . org-insert-heading-respect-content)
+         ("M-o" . (lambda () (interactive) (org-insert-heading-respect-content 1) (evil-append 1)))
 		 ("M-t" . mrm/org-toggle-flagged))
   :init
   (setq org-agenda-files (split-string (shell-command-to-string "find $X_TODOS -type d")))
