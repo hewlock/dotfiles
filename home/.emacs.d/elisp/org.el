@@ -38,9 +38,9 @@
   "Toggle flagged tag to org item"
   (interactive)
   (let ((tags (org-get-tags)))
-	(if (member "flagged" tags)
-		(org-set-tags (sort (remove "flagged" tags) 'string<))
-	  (org-set-tags (sort (append '("flagged") tags) 'string<)))))
+	(if (member "FLAGGED" tags)
+		(org-set-tags (sort (remove "FLAGGED" tags) 'string<))
+	  (org-set-tags (sort (append '("FLAGGED") tags) 'string<)))))
 
 (defun mrm/org-clocktable-indent-string (level)
   "Fix \emsp from showing in clock tables"
