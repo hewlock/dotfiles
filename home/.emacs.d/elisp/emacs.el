@@ -1,7 +1,5 @@
 (require 'windmove)
 
-(setq make-backup-files nil)
-
 (setq-default auto-save-interval 20)
 (setq-default auto-save-timeout 5)
 (setq-default cursor-in-non-selected-windows nil)
