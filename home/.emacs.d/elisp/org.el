@@ -24,6 +24,9 @@
   (setq org-html-head-include-scripts nil)
   (setq org-html-validation-link nil)
   (setq org-log-into-drawer t)
+  (setq org-outline-path-complete-in-steps nil)
+  (setq org-refile-targets '((nil :maxlevel . 9) (org-agenda-files :maxlevel . 9)))
+  (setq org-refile-use-outline-path t)
   (setq org-startup-folded nil)
   (setq org-todo-keywords
         '((sequence "TODO(t)" "PROJECT(p)" "|" "DONE(d)" "CANCELLED(c)")))
