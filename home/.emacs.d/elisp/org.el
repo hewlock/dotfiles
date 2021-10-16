@@ -1,6 +1,8 @@
 (use-package org
   :ensure t
   :bind (("C-c o a" . org-agenda)
+		 ("C-c o c" . org-capture)
+		 ("C-c o t" . mrm/org-capture-todo)
          :map org-mode-map
          ("C-c c a" . org-table-align)
          ("C-c c e" . org-html-export-as-html)
@@ -17,8 +19,11 @@
          ("M-o" . mrm/org-insert-heading-respect-content)
 		 ("M-t" . mrm/org-toggle-tag-flagged))
   :init
-  (setq org-agenda-files (split-string (shell-command-to-string "find $X_TODOS -type d")))
+  ; First
   (setq org-directory (getenv "X_TODOS"))
+  (setq org-agenda-files (split-string (shell-command-to-string (concat "find " org-directory " -type d"))))
+  (setq org-default-notes-file (concat org-directory "/Inbox.org"))
+  ; Sorted
   (setq org-export-with-toc nil)
   (setq org-html-head-include-default-style nil)
   (setq org-html-head-include-scripts nil)
@@ -28,14 +33,18 @@
   (setq org-refile-targets '((nil :maxlevel . 9) (org-agenda-files :maxlevel . 9)))
   (setq org-refile-use-outline-path t)
   (setq org-startup-folded nil)
-  (setq org-todo-keywords
-        '((sequence "TODO(t)" "PROJECT(p)" "|" "DONE(d)" "CANCELLED(c)")))
   (setq org-agenda-custom-commands
       '(("o" "Overview Agenda"
          ((agenda)
           (tags-todo "inbox")
           (todo "PROJECT")
           (tags-todo "flagged")))))
+  (setq org-capture-templates
+		'(("t" "Todo" entry (file+headline org-default-notes-file "Inbox")
+		   "* TODO %?"
+		   :empty-lines-before 1)))
+  (setq org-todo-keywords
+        '((sequence "TODO(t)" "PROJECT(p)" "|" "DONE(d)" "CANCELLED(c)")))
   (add-hook 'org-mode-hook 'turn-on-auto-fill)
   :config
   (advice-add 'org-clocktable-indent-string
@@ -44,6 +53,12 @@
         (concat "<style>\n"
                 (mrm/get-file-as-string "~/.emacs.d/css/solarized.css")
                 "</style>")))
+
+(defun mrm/org-capture-todo ()
+  "Capture a todo"
+  (interactive)
+  (org-capture nil "t")
+  (evil-append 1))
 
 (defun mrm/org-insert-heading-respect-content ()
   "Call org-insert-heading-respect-content and enter Evil insert mode"
