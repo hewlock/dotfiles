@@ -35,10 +35,10 @@
   (setq org-startup-folded nil)
   (setq org-agenda-custom-commands
       '(("o" "Overview Agenda"
-         ((agenda)
-          (tags-todo "inbox")
+         ((tags-todo "inbox")
           (todo "PROJECT")
-          (tags-todo "flagged")))))
+          (tags-todo (concat "flagged+SCHEDULED<=\"<now>\"|flagged+SCHEDULED=\"\"")))
+		 ((org-agenda-remove-tags t)))))
   (setq org-capture-templates
 		'(("t" "Todo" entry (file+headline org-default-notes-file "Inbox")
 		   "* TODO %?"
