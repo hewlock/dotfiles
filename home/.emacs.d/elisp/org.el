@@ -46,6 +46,7 @@
   (setq org-todo-keywords
         '((sequence "TODO(t)" "PROJECT(p)" "|" "DONE(d)" "CANCELLED(c)")))
   (add-hook 'org-mode-hook 'turn-on-auto-fill)
+  (evil-set-initial-state 'org-agenda-mode 'motion)
   :config
   (advice-add 'org-clocktable-indent-string
               :override #'mrm/org-clocktable-indent-string)
