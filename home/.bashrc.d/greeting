@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
 echo ""
-neofetch --color_blocks off
+neofetch --color_blocks off --ascii_colors 4 12 1 8 8 6
 fortune -as
 echo ""
