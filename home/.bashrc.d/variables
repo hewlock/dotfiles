@@ -2,6 +2,7 @@
 
 export EDITOR=/usr/bin/vim
 
+export X_BACKUP=~/.backup
 export X_DROPBOX=~/Dropbox
 export X_PROJECTS=~/Projects
 

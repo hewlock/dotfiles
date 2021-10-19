@@ -1,9 +1,40 @@
 (require 'windmove)
 
-(setq make-backup-files nil)
+;==============================
+; Auto Backups
+;==============================
+(defvar backup-file-directory (concat (getenv "X_BACKUP") "/emacs/"))
+(make-directory backup-file-directory t)
 
-(setq-default auto-save-interval 20)
-(setq-default auto-save-timeout 5)
+(setq-default backup-by-copying t)
+(setq-default backup-directory-alist `((".*" . ,backup-file-directory)))
+(setq-default delete-old-versions t)
+(setq-default kept-new-versions 9)
+(setq-default kept-old-versions 2)
+(setq-default version-control t)
+
+;==============================
+; Auto Saves
+;==============================
+(auto-save-visited-mode t)
+(add-hook 'auto-save-hook 'mrm/save-all-buffers)
+(add-hook 'focus-out-hook 'mrm/save-all-buffers)
+(defadvice other-window (before other-window-now activate) (mrm/save-all-buffers))
+(defadvice switch-to-buffer (before save-buffer-now activate) (mrm/save-all-buffers))
+(defadvice windmove-down (before other-window-now activate) (mrm/save-all-buffers))
+(defadvice windmove-left (before other-window-now activate) (mrm/save-all-buffers))
+(defadvice windmove-right (before other-window-now activate) (mrm/save-all-buffers))
+(defadvice windmove-up (before other-window-now activate) (mrm/save-all-buffers))
+
+(defun mrm/save-all-buffers ()
+  "Save all buffers."
+  (interactive)
+  (save-some-buffers t))
+
+;==============================
+; General
+;==============================
+(setq-default create-lockfiles nil)
 (setq-default cursor-in-non-selected-windows nil)
 (setq-default fill-column 80)
 (setq-default indent-tabs-mode t)
@@ -23,15 +54,6 @@
   (set-fringe-mode 0)
   (toggle-scroll-bar -1)
   (tool-bar-mode -1))
-
-(add-hook 'auto-save-hook 'mrm/save-buffer)
-(add-hook 'focus-out-hook 'mrm/save-buffer)
-(defadvice other-window (before other-window-now activate) (mrm/save-buffer))
-(defadvice switch-to-buffer (before save-buffer-now activate) (mrm/save-buffer))
-(defadvice windmove-down (before other-window-now activate) (mrm/save-buffer))
-(defadvice windmove-left (before other-window-now activate) (mrm/save-buffer))
-(defadvice windmove-right (before other-window-now activate) (mrm/save-buffer))
-(defadvice windmove-up (before other-window-now activate) (mrm/save-buffer))
 
 (global-set-key (kbd "C-S-c") 'kill-ring-save)
 (global-set-key (kbd "C-S-v") 'yank)
@@ -77,11 +99,6 @@
 (defun mrm/reload-emacs ()
   (interactive)
   (load-file "~/.emacs.d/init.el"))
-
-(defun mrm/save-buffer ()
-  "Save current buffer."
-  (interactive)
-  (when buffer-file-name (save-buffer)))
 
 (defun mrm/get-file-as-string (file)
   "Return filePath's file content."
