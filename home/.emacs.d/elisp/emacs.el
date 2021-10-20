@@ -17,16 +17,19 @@
 ; Auto Saves
 ;==============================
 (auto-save-visited-mode t)
+
 (add-hook 'auto-save-hook 'mrm/save-all-buffers)
 (add-hook 'focus-out-hook 'mrm/save-all-buffers)
-(defadvice other-window (before other-window-now activate) (mrm/save-all-buffers))
-(defadvice switch-to-buffer (before save-buffer-now activate) (mrm/save-all-buffers))
-(defadvice windmove-down (before other-window-now activate) (mrm/save-all-buffers))
-(defadvice windmove-left (before other-window-now activate) (mrm/save-all-buffers))
-(defadvice windmove-right (before other-window-now activate) (mrm/save-all-buffers))
-(defadvice windmove-up (before other-window-now activate) (mrm/save-all-buffers))
 
-(defun mrm/save-all-buffers ()
+(advice-add 'org-agenda-quit :after #'mrm/save-all-buffers)
+(advice-add 'other-window :after #'mrm/save-all-buffers)
+(advice-add 'switch-to-buffer :after #'mrm/save-all-buffers)
+(advice-add 'windmove-down :after #'mrm/save-all-buffers)
+(advice-add 'windmove-left :after #'mrm/save-all-buffers)
+(advice-add 'windmove-right :after #'mrm/save-all-buffers)
+(advice-add 'windmove-up :after #'mrm/save-all-buffers)
+
+(defun mrm/save-all-buffers (&rest args)
   "Save all buffers."
   (interactive)
   (save-some-buffers t))
