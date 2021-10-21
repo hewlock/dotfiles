@@ -45,7 +45,8 @@
 (setq-default pulse-flag nil)
 (setq-default same-window-regexps '("."))
 (setq-default scroll-bar-mode nil)
-(setq-default split-width-threshold 120)
+(setq-default split-height-threshold 120)
+(setq-default split-width-threshold 80)
 (setq-default tab-width 4)
 
 (electric-indent-mode 1)
