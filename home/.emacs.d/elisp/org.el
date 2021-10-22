@@ -49,9 +49,9 @@
            :empty-lines-before 1)))
   (setq org-todo-keywords
         '((sequence
-           "DOCUMENTATION(o)"
+           "TODO(t)" ; needs to be first
            "PROJECT(p)"
-           "TODO(t)"
+           "DOCUMENTATION(o)"
            "|"
            "CANCELLED(c)"
            "DONE(d)"
