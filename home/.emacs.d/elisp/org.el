@@ -17,7 +17,9 @@
          ("M-k" . org-metaup)
          ("M-l" . org-metaright)
          ("M-o" . mrm/org-insert-heading-respect-content)
-		 ("M-t" . mrm/org-toggle-tag-flagged))
+		 ("M-f" . mrm/org-toggle-tag-flagged)
+         ("M-d" . (lambda () (interactive) (org-todo "DONE")))
+         ("M-t" . (lambda () (interactive) (org-todo "TODO"))))
   :init
   ; First
   (setq org-directory (getenv "X_TODOS"))
@@ -54,6 +56,11 @@
         (concat "<style>\n"
                 (mrm/get-file-as-string "~/.emacs.d/css/solarized.css")
                 "</style>")))
+
+(use-package org-agenda
+  :bind (:map org-agenda-mode-map
+         ("M-d" . (lambda () (interactive) (org-agenda-todo "DONE")))
+         ("M-t" . (lambda () (interactive) (org-agenda-todo "TODO")))))
 
 (defun mrm/org-capture-todo ()
   "Capture a todo"
