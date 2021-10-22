@@ -1,8 +1,8 @@
 (use-package org
   :ensure t
   :bind (("C-c o a" . org-agenda)
-		 ("C-c o c" . org-capture)
-		 ("C-c o t" . mrm/org-capture-todo)
+         ("C-c o c" . org-capture)
+         ("C-c o t" . (lambda () (interactive) (org-capture nil "t") (evil-append 1)))
          :map org-mode-map
          ("C-c c a" . org-table-align)
          ("C-c c e" . org-html-export-as-html)
@@ -11,14 +11,16 @@
          ("M-J" . org-shiftmetadown)
          ("M-K" . org-shiftmetaup)
          ("M-L" . org-shiftmetaright)
+         ("M-S" . (lambda () (interactive) (org-sort-entries nil ?p) (org-sort-entries nil ?o)))
+         ("M-d" . (lambda () (interactive) (org-todo "DONE")))
+         ("M-f" . (lambda () (interactive) (mrm/org-toggle-tag "flagged")))
          ("M-h" . org-metaleft)
-         ("M-i" . mrm/org-insert-todo-heading)
+         ("M-i" . (lambda () (interactive) (org-insert-todo-heading 1) (evil-append 1)))
          ("M-j" . org-metadown)
          ("M-k" . org-metaup)
          ("M-l" . org-metaright)
-         ("M-o" . mrm/org-insert-heading-respect-content)
-		 ("M-f" . mrm/org-toggle-tag-flagged)
-         ("M-d" . (lambda () (interactive) (org-todo "DONE")))
+         ("M-o" . (lambda () (interactive) (org-insert-heading-respect-content 1) (evil-append 1)))
+         ("M-s" . org-sort)
          ("M-t" . (lambda () (interactive) (org-todo "TODO"))))
   :init
   ; First
@@ -40,13 +42,20 @@
          ((tags-todo "inbox")
           (todo "PROJECT")
           (tags-todo (concat "flagged+SCHEDULED<=\"<now>\"|flagged+SCHEDULED=\"\"")))
-		 ((org-agenda-remove-tags t)))))
+         ((org-agenda-remove-tags t)))))
   (setq org-capture-templates
-		'(("t" "Todo" entry (file+headline org-default-notes-file "Inbox")
-		   "* TODO %?"
-		   :empty-lines-before 1)))
+        '(("t" "Todo" entry (file+headline org-default-notes-file "Inbox")
+           "* TODO %?"
+           :empty-lines-before 1)))
   (setq org-todo-keywords
-        '((sequence "TODO(t)" "PROJECT(p)" "|" "DONE(d)" "CANCELLED(c)")))
+        '((sequence
+           "DOCUMENTATION(o)"
+           "PROJECT(p)"
+           "TODO(t)"
+           "|"
+           "CANCELLED(c)"
+           "DONE(d)"
+           )))
   (add-hook 'org-mode-hook 'turn-on-auto-fill)
   (evil-set-initial-state 'org-agenda-mode 'motion)
   :config
@@ -62,35 +71,12 @@
          ("M-d" . (lambda () (interactive) (org-agenda-todo "DONE")))
          ("M-t" . (lambda () (interactive) (org-agenda-todo "TODO")))))
 
-(defun mrm/org-capture-todo ()
-  "Capture a todo"
-  (interactive)
-  (org-capture nil "t")
-  (evil-append 1))
-
-(defun mrm/org-insert-heading-respect-content ()
-  "Call org-insert-heading-respect-content and enter Evil insert mode"
-  (interactive)
-  (org-insert-heading-respect-content 1)
-  (evil-append 1))
-
-(defun mrm/org-insert-todo-heading ()
-  "Call org-insert-todo-heading and enter Evil insert mode"
-  (interactive)
-  (org-insert-todo-heading 1)
-  (evil-append 1))
-
 (defun mrm/org-toggle-tag (name)
   "Toggle tag to org item"
   (let ((tags (org-get-tags)))
-	(if (member name tags)
-		(org-set-tags (sort (remove name tags) 'string<))
-	  (org-set-tags (sort (append (list name) tags) 'string<)))))
-
-(defun mrm/org-toggle-tag-flagged ()
-  "Toggle flagged tag to org item"
-  (interactive)
-  (mrm/org-toggle-tag "flagged"))
+    (if (member name tags)
+        (org-set-tags (sort (remove name tags) 'string<))
+      (org-set-tags (sort (append (list name) tags) 'string<)))))
 
 (defun mrm/org-clocktable-indent-string (level)
   "Fix \emsp from showing in clock tables"
