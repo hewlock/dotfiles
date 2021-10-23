@@ -11,7 +11,7 @@
          ("M-J" . org-shiftmetadown)
          ("M-K" . org-shiftmetaup)
          ("M-L" . org-shiftmetaright)
-         ("M-S" . (lambda () (interactive) (org-sort-entries nil ?p) (org-sort-entries nil ?o)))
+         ("M-S" . (lambda () (interactive) (org-sort-entries nil ?s) (org-sort-entries nil ?p) (org-sort-entries nil ?o)))
          ("M-d" . (lambda () (interactive) (org-todo "DONE")))
          ("M-f" . (lambda () (interactive) (mrm/org-toggle-tag "flagged")))
          ("M-h" . org-metaleft)

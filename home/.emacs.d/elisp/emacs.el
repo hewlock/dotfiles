@@ -40,7 +40,7 @@
 (setq-default create-lockfiles nil)
 (setq-default cursor-in-non-selected-windows nil)
 (setq-default fill-column 80)
-(setq-default indent-tabs-mode t)
+(setq-default indent-tabs-mode nil)
 (setq-default linum-format "%3d ")
 (setq-default pulse-flag nil)
 (setq-default same-window-regexps '("."))
