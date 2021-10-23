@@ -2,7 +2,7 @@
   :ensure t
   :bind (("C-c o a" . org-agenda)
          ("C-c o c" . org-capture)
-         ("C-c o t" . (lambda () (interactive) (org-capture nil "t") (evil-append 1)))
+         ("C-c o t" . mrm/org-capture-todo)
          :map org-mode-map
          ("C-c c a" . org-table-align)
          ("C-c c e" . org-html-export-as-html)
@@ -11,17 +11,17 @@
          ("M-J" . org-shiftmetadown)
          ("M-K" . org-shiftmetaup)
          ("M-L" . org-shiftmetaright)
-         ("M-S" . (lambda () (interactive) (org-sort-entries nil ?s) (org-sort-entries nil ?p) (org-sort-entries nil ?o)))
-         ("M-d" . (lambda () (interactive) (org-todo "DONE")))
-         ("M-f" . (lambda () (interactive) (mrm/org-toggle-tag "flagged")))
+         ("M-S" . mrm/org-sort-entries)
+         ("M-d" . mrm/org-todo-done)
+         ("M-f" . mrm/org-toggle-tag-flagged)
          ("M-h" . org-metaleft)
-         ("M-i" . (lambda () (interactive) (org-insert-todo-heading 1) (evil-append 1)))
+         ("M-i" . mrm/org-insert-todo-heading)
          ("M-j" . org-metadown)
          ("M-k" . org-metaup)
          ("M-l" . org-metaright)
-         ("M-o" . (lambda () (interactive) (org-insert-heading-respect-content 1) (evil-append 1)))
+         ("M-o" . mrm/org-insert-heading-respect-content)
          ("M-s" . org-sort)
-         ("M-t" . (lambda () (interactive) (org-todo "TODO"))))
+         ("M-t" . mrm/org-todo-todo))
   :init
   ; First
   (setq org-directory (getenv "X_TODOS"))
@@ -70,12 +70,52 @@
          ("M-d" . (lambda () (interactive) (org-agenda-todo "DONE")))
          ("M-t" . (lambda () (interactive) (org-agenda-todo "TODO")))))
 
+(defun mrm/org-capture-todo ()
+  "Capture a new TODO"
+  (interactive)
+  (org-capture nil "t")
+  (evil-append 1))
+
+(defun mrm/org-sort-entries ()
+  "Sort entries by todo state > priority > scheduled time"
+  (interactive)
+  (org-sort-entries nil ?s)
+  (org-sort-entries nil ?p)
+  (org-sort-entries nil ?o))
+
+(defun mrm/org-todo-done ()
+  "Set a todo to DONE"
+  (interactive)
+  (org-todo "DONE"))
+
+(defun mrm/org-todo-todo ()
+  "Set a todo to TODO"
+  (interactive)
+  (org-todo "TODO"))
+
 (defun mrm/org-toggle-tag (name)
   "Toggle tag to org item"
   (let ((tags (org-get-tags)))
     (if (member name tags)
         (org-set-tags (sort (remove name tags) 'string<))
       (org-set-tags (sort (append (list name) tags) 'string<)))))
+
+(defun mrm/org-toggle-tag-flagged ()
+  "Toggle flagged tag"
+  (interactive)
+  (mrm/org-toggle-tag "flagged"))
+
+(defun mrm/org-insert-todo-heading ()
+  "Insert todo heading in Evil append mode"
+  (interactive)
+  (org-insert-todo-heading 1)
+  (evil-append 1))
+
+(defun mrm/org-insert-heading-respect-content ()
+  "Insert heading in Evil append mode"
+  (interactive)
+  (org-insert-heading-respect-content 1)
+  (evil-append 1))
 
 (defun mrm/org-clocktable-indent-string (level)
   "Fix \emsp from showing in clock tables"
