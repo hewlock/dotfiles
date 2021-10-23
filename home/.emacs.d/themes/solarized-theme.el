@@ -241,7 +241,7 @@
  '(org-done ((t (:inherit solarized-cyan-fg :weight bold))))
  '(org-headline-done ((t (:inherit outline-2))))
  '(org-priority ((t (:inherit org-todo))))
- '(org-property-value ((t (:inherit solarized-blue-fg))))
+ '(org-property-value ((t (:inherit org-drawer :weight bold))))
  '(org-scheduled ((t nil)))
  '(org-scheduled-previously ((t (:inherit solarized-red-fg))))
  '(org-scheduled-today ((t nil)))

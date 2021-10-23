@@ -26,7 +26,7 @@
   ; First
   (setq org-directory (getenv "X_TODOS"))
   (setq org-agenda-files (split-string (shell-command-to-string (concat "find " org-directory " -type d"))))
-  (setq org-default-notes-file (concat org-directory "/Inbox.org"))
+  (setq org-default-notes-file (concat org-directory "/Misc.org"))
   ; Sorted
   (setq org-export-with-toc nil)
   (setq org-html-head-include-default-style nil)
@@ -39,12 +39,11 @@
   (setq org-startup-folded nil)
   (setq org-agenda-custom-commands
       '(("o" "Overview Agenda"
-         ((tags-todo "inbox")
-          (todo "PROJECT")
+         ((todo "PROJECT")
           (tags-todo (concat "flagged+SCHEDULED<=\"<now>\"|flagged+SCHEDULED=\"\"")))
          ((org-agenda-remove-tags t)))))
   (setq org-capture-templates
-        '(("t" "Todo" entry (file+headline org-default-notes-file "Inbox")
+        '(("t" "Todo" entry (file+headline org-default-notes-file "Misc")
            "* TODO %?"
            :empty-lines-before 1)))
   (setq org-todo-keywords
