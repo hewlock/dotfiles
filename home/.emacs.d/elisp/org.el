@@ -50,7 +50,6 @@
         '((sequence
            "TODO(t)" ; needs to be first
            "PROJECT(p)"
-           "DOCUMENTATION(o)"
            "|"
            "CANCELLED(c)"
            "DONE(d)"
