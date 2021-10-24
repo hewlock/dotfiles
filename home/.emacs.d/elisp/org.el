@@ -24,7 +24,7 @@
          ("M-t" . mrm/org-todo-todo))
   :init
   ; First
-  (setq org-directory (getenv "X_TODOS"))
+  (setq org-directory "~/Dropbox/Org/Todos")
   (setq org-agenda-files (split-string (shell-command-to-string (concat "find " org-directory " -type d"))))
   (setq org-default-notes-file (concat org-directory "/Misc.org"))
   ; Sorted

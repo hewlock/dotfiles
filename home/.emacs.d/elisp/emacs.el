@@ -3,7 +3,7 @@
 ;==============================
 ; Auto Backups
 ;==============================
-(defvar backup-file-directory (concat (getenv "X_BACKUP") "/emacs/"))
+(defvar backup-file-directory "~/.backup/emacs/")
 (make-directory backup-file-directory t)
 
 (setq-default backup-by-copying t)
