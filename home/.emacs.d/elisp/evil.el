@@ -8,6 +8,7 @@
               :map evil-normal-state-map
               ("RET" . evil-ret))
   :init
+  (setq evil-mode-line-format '(after . mode-line-buffer-identification))
   (setq evil-want-C-i-jump nil) ; Enable TAB for org mode
   (setq evil-want-C-u-scroll t)
   :config

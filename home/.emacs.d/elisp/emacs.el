@@ -49,6 +49,14 @@
 (setq-default split-width-threshold 80)
 (setq-default tab-width 4)
 
+(setq-default mode-line-format '("%e"
+                                 mode-line-modified
+                                 mode-line-buffer-identification
+                                 "    "
+                                 "%I "
+                                 mode-line-position
+                                 "   (%m)"))
+
 (electric-indent-mode 1)
 (menu-bar-mode -1)
 (set-cursor-color "#dc322f")
