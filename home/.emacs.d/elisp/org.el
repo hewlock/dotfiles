@@ -32,6 +32,7 @@
   (setq org-html-head-include-default-style nil)
   (setq org-html-head-include-scripts nil)
   (setq org-html-validation-link nil)
+  (setq org-file-apps '((auto-mode . emacs) (directory . emacs) ("\\.x?html?\\'" . "/usr/bin/brave-browser %s") ("\\.pdf\\'" . "/usr/bin/brave-browser %s")))
   (setq org-log-into-drawer t)
   (setq org-outline-path-complete-in-steps nil)
   (setq org-refile-targets '((nil :maxlevel . 9) (org-agenda-files :maxlevel . 9)))
