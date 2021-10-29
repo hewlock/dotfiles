@@ -1,0 +1,244 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,400italic,700italic,800italic">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700,400italic,700italic">
+
+<style>
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, colgroup, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+   Org Styles
+*/
+
+html {
+    font-size: 18px;
+}
+
+body {
+    background-color: #FFFFFF;
+    color: #404040;
+    display: flex;
+    flex-flow: column;
+    font-family: 'Lora', serif;
+    font-size: inherit;
+    line-height: 1.5;
+    text-align: justify;
+}
+ 
+#content {
+    margin: 0 auto;
+    max-width: 750px;
+    padding: 1rem;
+}
+ 
+#postamble {
+    background-color: #EAEAEA;
+    display:flex;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .9rem;
+    font-weight: 700;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+#postamble > p {
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    margin: 1rem 0 .5rem 0;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+ 
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+ 
+h3 {
+    font-size: 1.5rem;
+}
+
+.section-number-1,
+.section-number-2,
+.section-number-3,
+.section-number-4,
+.section-number-5,
+.section-number-6 {
+    display: none;
+}
+
+code, pre {
+    border-radius: .25rem;
+    font-family: 'Roboto Mono', monospace;
+    font-size: .95rem;
+}
+ 
+p, ul, ol, table {
+    margin: .5rem 0;
+}
+
+a {
+    color: #008AFF;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+a:hover, a:focus {
+    color: #0085a1;
+    outline: 0;
+    text-decoration: underline;
+}
+ 
+b {
+    font-weight: 700;
+}
+ 
+i {
+    font-style: italic;
+}
+ 
+.underline, u {
+    text-decoration: underline;
+}
+
+code {
+    background-color: #f9f2f4;
+    color: #c7254e;
+    padding: 0 .25rem;
+}
+
+ul {
+    list-style-type: disc;
+}
+ 
+ul ul {
+    list-style-type: circle;
+}
+ 
+ol {
+    list-style-type: decimal;
+}
+
+ol ol {
+    list-style-type: lower-alpha;
+}
+
+ul, ol {
+    padding-left: 2rem;
+}
+ 
+ul ul, ol ol, ul ol, ol ul {
+    margin: 0;
+}
+ 
+table tr {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+
+table tr th {
+    font-weight: 700;
+}
+
+table tr td, table tr th {
+    border: 1px solid #cccccc;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+ 
+blockquote {
+    border-left: .25rem solid #ddd;
+    font-style: italic;
+    padding-left: 2rem;
+}
+ 
+pre {
+    display: block;
+    padding: .5rem .75rem;
+    margin: 0 0 .5rem;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+}
+ 
+img {
+    max-width: 100%;
+}
+ 
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 16px;
+    }
+    #postamble {
+        flex-flow: column;
+        gap: 0;
+        padding: 0 1rem;
+    }
+    #postamble > p:first-child {
+        margin-bottom: 0;
+    }
+}
+
+</style>
