@@ -10,3 +10,9 @@ x-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys previous \"['A
 x-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys volume-down \"['AudioLowerVolume']\""
 x-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys volume-mute \"['AudioMute']\""
 x-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys volume-up \"['AudioRaiseVolume']\""
+x-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys www \"['<Super>b']\""
+
+x-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings \"['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']\""
+x-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding \"<Super>t\""
+x-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command \"gnome-terminal --geometry=150x50\""
+x-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name \"Terminal\""
