@@ -67,6 +67,7 @@
 
 (use-package org-agenda
   :bind (:map org-agenda-mode-map
+         ("d" . (lambda () (interactive) (org-agenda-todo "DONE") (org-agenda-next-line)))
          ("M-d" . (lambda () (interactive) (org-agenda-todo "DONE")))
          ("M-t" . (lambda () (interactive) (org-agenda-todo "TODO")))))
 
