@@ -22,6 +22,7 @@
     `(
         ("org"
         :auto-sitemap t
+        :sitemap-filename "Sitemap.org"
         :base-directory ,mrm/publish-src-dir
         :base-extension "org"
         :publishing-directory ,mrm/publish-dst-dir
