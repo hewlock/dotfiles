@@ -22,6 +22,7 @@
 (load-config "emacs")
 (load-config "emacs-project")
 (load-config "evil")
+(load-config "org")
 
 ;; sorted
 (load-config "bookmark")
@@ -36,7 +37,7 @@
 (load-config "magit")
 (load-config "markdown-mode")
 (load-config "neotree")
-(load-config "org")
+(load-config "org-publish")
 (load-config "rainbow-delimiters")
 (load-config "undo-fu")
 (load-config "web-mode")

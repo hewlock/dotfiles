@@ -71,27 +71,14 @@ body {
     text-align: justify;
 }
  
-#content {
+main {
+    box-sizing: border-box;
     margin: 0 auto;
-    max-width: 750px;
+    max-width: 800px;
     padding: 1rem;
+    width: 100%;
 }
  
-#postamble {
-    background-color: #EAEAEA;
-    display:flex;
-    font-family: 'Open Sans', sans-serif;
-    font-size: .9rem;
-    font-weight: 700;
-    gap: 2rem;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-#postamble > p {
-    text-align: center;
-}
-
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
@@ -110,15 +97,6 @@ h2 {
  
 h3 {
     font-size: 1.5rem;
-}
-
-.section-number-1,
-.section-number-2,
-.section-number-3,
-.section-number-4,
-.section-number-5,
-.section-number-6 {
-    display: none;
 }
 
 code, pre {
@@ -227,17 +205,9 @@ img {
     max-width: 100%;
 }
  
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     html {
         font-size: 16px;
-    }
-    #postamble {
-        flex-flow: column;
-        gap: 0;
-        padding: 0 1rem;
-    }
-    #postamble > p:first-child {
-        margin-bottom: 0;
     }
 }
 

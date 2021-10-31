@@ -28,20 +28,15 @@
   (setq org-agenda-files (split-string (shell-command-to-string (concat "find " org-directory " -type d"))))
   (setq org-default-notes-file (concat org-directory "/Misc.org"))
   ; Sorted
-  (setq org-export-with-toc nil)
   (setq org-file-apps '((auto-mode . emacs)
                         (directory . emacs)
                         ("\\.x?html?\\'" . "/usr/bin/brave-browser %s")
                         ("\\.pdf\\'" . "/usr/bin/brave-browser %s")))
-  (setq org-html-head-include-default-style nil)
-  (setq org-html-head-include-scripts nil)
-  (setq org-html-validation-link nil)
   (setq org-log-into-drawer t)
   (setq org-outline-path-complete-in-steps nil)
   (setq org-refile-targets '((nil :maxlevel . 9) (org-agenda-files :maxlevel . 9)))
   (setq org-refile-use-outline-path t)
   (setq org-startup-folded nil)
-  (setq org-html-head (mrm/get-file-as-string "~/.emacs.d/export/head.html"))
   (setq org-agenda-custom-commands
       '(("o" "Overview Agenda"
          ((todo "PROJECT")
