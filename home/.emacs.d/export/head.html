@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,400italic,700italic,800italic">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700,400italic,700italic">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700,400italic,700italic">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Special+Elite">
 
 <style>
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -87,12 +89,23 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 4rem;
+    line-height: 1;
+    margin: 2rem 0 1rem 0;
     text-align: center;
+}
+
+.subtitle {
+    display: inline-block;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 0;
+    position: relative;
+    top: -1rem;
 }
  
 h2 {
     font-size: 2rem;
-    text-align: center;
 }
  
 h3 {
@@ -104,7 +117,7 @@ code, pre {
     font-family: 'Roboto Mono', monospace;
     font-size: .95rem;
 }
- 
+
 p, ul, ol, table {
     margin: .5rem 0;
 }
@@ -187,6 +200,7 @@ table tr td, table tr th {
  
 blockquote {
     border-left: .25rem solid #ddd;
+    font-family: 'Special Elite', cursive;
     font-style: italic;
     padding-left: 2rem;
 }
@@ -199,6 +213,10 @@ pre {
     word-wrap: break-word;
     background-color: #f5f5f5;
     border: 1px solid #ccc;
+}
+ 
+.figure {
+    text-align: center;
 }
  
 img {
