@@ -9,7 +9,10 @@
 (setq org-export-with-section-numbers nil)
 (setq org-export-with-toc nil)
 
-(setq org-html-head (mrm/get-file-as-string "~/.emacs.d/export/head.html"))
+(setq org-html-head (concat
+                     (mrm/get-file-as-string "~/.emacs.d/export/reset.html")
+                     (mrm/get-file-as-string "~/.emacs.d/export/default.html")
+                     (mrm/get-file-as-string "~/.emacs.d/export/gtd.html")))
 (setq org-html-head-include-default-style nil)
 (setq org-html-head-include-scripts nil)
 (setq org-html-postamble nil)
