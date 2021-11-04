@@ -6,6 +6,7 @@
          :map org-mode-map
          ("C-c c a" . org-table-align)
          ("C-c c e" . org-html-export-as-html)
+         ("C-c c l" . org-toggle-link-display)
          ("C-c c u" . org-update-all-dblocks)
          ("M-H" . org-shiftmetaleft)
          ("M-J" . org-shiftmetadown)
