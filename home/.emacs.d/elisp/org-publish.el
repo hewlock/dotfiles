@@ -25,14 +25,28 @@
     `(
         ("org"
         :auto-sitemap t
-        :sitemap-filename "Sitemap.org"
         :base-directory ,mrm/publish-src-dir
         :base-extension "org"
         :publishing-directory ,mrm/publish-dst-dir
         :publishing-function org-html-publish-to-html
         :recursive t
+        :sitemap-filename "Sitemap.org"
+        :sitemap-format-entry mrm/sitemap-format-entry
         :sitemap-title "Wiki Sitemap"
         )))
+
+(defun mrm/sitemap-format-entry (entry style project)
+  "Override default format to include date"
+  (setq date (org-publish-find-property entry :date project))
+  (cond ((not (directory-name-p entry))
+	 (format "[[file:%s][%s%s]]"
+		 entry
+		 (if date (concat "~" (car date) "~ ") "")
+		 (org-publish-find-title entry project)))
+	((eq style 'tree)
+	 ;; Return only last subdir.
+	 (file-name-nondirectory (directory-file-name entry)))
+	(t entry)))
 
 (defun mrm/org-publish ()
   "Publish Notes to Wiki"
