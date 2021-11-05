@@ -6,7 +6,8 @@
               ("RET" . nil)
               ("SPC" . nil)
               :map evil-normal-state-map
-              ("RET" . evil-ret))
+              ("RET" . evil-ret)
+              ("U" . universal-argument))
   :init
   (setq evil-mode-line-format '(after . mode-line-buffer-identification))
   (setq evil-want-C-i-jump nil) ; Enable TAB for org mode

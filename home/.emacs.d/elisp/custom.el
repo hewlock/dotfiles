@@ -5,11 +5,11 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes '(solarized))
  '(custom-safe-themes
-   '("5a8a3ba391f39e084d0e60b90039c4465a8b0769b575e989d1e1d8a691a48120" default))
+   '("eebd320ee8e2aec6d1a527cbf4f3f5c7ea29a930b88e437caa25e67b8776dba6" default))
  '(custom-theme-directory "~/.emacs.d/themes/")
  '(frame-background-mode 'dark)
  '(package-selected-packages
-   '(web-mode markdown-mode less-css-mode coffee-mode yasnippet which-key rainbow-delimiters neotree magit counsel swiper ivy-hydra ivy evil-surround company evil use-package)))
+   '(org-journal web-mode markdown-mode less-css-mode coffee-mode yasnippet which-key rainbow-delimiters neotree magit counsel swiper ivy-hydra ivy evil-surround company evil use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

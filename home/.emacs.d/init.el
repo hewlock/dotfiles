@@ -37,6 +37,7 @@
 (load-config "magit")
 (load-config "markdown-mode")
 (load-config "neotree")
+(load-config "org-journal")
 (load-config "org-publish")
 (load-config "rainbow-delimiters")
 (load-config "undo-fu")

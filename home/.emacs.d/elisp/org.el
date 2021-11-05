@@ -1,7 +1,6 @@
 (use-package org
   :ensure t
   :bind (("C-c o a" . org-agenda)
-         ("C-c o c" . org-capture)
          ("C-c o t" . mrm/org-capture-todo)
          :map org-mode-map
          ("C-c c a" . org-table-align)
