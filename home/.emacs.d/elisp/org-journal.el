@@ -6,9 +6,7 @@
   (setq org-journal-date-format "%Y-%m-%d")
   (setq org-journal-date-prefix (concat
                                  "#+Title: "
-                                 (format-time-string "%A %B %-e, %Y")
-                                 "\n#+Subtitle: "
-                                 (format-time-string "%Y-%m-%d")
+                                 (format-time-string "%Y-%m-%d %A")
                                  "\n#+Date: "))
   (setq org-journal-dir (concat "~/Dropbox/Org/Journal/" (format-time-string "%Y") "/"))
   (setq org-journal-file-format "%Y-%m-%d-%A.org")
