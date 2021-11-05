@@ -21,6 +21,7 @@
                       (content "main" "content")
                       (postamble "footer" "postamble")))
 
+(add-to-list 'org-export-options-alist '(:subtitle "SUBTITLE" nil nil parse))
 (setq org-publish-project-alist
     `(
         ("org"
@@ -31,7 +32,29 @@
         :publishing-function org-html-publish-to-html
         :recursive t
         :sitemap-filename "Sitemap.org"
+        :sitemap-format-entry mrm/sitemap-format-entry
+        :sitemap-title "Wiki Sitemap"
         )))
+
+(defun mrm/sitemap-format-entry (entry style project)
+  "Override default sitemap to include subtitle"
+  (setq title (org-publish-find-title entry project))
+  (setq subtitle (org-publish-find-property entry :subtitle project))
+  (cond ((not (directory-name-p entry))
+	 (format "[[file:%s][%s%s]]"
+		 entry
+		 (concat "*"
+                 (if (and
+                      (eq (string-match-p "^[0-9][0-9][0-9][0-9]-" title) 0)
+                      (> (length title) 14))
+                     (concat "~" (substring title 0 14) "~")
+                   title)
+                 "*")
+		 (if subtitle (concat " - /" (car subtitle) "/") "")))
+	((eq style 'tree)
+	 ;; Return only last subdir.
+	 (concat "*" (file-name-nondirectory (directory-file-name entry)) "*"))
+	(t entry)))
 
 (defun mrm/org-publish ()
   "Publish Notes to Wiki"
