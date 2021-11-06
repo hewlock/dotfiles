@@ -153,7 +153,7 @@
  '(ivy-subdir ((t (:inherit default))))
  '(ivy-virtual ((t (:inherit default))))
  '(lazy-highlight ((t (:inherit (solarized-base1-bg solarized-base3-fg)))))
- '(link ((t (:inherit solarized-yellow-fg :underline t))))
+ '(link ((t (:inherit solarized-yellow-fg))))
  '(link-visited ((t (:inherit (solarized-green-fg link)))))
  '(linum ((t (:inherit (solarized-base2-bg solarized-base1-fg)))))
  '(magit-bisect-bad ((t (:inherit solarized-red-fg))))
