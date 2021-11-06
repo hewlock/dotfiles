@@ -12,7 +12,9 @@
 (setq org-html-head (concat
                      (mrm/get-file-as-string "~/.emacs.d/export/reset.html")
                      (mrm/get-file-as-string "~/.emacs.d/export/default.html")
-                     (mrm/get-file-as-string "~/.emacs.d/export/gtd.html")))
+                     (mrm/get-file-as-string "~/.emacs.d/export/gtd.html")
+                     (mrm/get-file-as-string "~/.emacs.d/export/script.html")
+                     ))
 (setq org-html-head-include-default-style nil)
 (setq org-html-head-include-scripts nil)
 (setq org-html-postamble nil)
@@ -31,6 +33,7 @@
         :publishing-directory ,mrm/publish-dst-dir
         :publishing-function org-html-publish-to-html
         :recursive t
+        :makeindex t
         :sitemap-filename "Sitemap.org"
         :sitemap-format-entry mrm/sitemap-format-entry
         :sitemap-title "Wiki Sitemap"
@@ -43,13 +46,7 @@
   (cond ((not (directory-name-p entry))
 	 (format "[[file:%s][%s%s]]"
 		 entry
-		 (concat "*"
-                 (if (and
-                      (eq (string-match-p "^[0-9][0-9][0-9][0-9]-" title) 0)
-                      (> (length title) 14))
-                     (concat "~" (substring title 0 14) "~")
-                   title)
-                 "*")
+		 (concat "*" title "*")
 		 (if subtitle (concat " - /" (car subtitle) "/") "")))
 	((eq style 'tree)
 	 ;; Return only last subdir.
