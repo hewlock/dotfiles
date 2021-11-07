@@ -238,6 +238,7 @@
  '(org-code ((t (:inherit solarized-base2-bg :family "Roboto Mono"))))
  '(org-date ((t (:inherit solarized-base1-fg :weight bold :underline t))))
  '(org-date-selected ((t (:inherit (solarized-red-bg solarized-base3-fg)))))
+ '(org-document-title ((t (:inherit solarized-base01-fg :weight bold))))
  '(org-done ((t (:inherit solarized-cyan-fg :weight bold))))
  '(org-drawer ((t (:inherit solarized-base1-fg))))
  '(org-headline-done ((t (:inherit outline-2))))

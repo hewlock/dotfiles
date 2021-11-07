@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes '(solarized))
  '(custom-safe-themes
-   '("da9bfe000e5006eb03bbdfb6de5099085c7ac515e944abe6b4d1ccb055e96c30" default))
+   '("411cb1938bbd664850d3aedf00915e161d602a61b36ecbc01e5346747e6faa03" default))
  '(custom-theme-directory "~/.emacs.d/themes/")
  '(frame-background-mode 'dark)
  '(package-selected-packages
