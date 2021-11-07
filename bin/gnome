@@ -4,6 +4,7 @@
 x-cmd "gsettings set org.gnome.desktop.interface gtk-key-theme \"Emacs\""
 
 x-cmd "gsettings set org.gnome.desktop.input-sources xkb-options \"['ctrl:swap_rwin_rctl', 'ctrl:nocaps', 'compose:menu']\""
+x-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys home \"['<Super>e']\""
 x-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys next \"['AudioNext']\""
 x-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys play \"['AudioPlay']\""
 x-cmd "gsettings set org.gnome.settings-daemon.plugins.media-keys previous \"['AudioPrev']\""
