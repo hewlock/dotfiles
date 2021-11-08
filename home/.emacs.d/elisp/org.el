@@ -12,6 +12,7 @@
          ("M-K" . org-shiftmetaup)
          ("M-L" . org-shiftmetaright)
          ("M-S" . mrm/org-sort-entries)
+         ("M-c" . mrm/org-todo-cancelled)
          ("M-d" . mrm/org-todo-done)
          ("M-f" . mrm/org-toggle-tag-flagged)
          ("M-h" . org-metaleft)
@@ -62,9 +63,11 @@
 
 (use-package org-agenda
   :bind (:map org-agenda-mode-map
-         ("d" . (lambda () (interactive) (org-agenda-todo "DONE") (org-agenda-next-line)))
-         ("M-d" . (lambda () (interactive) (org-agenda-todo "DONE")))
-         ("M-t" . (lambda () (interactive) (org-agenda-todo "TODO")))))
+         ("c" . mrm/org-agenda-todo-cancelled)
+         ("d" . mrm/org-agenda-todo-done)
+         ("M-c" . mrm/org-agenda-todo-cancelled)
+         ("M-d" . mrm/org-agenda-todo-done)
+         ("M-t" . mrm/org-agenda-todo-todo)))
 
 (defun mrm/org-capture-todo ()
   "Capture a new TODO"
@@ -79,6 +82,11 @@
   (org-sort-entries nil ?p)
   (org-sort-entries nil ?o))
 
+(defun mrm/org-todo-cancelled ()
+  "Set a todo to CANCELLED"
+  (interactive)
+  (org-todo "CANCELLED"))
+
 (defun mrm/org-todo-done ()
   "Set a todo to DONE"
   (interactive)
@@ -88,6 +96,24 @@
   "Set a todo to TODO"
   (interactive)
   (org-todo "TODO"))
+
+(defun mrm/org-agenda-todo-cancelled ()
+  "Set a todo to CANCELLED"
+  (interactive)
+  (org-agenda-todo "CANCELLED")
+  (org-agenda-next-line))
+
+(defun mrm/org-agenda-todo-done ()
+  "Set a todo to DONE"
+  (interactive)
+  (org-agenda-todo "DONE")
+  (org-agenda-next-line))
+
+(defun mrm/org-agenda-todo-todo ()
+  "Set a todo to TODO"
+  (interactive)
+  (org-agenda-todo "TODO")
+  (org-agenda-next-line))
 
 (defun mrm/org-toggle-tag (name)
   "Toggle tag to org item"
