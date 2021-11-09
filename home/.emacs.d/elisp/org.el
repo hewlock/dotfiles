@@ -37,7 +37,6 @@
   (setq org-outline-path-complete-in-steps nil)
   (setq org-refile-targets '((nil :maxlevel . 9) (org-agenda-files :maxlevel . 9)))
   (setq org-refile-use-outline-path t)
-  (setq org-startup-folded nil)
   (setq org-agenda-custom-commands
       '(("o" "Overview Agenda"
          ((todo "PROJECT")
@@ -47,6 +46,10 @@
         '(("t" "Todo" entry (file+headline org-default-notes-file "Misc")
            "* TODO %?"
            :empty-lines-before 1)))
+  (setq org-priority-default 66) ; B
+  (setq org-priority-highest 65) ; A
+  (setq org-priority-lowest 90)  ; Z
+  (setq org-startup-folded nil)
   (setq org-todo-keywords
         '((sequence
            "TODO(t)" ; needs to be first
