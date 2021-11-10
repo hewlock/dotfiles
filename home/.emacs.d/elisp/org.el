@@ -34,6 +34,7 @@
                         ("\\.x?html?\\'" . "/usr/bin/brave-browser %s")
                         ("\\.pdf\\'" . "/usr/bin/brave-browser %s")))
   (setq org-log-into-drawer t)
+  (setq org-log-repeat nil)
   (setq org-outline-path-complete-in-steps nil)
   (setq org-refile-targets '((nil :maxlevel . 9) (org-agenda-files :maxlevel . 9)))
   (setq org-refile-use-outline-path t)
