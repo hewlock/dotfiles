@@ -4,6 +4,7 @@
 (setq mrm/publish-dst-dir "~/Dropbox/Wiki/")
 
 (global-set-key (kbd "C-c o p") 'mrm/org-publish)
+(global-set-key (kbd "C-c o P") 'mrm/org-publish-force)
 
 (setq org-export-with-author nil)
 (setq org-export-with-section-numbers nil)
@@ -57,3 +58,8 @@
   "Publish Notes to Wiki"
   (interactive)
   (org-publish "org"))
+
+(defun mrm/org-publish-force ()
+  "Publish Notes to Wiki (force publish all)"
+  (interactive)
+  (org-publish "org" t))
