@@ -1,7 +1,12 @@
 (use-package org
   :ensure t
-  :bind (("C-c o a" . org-agenda)
-         ("C-c o t" . mrm/org-capture-todo)
+  :bind (
+         ("C-c o B" . mrm/org-capture-backlog-todo)
+         ("C-c o M" . mrm/org-capture-misc-todo)
+         ("C-c o a" . org-agenda)
+         ("C-c o b" . mrm/org-capture-backlog)
+         ("C-c o c" . org-capture)
+         ("C-c o m" . mrm/org-capture-misc)
          :map org-mode-map
          ("C-c c a" . org-table-align)
          ("C-c c e" . org-html-export-as-html)
@@ -28,6 +33,7 @@
   (setq org-directory "~/Dropbox/Org/GTD")
   (setq org-agenda-files (split-string (shell-command-to-string (concat "find " org-directory " -type d"))))
   (setq org-default-notes-file (concat org-directory "/Misc.org"))
+  (setq mrm/org-backlog-notes-file (concat org-directory "/Backlog.org"))
   ; Sorted
   (setq org-file-apps '((auto-mode . emacs)
                         (directory . emacs)
@@ -44,9 +50,12 @@
           (tags-todo (concat "flagged+SCHEDULED<=\"<now>\"|flagged+SCHEDULED=\"\"")))
          ((org-agenda-remove-tags t)))))
   (setq org-capture-templates
-        '(("t" "Todo" entry (file+headline org-default-notes-file "Misc")
-           "* TODO %?"
-           :empty-lines-before 1)))
+        '(
+          ("b" "Backlog Entry" entry (file+headline mrm/org-backlog-notes-file "Backlog") "* %?" :empty-lines-before 1)
+          ("B" "Backlog Todo" entry (file+headline mrm/org-backlog-notes-file "Backlog") "* TODO %?" :empty-lines-before 1)
+          ("m" "Misc Entry" entry (file+headline org-default-notes-file "Misc") "* %?" :empty-lines-before 1)
+          ("M" "Misc Todo" entry (file+headline org-default-notes-file "Misc") "* TODO %?" :empty-lines-before 1)
+          ))
   (setq org-priority-default 66) ; B
   (setq org-priority-highest 65) ; A
   (setq org-priority-lowest 90)  ; Z
@@ -73,11 +82,11 @@
          ("M-d" . mrm/org-agenda-todo-done)
          ("M-t" . mrm/org-agenda-todo-todo)))
 
-(defun mrm/org-capture-todo ()
-  "Capture a new TODO"
-  (interactive)
-  (org-capture nil "t")
-  (evil-append 1))
+(defun mrm/org-capture (key) (org-capture nil key) (evil-append 1))
+(defun mrm/org-capture-backlog () "Capture Backlog" (interactive) (mrm/org-capture "b"))
+(defun mrm/org-capture-backlog-todo () "Capture Backlog TODO" (interactive) (mrm/org-capture "B"))
+(defun mrm/org-capture-misc () "Capture Misc" (interactive) (mrm/org-capture "m"))
+(defun mrm/org-capture-misc-todo () "Capture Misc TODO" (interactive) (mrm/org-capture "M"))
 
 (defun mrm/org-sort-entries ()
   "Sort entries by todo state > priority > scheduled time"

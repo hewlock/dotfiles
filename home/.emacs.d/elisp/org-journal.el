@@ -1,7 +1,6 @@
 (use-package org-journal
   :ensure t
-  :bind (("C-c o c" . calendar)
-         ("C-c o j" . mrm/org-journal-new-entry))
+  :bind (("C-c o j" . mrm/org-journal-new-entry))
   :init
   (setq org-journal-date-format "%Y-%m-%d")
   (setq org-journal-dir (concat "~/Dropbox/Org/Journal/" (format-time-string "%Y") "/"))
