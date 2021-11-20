@@ -101,7 +101,6 @@
 (global-set-key (kbd "C-c p q") 'mrm/project-quit)
 (global-set-key (kbd "C-c r c") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-c r f") 'mrm/format-region)
-(global-set-key (kbd "C-c r w") 'whitespace-cleanup)
 (global-set-key (kbd "C-c r x") 'eval-region)
 (global-set-key (kbd "C-c w R") 'mrm/rotate-windows-anticlockwise)
 (global-set-key (kbd "C-c w b") 'balance-windows)
