@@ -280,7 +280,7 @@
  '(swiper-match-face-3 ((t (:inherit swiper-match-face-2))))
  '(swiper-match-face-4 ((t (:inherit swiper-match-face-2))))
  '(tooltip ((t (:inherit (solarized-base2-bg solarized-base01-fg)))))
- '(trailing-whitespace ((t (:inherit (solarized-red-bg solarized-base3-fg)))))
+ '(trailing-whitespace ((t (:inherit (solarized-yellow-bg solarized-base3-fg)))))
  '(variable-pitch ((t (:family "Sans Serif"))))
  '(vertical-border ((((class color) (min-colors 88)) (:inherit (solarized-base3-bg mode-line))) (t (:inherit (solarized-base2-fg solarized-base2-bg)))))
  '(warning ((t (:inherit solarized-red-fg :weight bold))))
