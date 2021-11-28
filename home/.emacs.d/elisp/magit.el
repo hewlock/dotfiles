@@ -1,11 +1,9 @@
 (use-package magit
   :ensure t
   :diminish 'magit-mode
-  :bind (("C-c b B" . magit-blame-popup)
-         ("C-c b D" . magit-diff-buffer-file-popup)
-         ("C-c b L" . magit-log-buffer-file-popup)
-         ("C-c b b" . magit-blame)
+  :bind (("C-c b b" . magit-blame)
          ("C-c b d" . magit-diff-buffer-file)
+         ("C-c b g" . magit-file-dispatch)
          ("C-c b l" . magit-log-buffer-file)
          ("C-c p l" . magit-log-all)
          ("C-c p u" . mrm/magit-status-project))
