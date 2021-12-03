@@ -19,11 +19,11 @@ function git_branch {
 	local on_commit="HEAD detached at ([^${IFS}]*)"
 	if [[ $git_status =~ $on_branch ]]; then
 		local branch=${BASH_REMATCH[1]}
-		echo " $(git_color)$branch"
+		echo " $branch"
 	elif [[ $git_status =~ $on_commit ]]; then
 		local commit=${BASH_REMATCH[1]}
-		echo " $(git_color)$commit"
+		echo " $commit"
 	fi
 }
 
-PS1='$(bold)$(green)\u$(git_branch) $(blue)\w$(clr) \$ '
+PS1='\[$(bold)\]\[$(green)\]\u\[$(git_color)\]$(git_branch) \[$(blue)\]\w\[$(clr)\] \$ '
