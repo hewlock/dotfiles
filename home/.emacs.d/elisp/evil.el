@@ -1,3 +1,9 @@
+(use-package evil-terminal-cursor-changer
+  :ensure t
+  :demand
+  :init
+  (evil-terminal-cursor-changer-activate))
+
 (use-package evil
   :ensure t
   :demand

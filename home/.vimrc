@@ -26,6 +26,8 @@ set t_Co=16
 set tabstop=4
 set undolevels=1000
 
+let &t_EI = "\e[2 q"
+let &t_SI = "\e[5 q"
 let g:lightline = { 'colorscheme': 'solarized' }
 let mapleader = "\<Space>"
 
