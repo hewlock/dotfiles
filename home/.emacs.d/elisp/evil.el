@@ -1,9 +1,3 @@
-(use-package evil-terminal-cursor-changer
-  :ensure t
-  :demand
-  :init
-  (evil-terminal-cursor-changer-activate))
-
 (use-package evil
   :ensure t
   :demand
@@ -22,6 +16,12 @@
   :config
   (define-key evil-motion-state-map (kbd "C-w C-c") 'kill-buffer-and-window)
   (evil-mode))
+
+(use-package evil-terminal-cursor-changer
+  :ensure t
+  :demand
+  :init
+  (evil-terminal-cursor-changer-activate))
 
 (defun mrm/evil-global-unbind (binding)
   "Unbind key from all evil mode maps"
