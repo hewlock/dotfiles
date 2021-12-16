@@ -35,6 +35,8 @@ x-install the_silver_searcher
 x-install tree
 x-install vim
 
+x-cmd "pip install hew-tag"
+
 x-cmd "stow -v -t ~ home"
 
 x-cmd "vim +PlugInstall +qall"
