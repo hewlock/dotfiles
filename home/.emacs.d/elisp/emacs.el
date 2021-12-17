@@ -74,6 +74,7 @@
 (global-set-key (kbd "C-c b p") 'mrm/print-file-name)
 (global-set-key (kbd "C-c b q") 'kill-this-buffer)
 (global-set-key (kbd "C-c b r") 'mrm/rename-file-and-buffer)
+(global-set-key (kbd "C-c b x") 'eval-buffer)
 (global-set-key (kbd "C-c d c") 'cd)
 (global-set-key (kbd "C-c d p") 'pwd)
 (global-set-key (kbd "C-c h U") 'find-function-at-point)

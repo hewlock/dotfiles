@@ -36,6 +36,7 @@
          ("C-c p f" . mrm/project-file-jump)
          ("C-c p o" . mrm/project-find-file)
          ("C-c p s" . mrm/project-search)
+         ("C-c p S" . mrm/project-search-all)
          ("M-p" . counsel-yank-pop)
          :map counsel-ag-map
          ("C-r" . counsel-git-grep-query-replace)
@@ -53,6 +54,10 @@
     (interactive)
     (counsel-file-jump nil (mrm/project-directory)))
   (defun mrm/project-search ()
-    "Search file contents in project directory."
+    "Search file (excluding hidden) contents in project directory."
+    (interactive)
+	(counsel-ag nil (mrm/project-directory)))
+  (defun mrm/project-search-all ()
+    "Search file (including hidden) contents in project directory."
     (interactive)
 	(counsel-ag nil (mrm/project-directory) "--hidden")))
