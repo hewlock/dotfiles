@@ -17,6 +17,12 @@
   (define-key evil-motion-state-map (kbd "C-w C-c") 'kill-buffer-and-window)
   (evil-mode))
 
+(use-package evil-surround
+  :ensure t
+  :demand
+  :init
+  (global-evil-surround-mode 1))
+
 (use-package evil-terminal-cursor-changer
   :ensure t
   :demand
