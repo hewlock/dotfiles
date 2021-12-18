@@ -58,6 +58,7 @@
                                  "   (%m)"))
 
 (electric-indent-mode 1)
+(global-hl-line-mode t)
 (menu-bar-mode -1)
 (set-cursor-color "#dc322f")
 
