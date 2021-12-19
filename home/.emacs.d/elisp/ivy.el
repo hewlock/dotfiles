@@ -56,8 +56,8 @@
   (defun mrm/project-search ()
     "Search file (excluding hidden) contents in project directory."
     (interactive)
-	(counsel-ag nil (mrm/project-directory)))
+    (counsel-ag nil (mrm/project-directory)))
   (defun mrm/project-search-all ()
     "Search file (including hidden) contents in project directory."
     (interactive)
-	(counsel-ag nil (mrm/project-directory) "--hidden")))
+    (counsel-ag nil (mrm/project-directory) "--hidden")))
