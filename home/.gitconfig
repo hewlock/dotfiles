@@ -1,21 +1,25 @@
 [alias]
-	co = checkout
+    a = add .
+    co = checkout
+    d = diff HEAD
+    ll = log --graph --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr) %Creset%C(bold)<%an>%Creset%C(yellow)%d%Creset' --abbrev-commit
+    s = status
 [color "diff"]
-	meta = green bold
+    meta = green bold
 [core]
-	commentchar = $
-	editor = vim
+    commentchar = $
+    editor = vim
 [diff]
-	tool = vimdiff
+    tool = vimdiff
 [merge]
-	conflictstyle = diff3
-	tool = vimdiff
+    conflictstyle = diff3
+    tool = vimdiff
 [push]
-	default = simple
+    default = simple
 [user]
-	name = Matthew Moulton
-	email = matthew.moulton@gmail.com
+    name = Matthew Moulton
+    email = matthew.moulton@gmail.com
 [credential]
-	helper = cache --timeout 64800 # 18 hours
+    helper = cache --timeout 64800 # 18 hours
 [init]
-	defaultBranch = main
+    defaultBranch = main

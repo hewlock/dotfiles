@@ -11,9 +11,6 @@ fi
 
 alias ag="ag --hidden"
 alias emacs='TERM=xterm-16color emacs --no-window-system'
-alias ga='git add .'
-alias gd='git diff HEAD'
-alias gs='git status'
 alias l='ls -CF'
 alias la='ls -A'
 alias ll='ls -alF'
