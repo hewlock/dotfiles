@@ -5,8 +5,8 @@ PATH="$(pwd)/home/bin:$PATH"
 disto=$(x-distro-name)
 x-info "distro detected: $disto"
 if [[ $disto != "elementary" && $disto != "fedora" ]]; then
-	x-error "distro unsupported"
-	exit 1
+    x-error "distro unsupported"
+    exit 1
 fi
 
 x-cmd "mkdir -p $HOME/.backup/gsettings"
@@ -27,11 +27,12 @@ x-install gnome-terminal
 x-install make
 x-install ncurses-term
 x-install neofetch
+x-install nodejs
 x-install ranger
 x-install rsync
 x-install stow
-x-install tmux
 x-install the_silver_searcher
+x-install tmux
 x-install tree
 x-install vim
 
