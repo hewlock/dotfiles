@@ -42,6 +42,9 @@
          ("C-r" . counsel-git-grep-query-replace)
          :map counsel-git-grep-map
          ("C-r" . counsel-git-grep-query-replace))
+  :init
+  (setq counsel-file-jump-args
+        (split-string ". -name .git -prune -o -name node_modules -prune -o -type f -print"))
   :commands
   counsel-yank-pop
   :config

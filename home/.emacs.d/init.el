@@ -32,8 +32,6 @@
 (load-config "evil-surround")
 (load-config "eww")
 (load-config "ivy")
-(load-config "js")
-(load-config "less-css-mode")
 (load-config "magit")
 (load-config "markdown-mode")
 (load-config "neotree")
