@@ -8,9 +8,10 @@
               ("C-o" . ivy-dispatching-done)
               ("C-p" . ivy-previous-line)
               ("C-u" . ivy-scroll-down-command)
+              ("M-RET" . ivy-immediate-done)
               ("M-d" . ivy-end-of-buffer)
-              ("M-u" . ivy-beginning-of-buffer)
-              ("M-o" . ivy-immediate-done))
+              ("M-o" . ivy-call)
+              ("M-u" . ivy-beginning-of-buffer))
   :init
   (setq ivy-count-format "%d/%d ")
   (setq ivy-height 15)
