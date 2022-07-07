@@ -48,3 +48,6 @@ nnoremap <Leader><Space> :noh<CR>
 nnoremap <Leader>n :set number!<CR>
 nnoremap <Leader>p :set paste!<CR>
 nnoremap <Leader>w :set list!<CR>
+
+com! FormatJson %!python3 -m json.tool
+com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"

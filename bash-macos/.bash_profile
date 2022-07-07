@@ -16,4 +16,8 @@ alias ls='ls -Gh'
 fortune -as
 echo ""
 
+export JDK_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=$JDK_HOME
+
 source $(pip3 show powerline-status | grep Location: | cut -c11-)/powerline/bindings/bash/powerline.sh
+export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
